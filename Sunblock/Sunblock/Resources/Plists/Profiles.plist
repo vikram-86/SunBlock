@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>profileImageName</key>
+		<string>stieve</string>
+		<key>description</key>
+		<string>Design and Experience</string>
+		<key>name</key>
+		<string>Stieve Hansen</string>
+	</dict>
+	<dict>
+		<key>profileImageName</key>
+		<string>sutha</string>
+		<key>description</key>
+		<string>Developer and Mastermind</string>
+		<key>name</key>
+		<string>Sutha</string>
+	</dict>
+</array>
+</plist>

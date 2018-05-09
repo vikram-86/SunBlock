@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Bold.ttf">
+            <string>Archivo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileView" customModule="Sunblock" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="Z2e-bG-Aa7" id="ecJ-RQ-33Z"/>
+                <outlet property="nameLabel" destination="djv-BB-Xro" id="tYs-cP-F8S"/>
+                <outlet property="profileImageView" destination="fNd-BW-ivd" id="nor-Ql-wOK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sutha" translatesAutoresizingMaskIntoConstraints="NO" id="fNd-BW-ivd">
+                    <rect key="frame" x="29" y="0.0" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="exw-Ux-QKr"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suthananth Arulanantham" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="djv-BB-Xro">
+                    <rect key="frame" x="173" y="0.0" width="178" height="51.5"/>
+                    <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="23"/>
+                    <color key="textColor" name="dark"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mastermind and developer." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2e-bG-Aa7">
+                    <rect key="frame" x="173" y="55" width="178" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" name="dark"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-VE-xqg">
+                    <rect key="frame" x="173" y="97" width="20" height="22"/>
+                    <state key="normal" image="facebook"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tv-4t-UoI">
+                    <rect key="frame" x="209" y="97" width="20" height="22"/>
+                    <state key="normal" image="linkedin"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fNd-BW-ivd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="29" id="2zT-qa-mQv"/>
+                <constraint firstItem="rvw-VE-xqg" firstAttribute="top" secondItem="Z2e-bG-Aa7" secondAttribute="bottom" constant="3.5" id="Hbv-td-brG"/>
+                <constraint firstItem="djv-BB-Xro" firstAttribute="leading" secondItem="fNd-BW-ivd" secondAttribute="trailing" constant="24" id="HsM-e0-y5W"/>
+                <constraint firstItem="2Tv-4t-UoI" firstAttribute="top" secondItem="rvw-VE-xqg" secondAttribute="top" id="Vpu-nh-D3T"/>
+                <constraint firstItem="Z2e-bG-Aa7" firstAttribute="width" secondItem="djv-BB-Xro" secondAttribute="width" id="XRL-0f-EJX"/>
+                <constraint firstItem="fNd-BW-ivd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XeF-U1-IJt"/>
+                <constraint firstAttribute="bottom" secondItem="fNd-BW-ivd" secondAttribute="bottom" id="Z38-6m-xJm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="djv-BB-Xro" secondAttribute="trailing" constant="24" id="bMm-5e-OgH"/>
+                <constraint firstItem="Z2e-bG-Aa7" firstAttribute="top" secondItem="djv-BB-Xro" secondAttribute="bottom" constant="3" id="bcQ-ut-aHe"/>
+                <constraint firstItem="Z2e-bG-Aa7" firstAttribute="leading" secondItem="djv-BB-Xro" secondAttribute="leading" id="bk2-u1-hKt"/>
+                <constraint firstItem="rvw-VE-xqg" firstAttribute="leading" secondItem="Z2e-bG-Aa7" secondAttribute="leading" id="jUz-BY-GXf"/>
+                <constraint firstItem="djv-BB-Xro" firstAttribute="top" secondItem="fNd-BW-ivd" secondAttribute="top" id="vSS-se-u0y"/>
+                <constraint firstItem="2Tv-4t-UoI" firstAttribute="leading" secondItem="rvw-VE-xqg" secondAttribute="trailing" constant="16" id="vvo-jo-TRf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="-17"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="facebook" width="20" height="20"/>
+        <image name="linkedin" width="20" height="20"/>
+        <image name="sutha" width="120" height="120"/>
+        <namedColor name="dark">
+            <color red="0.13725490196078433" green="0.11372549019607843" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
