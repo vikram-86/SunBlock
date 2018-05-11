@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0003B820A5BEE3006A854E /* SPFSelectorSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003B720A5BEE3006A854E /* SPFSelectorSceneViewController.swift */; };
+		8A0003BB20A5CB1E006A854E /* SPFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0003BA20A5CB1E006A854E /* SPFView.xib */; };
+		8A0003BD20A5CC9D006A854E /* SPFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003BC20A5CC9D006A854E /* SPFView.swift */; };
 		8A00E936209F7B72000C6882 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A00E935209F7B72000C6882 /* ProfileView.xib */; };
 		8A00E938209F8912000C6882 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00E937209F8912000C6882 /* ProfileView.swift */; };
 		8A00E93A209F8A71000C6882 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00E939209F8A71000C6882 /* Profile.swift */; };
@@ -39,6 +42,8 @@
 		8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CF53E209A5034001EFCCC /* SettingsSceneViewController.swift */; };
 		8A9CF542209A509E001EFCCC /* DisclaimerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CF541209A509E001EFCCC /* DisclaimerSceneViewController.swift */; };
 		8A9CF545209A5E2E001EFCCC /* AboutSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CF544209A5E2E001EFCCC /* AboutSceneViewController.swift */; };
+		8AC3C3F820A4CFC400FFFB20 /* SegmentChooserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC3C3F720A4CFC400FFFB20 /* SegmentChooserView.xib */; };
+		8AC3C3FA20A577EA00FFFB20 /* SegmentChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3C3F920A577EA00FFFB20 /* SegmentChooserView.swift */; };
 		8AD6B1FA2083D47E0073721E /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B1F92083D47E0073721E /* MainButton.swift */; };
 		8AD6B1FD2083E2FD0073721E /* SkinChooser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6B1FC2083E2FD0073721E /* SkinChooser.storyboard */; };
 		8AD6B2002083E80F0073721E /* SkinChooserSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B1FF2083E80F0073721E /* SkinChooserSceneViewController.swift */; };
@@ -47,6 +52,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A0003B720A5BEE3006A854E /* SPFSelectorSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFSelectorSceneViewController.swift; sourceTree = "<group>"; };
+		8A0003BA20A5CB1E006A854E /* SPFView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPFView.xib; sourceTree = "<group>"; };
+		8A0003BC20A5CC9D006A854E /* SPFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFView.swift; sourceTree = "<group>"; };
 		8A00E935209F7B72000C6882 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		8A00E937209F8912000C6882 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8A00E939209F8A71000C6882 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -81,6 +89,8 @@
 		8A9CF53E209A5034001EFCCC /* SettingsSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSceneViewController.swift; sourceTree = "<group>"; };
 		8A9CF541209A509E001EFCCC /* DisclaimerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerSceneViewController.swift; sourceTree = "<group>"; };
 		8A9CF544209A5E2E001EFCCC /* AboutSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSceneViewController.swift; sourceTree = "<group>"; };
+		8AC3C3F720A4CFC400FFFB20 /* SegmentChooserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentChooserView.xib; sourceTree = "<group>"; };
+		8AC3C3F920A577EA00FFFB20 /* SegmentChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentChooserView.swift; sourceTree = "<group>"; };
 		8AD6B1F92083D47E0073721E /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		8AD6B1FC2083E2FD0073721E /* SkinChooser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkinChooser.storyboard; sourceTree = "<group>"; };
 		8AD6B1FF2083E80F0073721E /* SkinChooserSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinChooserSceneViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +109,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A0003B620A5BECA006A854E /* SPFSelectorScene */ = {
+			isa = PBXGroup;
+			children = (
+				8A0003B720A5BEE3006A854E /* SPFSelectorSceneViewController.swift */,
+			);
+			path = SPFSelectorScene;
+			sourceTree = "<group>";
+		};
+		8A0003B920A5CB0F006A854E /* SPFView */ = {
+			isa = PBXGroup;
+			children = (
+				8A0003BA20A5CB1E006A854E /* SPFView.xib */,
+				8A0003BC20A5CC9D006A854E /* SPFView.swift */,
+			);
+			path = SPFView;
+			sourceTree = "<group>";
+		};
 		8A00E934209F7B61000C6882 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +236,7 @@
 		8A502EF52073C8770039D598 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8A0003B620A5BECA006A854E /* SPFSelectorScene */,
 				8A9CF543209A5E1F001EFCCC /* AboutScene */,
 				8A9CF540209A508F001EFCCC /* DisclaimerScene */,
 				8A9CF53D209A5018001EFCCC /* SettingScene */,
@@ -310,9 +338,20 @@
 			path = AboutScene;
 			sourceTree = "<group>";
 		};
+		8AC3C3F620A4CF9200FFFB20 /* SegmentChooserView */ = {
+			isa = PBXGroup;
+			children = (
+				8AC3C3F720A4CFC400FFFB20 /* SegmentChooserView.xib */,
+				8AC3C3F920A577EA00FFFB20 /* SegmentChooserView.swift */,
+			);
+			path = SegmentChooserView;
+			sourceTree = "<group>";
+		};
 		8AD6B1F72083D43C0073721E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A0003B920A5CB0F006A854E /* SPFView */,
+				8AC3C3F620A4CF9200FFFB20 /* SegmentChooserView */,
 				8A00E934209F7B61000C6882 /* ProfileView */,
 				8AD6B1F82083D46E0073721E /* Button */,
 			);
@@ -423,7 +462,9 @@
 				8A57482E2074316B00B295B9 /* Archivo-Italic.ttf in Resources */,
 				8A57482F2074316B00B295B9 /* Archivo-BoldItalic.ttf in Resources */,
 				8A502EE92073C8330039D598 /* LaunchScreen.storyboard in Resources */,
+				8A0003BB20A5CB1E006A854E /* SPFView.xib in Resources */,
 				8A5748312074316B00B295B9 /* Archivo-SemiBoldItalic.ttf in Resources */,
+				8AC3C3F820A4CFC400FFFB20 /* SegmentChooserView.xib in Resources */,
 				8A502EE62073C8330039D598 /* Assets.xcassets in Resources */,
 				8A5748382075222400B295B9 /* nevis.ttf in Resources */,
 				8AD6B1FD2083E2FD0073721E /* SkinChooser.storyboard in Resources */,
@@ -451,6 +492,7 @@
 				8AD6B2002083E80F0073721E /* SkinChooserSceneViewController.swift in Sources */,
 				8A23F6E320910B8400A30DDE /* NibOwnerLoadable.swift in Sources */,
 				8A9CF545209A5E2E001EFCCC /* AboutSceneViewController.swift in Sources */,
+				8A0003B820A5BEE3006A854E /* SPFSelectorSceneViewController.swift in Sources */,
 				8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */,
 				8AD6B1FA2083D47E0073721E /* MainButton.swift in Sources */,
 				8A0D7BB0208FCA1400003245 /* NibLoadable.swift in Sources */,
@@ -463,6 +505,8 @@
 				8A502EFA2073C95C0039D598 /* UIColor.swift in Sources */,
 				8A0D7BA8208FAAC000003245 /* SkinType.swift in Sources */,
 				8A9CF542209A509E001EFCCC /* DisclaimerSceneViewController.swift in Sources */,
+				8AC3C3FA20A577EA00FFFB20 /* SegmentChooserView.swift in Sources */,
+				8A0003BD20A5CC9D006A854E /* SPFView.swift in Sources */,
 				8A23F6E72091103500A30DDE /* UITableView.swift in Sources */,
 				8A0D7BAB208FABBB00003245 /* SkinImageContainer.swift in Sources */,
 				8A57482320742E8600B295B9 /* MainSceneViewController.swift in Sources */,

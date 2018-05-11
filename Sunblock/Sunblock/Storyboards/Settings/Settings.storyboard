@@ -407,7 +407,7 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                                 <rect key="frame" x="32" y="515" width="311" height="373"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <mutableString key="content">This app uses free commercial sources which as been used unmodified or modified.
+                                                        <string key="content">This app uses free commercial sources which as been used unmodified or modified.
 
 Here is a credit list for their content (n_n)
 
@@ -419,7 +419,7 @@ Timer icon by smashicons https://www.flaticon.com/authors/smashicons
 
 Suncreen icon by
 Flaticon basic licence https://www.flaticon.com/
-</mutableString>
+</string>
                                                         <attributes>
                                                             <font key="NSFont" size="16" name=".SFNSText"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>

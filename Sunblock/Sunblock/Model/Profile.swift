@@ -22,5 +22,4 @@ struct Profile: Codable{
         }
         return image
     }
-    
 }

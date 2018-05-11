@@ -20,17 +20,17 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="MainSceneViewController" customModule="Sunblock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="888"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDR-k8-pee">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="888"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8u-dk-Io7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="888"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waveBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hQl-YJ-ZWM">
-                                                <rect key="frame" x="0.0" y="472" width="375" height="600"/>
+                                                <rect key="frame" x="0.0" y="484" width="375" height="600"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="600" id="kDk-bU-b84"/>
                                                 </constraints>
@@ -217,9 +217,17 @@
                                                     <segue destination="a6d-lU-pH1" kind="show" id="Mf9-dP-Ayg"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHR-y8-ekb" customClass="SegmentChooserView" customModule="Sunblock" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="784" width="335" height="108"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="108" id="sRp-7L-g2H"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="hQl-YJ-ZWM" secondAttribute="trailing" id="4dl-az-3Wt"/>
+                                            <constraint firstAttribute="trailing" secondItem="lHR-y8-ekb" secondAttribute="trailing" constant="20" symbolic="YES" id="8hv-l9-C7o"/>
                                             <constraint firstItem="sVz-Qf-0z9" firstAttribute="leading" secondItem="EzQ-FY-KvU" secondAttribute="leading" id="BCn-TH-K0y"/>
                                             <constraint firstItem="tq1-lr-cHO" firstAttribute="leading" secondItem="QZp-GN-SpG" secondAttribute="leading" id="DFB-7P-ax8"/>
                                             <constraint firstItem="EzQ-FY-KvU" firstAttribute="top" secondItem="A8u-dk-Io7" secondAttribute="top" constant="85" id="Eie-ui-Q2p"/>
@@ -228,9 +236,10 @@
                                             <constraint firstItem="EzQ-FY-KvU" firstAttribute="leading" secondItem="A8u-dk-Io7" secondAttribute="leading" constant="36" id="L90-y7-AGy"/>
                                             <constraint firstItem="7gS-oa-coM" firstAttribute="centerY" secondItem="wnj-5C-DNj" secondAttribute="centerY" id="Ngf-DF-MAp"/>
                                             <constraint firstItem="zCE-AD-azP" firstAttribute="top" secondItem="XxE-Ak-bk8" secondAttribute="bottom" constant="148" id="O1k-rG-bHE"/>
-                                            <constraint firstAttribute="height" constant="888" id="O61-Bq-sbf"/>
+                                            <constraint firstAttribute="height" constant="900" id="O61-Bq-sbf"/>
                                             <constraint firstItem="zCE-AD-azP" firstAttribute="leading" secondItem="A8u-dk-Io7" secondAttribute="leading" constant="38" id="PwZ-Op-JQG"/>
                                             <constraint firstItem="lPh-aH-bly" firstAttribute="top" secondItem="tq1-lr-cHO" secondAttribute="bottom" constant="-0.5" id="QoS-1a-8dT"/>
+                                            <constraint firstItem="lHR-y8-ekb" firstAttribute="leading" secondItem="A8u-dk-Io7" secondAttribute="leading" constant="20" symbolic="YES" id="TYh-z5-zUx"/>
                                             <constraint firstItem="b82-LI-N8P" firstAttribute="top" secondItem="sVz-Qf-0z9" secondAttribute="bottom" constant="48" id="TqO-F0-2sy"/>
                                             <constraint firstItem="b82-LI-N8P" firstAttribute="leading" secondItem="sVz-Qf-0z9" secondAttribute="leading" id="UN7-G5-LiT"/>
                                             <constraint firstAttribute="trailing" secondItem="7gS-oa-coM" secondAttribute="trailing" constant="35" id="W0I-i0-ebu"/>
@@ -241,6 +250,7 @@
                                             <constraint firstItem="tq1-lr-cHO" firstAttribute="top" secondItem="XxE-Ak-bk8" secondAttribute="bottom" constant="253" id="m9y-Fx-tqx"/>
                                             <constraint firstAttribute="trailing" secondItem="YNw-RG-B1U" secondAttribute="trailing" constant="21" id="n4W-Xq-J2Q"/>
                                             <constraint firstItem="QZp-GN-SpG" firstAttribute="leading" secondItem="zCE-AD-azP" secondAttribute="leading" id="pMU-RF-8rc"/>
+                                            <constraint firstAttribute="bottom" secondItem="lHR-y8-ekb" secondAttribute="bottom" constant="8" id="sO9-4V-J1l"/>
                                             <constraint firstItem="hQl-YJ-ZWM" firstAttribute="bottom" secondItem="A8u-dk-Io7" secondAttribute="bottom" constant="184" id="svS-gn-JRe"/>
                                             <constraint firstAttribute="trailing" secondItem="QZp-GN-SpG" secondAttribute="trailing" constant="40" id="vrB-1W-5kb"/>
                                             <constraint firstAttribute="trailing" secondItem="lPh-aH-bly" secondAttribute="trailing" constant="40" id="zka-6I-0XQ"/>
@@ -265,7 +275,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <size key="freeformSize" width="375" height="888"/>
+                    <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="spfStackView" destination="iHG-ik-8gy" id="z6t-OK-WHm"/>
+                        <segue destination="OfL-O9-pcf" kind="show" identifier="spfSegue" id="drz-EN-qAJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,8 +293,69 @@
             </objects>
             <point key="canvasLocation" x="526" y="127"/>
         </scene>
+        <!--Selector Scene View Controller-->
+        <scene sceneID="CNe-Kd-8pM">
+            <objects>
+                <viewController id="OfL-O9-pcf" customClass="SPFSelectorSceneViewController" customModule="Sunblock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cMn-3G-mLD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.17000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q2-GF-wX7">
+                                <rect key="frame" x="0.0" y="303.5" width="375" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="hiA-lO-aDL"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ME-RQ-Nat">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXa-gE-Nuk">
+                                <rect key="frame" x="327" y="42" width="24" height="24"/>
+                                <state key="normal" image="closeMaterial"/>
+                                <connections>
+                                    <action selector="close" destination="OfL-O9-pcf" eventType="touchUpInside" id="KAR-X5-vjv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCm-PD-xen">
+                                <rect key="frame" x="276" y="325" width="62" height="36"/>
+                                <fontDescription key="fontDescription" name="nevis-Bold" family="nevis" pointSize="21"/>
+                                <state key="normal" title="Select">
+                                    <color key="titleColor" name="white"/>
+                                </state>
+                                <connections>
+                                    <action selector="select" destination="OfL-O9-pcf" eventType="touchUpInside" id="qvT-kF-p31"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="greenishTeal"/>
+                        <constraints>
+                            <constraint firstItem="3ME-RQ-Nat" firstAttribute="leading" secondItem="ptX-Kn-bWC" secondAttribute="leading" id="0K7-3f-vBt"/>
+                            <constraint firstItem="5q2-GF-wX7" firstAttribute="leading" secondItem="ptX-Kn-bWC" secondAttribute="leading" id="HcV-uV-Cz9"/>
+                            <constraint firstItem="3ME-RQ-Nat" firstAttribute="bottom" secondItem="ptX-Kn-bWC" secondAttribute="bottom" id="IrT-to-nyf"/>
+                            <constraint firstItem="ptX-Kn-bWC" firstAttribute="top" secondItem="3ME-RQ-Nat" secondAttribute="top" id="QkJ-Vh-k3o"/>
+                            <constraint firstItem="ptX-Kn-bWC" firstAttribute="trailing" secondItem="vCm-PD-xen" secondAttribute="trailing" constant="37" id="SrH-vp-Djm"/>
+                            <constraint firstItem="ptX-Kn-bWC" firstAttribute="trailing" secondItem="JXa-gE-Nuk" secondAttribute="trailing" constant="24" id="WEv-ze-w8y"/>
+                            <constraint firstItem="3ME-RQ-Nat" firstAttribute="trailing" secondItem="ptX-Kn-bWC" secondAttribute="trailing" id="WmO-Oj-hoX"/>
+                            <constraint firstItem="JXa-gE-Nuk" firstAttribute="top" secondItem="ptX-Kn-bWC" secondAttribute="top" constant="22" id="sgE-xQ-7IR"/>
+                            <constraint firstItem="vCm-PD-xen" firstAttribute="centerY" secondItem="5q2-GF-wX7" secondAttribute="centerY" id="siz-p2-PkT"/>
+                            <constraint firstItem="ptX-Kn-bWC" firstAttribute="trailing" secondItem="5q2-GF-wX7" secondAttribute="trailing" id="wKz-vj-SIV"/>
+                            <constraint firstItem="5q2-GF-wX7" firstAttribute="centerY" secondItem="3ME-RQ-Nat" secondAttribute="centerY" id="yM6-J6-m2h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ptX-Kn-bWC"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="3ME-RQ-Nat" id="O19-a5-gwg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7w2-qM-LAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-303.19999999999999" y="954.87256371814101"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="closeMaterial" width="24" height="24"/>
         <image name="iconSettings" width="20" height="20"/>
         <image name="rain" width="40" height="36"/>
         <image name="stopwatch" width="34" height="35"/>
@@ -290,8 +365,14 @@
         <namedColor name="dirtyPurple">
             <color red="0.33725490196078434" green="0.25882352941176473" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="greenishTeal">
+            <color red="0.2630000114440918" green="0.81199997663497925" blue="0.45100000500679016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="perrywinkle">
             <color red="0.57300001382827759" green="0.45100000500679016" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="0.98799997568130493" green="0.98799997568130493" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="0.98799997568130493" green="0.98799997568130493" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
