@@ -10,6 +10,10 @@
 		8A0003B820A5BEE3006A854E /* SPFSelectorSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003B720A5BEE3006A854E /* SPFSelectorSceneViewController.swift */; };
 		8A0003BB20A5CB1E006A854E /* SPFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0003BA20A5CB1E006A854E /* SPFView.xib */; };
 		8A0003BD20A5CC9D006A854E /* SPFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003BC20A5CC9D006A854E /* SPFView.swift */; };
+		8A0003C520A8ADA2006A854E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003C420A8ADA2006A854E /* LocationService.swift */; };
+		8A0003C720A96E85006A854E /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003C620A96E85006A854E /* UserLocation.swift */; };
+		8A0003CA20A96F7C006A854E /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003C920A96F7C006A854E /* LocationError.swift */; };
+		8A0003CC20A983C2006A854E /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003CB20A983C2006A854E /* AlertService.swift */; };
 		8A00E936209F7B72000C6882 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A00E935209F7B72000C6882 /* ProfileView.xib */; };
 		8A00E938209F8912000C6882 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00E937209F8912000C6882 /* ProfileView.swift */; };
 		8A00E93A209F8A71000C6882 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00E939209F8A71000C6882 /* Profile.swift */; };
@@ -55,6 +59,10 @@
 		8A0003B720A5BEE3006A854E /* SPFSelectorSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFSelectorSceneViewController.swift; sourceTree = "<group>"; };
 		8A0003BA20A5CB1E006A854E /* SPFView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPFView.xib; sourceTree = "<group>"; };
 		8A0003BC20A5CC9D006A854E /* SPFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFView.swift; sourceTree = "<group>"; };
+		8A0003C420A8ADA2006A854E /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		8A0003C620A96E85006A854E /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		8A0003C920A96F7C006A854E /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
+		8A0003CB20A983C2006A854E /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		8A00E935209F7B72000C6882 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		8A00E937209F8912000C6882 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8A00E939209F8A71000C6882 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -126,6 +134,31 @@
 			path = SPFView;
 			sourceTree = "<group>";
 		};
+		8A0003C220A8AD8B006A854E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8A0003C320A8AD96006A854E /* LocationService */,
+				8A0003CB20A983C2006A854E /* AlertService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8A0003C320A8AD96006A854E /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				8A0003C420A8ADA2006A854E /* LocationService.swift */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
+		8A0003C820A96F74006A854E /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8A0003C920A96F7C006A854E /* LocationError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		8A00E934209F7B61000C6882 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +174,7 @@
 				8A0D7BA7208FAAC000003245 /* SkinType.swift */,
 				8A0D7BAA208FABBB00003245 /* SkinImageContainer.swift */,
 				8A00E939209F8A71000C6882 /* Profile.swift */,
+				8A0003C620A96E85006A854E /* UserLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +209,8 @@
 		8A502EDD2073C8330039D598 /* Sunblock */ = {
 			isa = PBXGroup;
 			children = (
+				8A0003C820A96F74006A854E /* Error */,
+				8A0003C220A8AD8B006A854E /* Services */,
 				8A0D7BAC208FC38500003245 /* Protocols */,
 				8A0D7BA6208FAAB400003245 /* Model */,
 				8AD6B1F72083D43C0073721E /* Views */,
@@ -488,9 +524,12 @@
 			files = (
 				8A36537320950E1000337B3C /* UIView.swift in Sources */,
 				8A23F6E92091140A00A30DDE /* StoryboardIdentifiable.swift in Sources */,
+				8A0003CC20A983C2006A854E /* AlertService.swift in Sources */,
 				8AD6B2032083E8A10073721E /* SkinTypeCell.swift in Sources */,
 				8AD6B2002083E80F0073721E /* SkinChooserSceneViewController.swift in Sources */,
 				8A23F6E320910B8400A30DDE /* NibOwnerLoadable.swift in Sources */,
+				8A0003C720A96E85006A854E /* UserLocation.swift in Sources */,
+				8A0003CA20A96F7C006A854E /* LocationError.swift in Sources */,
 				8A9CF545209A5E2E001EFCCC /* AboutSceneViewController.swift in Sources */,
 				8A0003B820A5BEE3006A854E /* SPFSelectorSceneViewController.swift in Sources */,
 				8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */,
@@ -503,6 +542,7 @@
 				8A00E938209F8912000C6882 /* ProfileView.swift in Sources */,
 				8A502EDF2073C8330039D598 /* AppDelegate.swift in Sources */,
 				8A502EFA2073C95C0039D598 /* UIColor.swift in Sources */,
+				8A0003C520A8ADA2006A854E /* LocationService.swift in Sources */,
 				8A0D7BA8208FAAC000003245 /* SkinType.swift in Sources */,
 				8A9CF542209A509E001EFCCC /* DisclaimerSceneViewController.swift in Sources */,
 				8AC3C3FA20A577EA00FFFB20 /* SegmentChooserView.swift in Sources */,

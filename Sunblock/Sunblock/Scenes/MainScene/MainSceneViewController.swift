@@ -23,7 +23,15 @@ class MainSceneViewController: UIViewController {
         // setting up touch gesture for spf
         let gesture = UITapGestureRecognizer(target: self, action: #selector(selectSunscreen))
         spfStackView.addGestureRecognizer(gesture)
+		LocationService.current.delegate = self
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        LocationService.current.requestLocation()
+    }
+
+
 }
 
 extension MainSceneViewController{
@@ -35,11 +43,22 @@ extension MainSceneViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? SPFSelectorSceneViewController{
             vc.delegate = self
-
         }
     }
 }
 
+//MARK: Location Service Delegate
+extension MainSceneViewController: LocationServiceDelegate{
+    func locationServiceDidFinish(with location: UserLocation) {
+        AlertService.presentAlert(with: location.cityName)
+    }
+
+    func locationServiceDidFinishWithError(_ error: LocationError) {
+        AlertService.presentAlert(with: error.errorDescription!)
+    }
+}
+
+//MARK: SPFSelectorScene Delegate
 extension MainSceneViewController: SPFSelectorSceneDelegate{
     func sceneSelected(spf: Int) {
         print(spf)
