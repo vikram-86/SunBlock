@@ -50,7 +50,19 @@ extension MainSceneViewController{
 //MARK: Location Service Delegate
 extension MainSceneViewController: LocationServiceDelegate{
     func locationServiceDidFinish(with location: UserLocation) {
-        AlertService.presentAlert(with: location.cityName)
+
+        // Check location change and empty weather list
+
+//        let client = WeatherClient()
+//        client.getFeed(from: .getWeather(location)) { (result) in
+//            switch result{
+//            case .success(let weatherResponse):
+//                guard let response = weatherResponse else { return }
+//                CoreDataStack.current.createWeathers(from: response)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
 
     func locationServiceDidFinishWithError(_ error: LocationError) {

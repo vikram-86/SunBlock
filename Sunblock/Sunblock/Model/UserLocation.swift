@@ -14,4 +14,8 @@ struct UserLocation{
     let cityName	: String
     let country		: String
     let coordinate	: UserCoordinate
+
+    var coordinateAsString: String {
+        return "\(coordinate.latitude),\(coordinate.longitude)"
+    }
 }

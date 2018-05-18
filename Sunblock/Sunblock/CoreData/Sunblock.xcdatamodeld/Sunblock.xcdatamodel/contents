@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HourlyWeather" representedClassName=".HourlyWeather" syncable="YES">
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="data" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="WeatherData" inverseName="hourly" inverseEntity="WeatherData" syncable="YES"/>
+        <relationship name="weather" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Weather" inverseName="hourly" inverseEntity="Weather" syncable="YES"/>
+    </entity>
+    <entity name="Weather" representedClassName=".Weather" syncable="YES">
+        <relationship name="hourly" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="HourlyWeather" inverseName="weather" inverseEntity="HourlyWeather" syncable="YES"/>
+    </entity>
+    <entity name="WeatherData" representedClassName=".WeatherData" syncable="YES">
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temperature" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="time" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="uvIndex" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="hourly" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HourlyWeather" inverseName="data" inverseEntity="HourlyWeather" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Weather" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="HourlyWeather" positionX="171" positionY="162" width="128" height="103"/>
+        <element name="WeatherData" positionX="144" positionY="498" width="128" height="133"/>
+    </elements>
+</model>
