@@ -277,6 +277,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="900"/>
                     <connections>
+                        <outlet property="segmentView" destination="lHR-y8-ekb" id="Fty-sR-13x"/>
                         <outlet property="spfStackView" destination="iHG-ik-8gy" id="z6t-OK-WHm"/>
                         <segue destination="OfL-O9-pcf" kind="show" identifier="spfSegue" id="drz-EN-qAJ"/>
                     </connections>

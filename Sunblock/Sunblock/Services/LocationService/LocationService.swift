@@ -62,7 +62,7 @@ extension LocationService: CLLocationManagerDelegate{
         guard
         	let userLocation = locations.first
         else{ return }
-
+        let altitude = userLocation.altitude
         manager.stopUpdatingLocation()
         geoCoder.reverseGeocodeLocation(userLocation) { (placemarks, error) in
             if let error = error {
@@ -73,7 +73,7 @@ extension LocationService: CLLocationManagerDelegate{
 
                     let coordinate = UserCoordinate(latitude: Float(userLocation.coordinate.latitude),
                                                     longitude: Float(userLocation.coordinate.longitude))
-                    let userLocation = UserLocation(cityName: city, country: country, coordinate: coordinate)
+                    let userLocation = UserLocation(cityName: city, country: country, coordinate: coordinate, altitude: Float(altitude))
                     self.delegate?.locationServiceDidFinish(with: userLocation)
                 }
             }

@@ -12,7 +12,9 @@ class MainSceneViewController: UIViewController {
 
     // Private
     private let spfSegue	= "spfSegue"
-    @IBOutlet weak var spfStackView: UIStackView!
+
+    @IBOutlet weak var spfStackView	: UIStackView!
+    @IBOutlet weak var segmentView	: SegmentChooserView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class MainSceneViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(selectSunscreen))
         spfStackView.addGestureRecognizer(gesture)
 		LocationService.current.delegate = self
+        segmentView.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -74,5 +77,13 @@ extension MainSceneViewController: LocationServiceDelegate{
 extension MainSceneViewController: SPFSelectorSceneDelegate{
     func sceneSelected(spf: Int) {
         print(spf)
+    }
+}
+
+//MARK: SegmentChooserDelegate
+extension MainSceneViewController: SegmentChooserDelegate{
+
+    func segmentSelected(environment: Environment) {
+        // Update SSE
     }
 }

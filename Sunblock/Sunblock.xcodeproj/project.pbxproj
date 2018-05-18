@@ -28,6 +28,8 @@
 		8A00044A20AE03A7006A854E /* Sunblock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A00044820AE03A7006A854E /* Sunblock.xcdatamodeld */; };
 		8A00045120AE07C7006A854E /* Weather+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00044F20AE07C7006A854E /* Weather+CoreDataClass.swift */; };
 		8A00045220AE07C7006A854E /* Weather+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00045020AE07C7006A854E /* Weather+CoreDataProperties.swift */; };
+		8A00045420AEB45D006A854E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00045320AEB45D006A854E /* Date.swift */; };
+		8A00045620AECA53006A854E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00045520AECA53006A854E /* Environment.swift */; };
 		8A00E936209F7B72000C6882 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A00E935209F7B72000C6882 /* ProfileView.xib */; };
 		8A00E938209F8912000C6882 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00E937209F8912000C6882 /* ProfileView.swift */; };
 		8A00E93A209F8A71000C6882 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00E939209F8A71000C6882 /* Profile.swift */; };
@@ -91,6 +93,8 @@
 		8A00044920AE03A7006A854E /* Sunblock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sunblock.xcdatamodel; sourceTree = "<group>"; };
 		8A00044F20AE07C7006A854E /* Weather+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8A00045020AE07C7006A854E /* Weather+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8A00045320AEB45D006A854E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		8A00045520AECA53006A854E /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		8A00E935209F7B72000C6882 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		8A00E937209F8912000C6882 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8A00E939209F8A71000C6882 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 				8A0D7BAA208FABBB00003245 /* SkinImageContainer.swift */,
 				8A00E939209F8A71000C6882 /* Profile.swift */,
 				8A0003C620A96E85006A854E /* UserLocation.swift */,
+				8A00045520AECA53006A854E /* Environment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				8A23F6EA2091143300A30DDE /* UIStoryboard.swift */,
 				8A36537220950E1000337B3C /* UIView.swift */,
 				8A00042B20AAEF23006A854E /* CodingUserInfoKey.swift */,
+				8A00045320AEB45D006A854E /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 				8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */,
 				8A00045120AE07C7006A854E /* Weather+CoreDataClass.swift in Sources */,
 				8AD6B1FA2083D47E0073721E /* MainButton.swift in Sources */,
+				8A00045420AEB45D006A854E /* Date.swift in Sources */,
 				8A00041C20AAD4E4006A854E /* CoreDataStack.swift in Sources */,
 				8A0D7BB0208FCA1400003245 /* NibLoadable.swift in Sources */,
 				8A23F6EB2091143300A30DDE /* UIStoryboard.swift in Sources */,
@@ -648,6 +655,7 @@
 				8A0003E020AA147D006A854E /* WeatherClient.swift in Sources */,
 				8A00045220AE07C7006A854E /* Weather+CoreDataProperties.swift in Sources */,
 				8A00E938209F8912000C6882 /* ProfileView.swift in Sources */,
+				8A00045620AECA53006A854E /* Environment.swift in Sources */,
 				8A502EDF2073C8330039D598 /* AppDelegate.swift in Sources */,
 				8A502EFA2073C95C0039D598 /* UIColor.swift in Sources */,
 				8A00044320ADF174006A854E /* WeatherDataResponse.swift in Sources */,

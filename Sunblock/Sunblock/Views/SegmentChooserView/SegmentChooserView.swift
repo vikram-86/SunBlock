@@ -8,15 +8,25 @@
 
 import UIKit
 
+protocol SegmentChooserDelegate: class {
+    func segmentSelected(environment: Environment)
+}
+
 @IBDesignable class SegmentChooserView: UIView, NibFileOwnerLoadable{
 
     @IBOutlet private weak var firstDimmerView: UIView!
     @IBOutlet private weak var secondDimmerView: UIView!
     @IBOutlet private weak var thirdDimmerView: UIView!
 
+    private var environtment = Environment.city
+    weak var delegate	: SegmentChooserDelegate?
+
     @IBInspectable var selectedIndex = 0 {
         didSet{
             updateSelection(for: selectedIndex)
+            self.environtment = Environment.init(value: selectedIndex)
+            self.environtment.save()
+            self.delegate?.segmentSelected(environment: self.environtment)
         }
     }
 

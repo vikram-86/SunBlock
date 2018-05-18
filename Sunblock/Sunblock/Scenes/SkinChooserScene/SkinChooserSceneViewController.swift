@@ -54,7 +54,7 @@ class SkinChooserSceneViewController: UIViewController {
 
         let type = source[index.item]
         print(type)
-
+        
         // Save current skintype to persistance
         if let navController = self.navigationController{
             navController.popViewController(animated: true)
