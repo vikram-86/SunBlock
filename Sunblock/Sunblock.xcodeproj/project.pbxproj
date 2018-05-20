@@ -68,6 +68,8 @@
 		8AE2771F20B0A79300D8E65F /* SPFSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE2771E20B0A79300D8E65F /* SPFSelectionView.xib */; };
 		8AE2772120B0ADDF00D8E65F /* SPFSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772020B0ADDF00D8E65F /* SPFSelectionView.swift */; };
 		8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772420B1CA7900D8E65F /* UIFont.swift */; };
+		8AE2772820B1F73500D8E65F /* SSEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE2772720B1F73500D8E65F /* SSEView.xib */; };
+		8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772920B1FE8C00D8E65F /* SSEView.swift */; };
 		8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAE299207FED9500DA7D0E /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +137,8 @@
 		8AE2771E20B0A79300D8E65F /* SPFSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPFSelectionView.xib; sourceTree = "<group>"; };
 		8AE2772020B0ADDF00D8E65F /* SPFSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFSelectionView.swift; sourceTree = "<group>"; };
 		8AE2772420B1CA7900D8E65F /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		8AE2772720B1F73500D8E65F /* SSEView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSEView.xib; sourceTree = "<group>"; };
+		8AE2772920B1FE8C00D8E65F /* SSEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEView.swift; sourceTree = "<group>"; };
 		8AFAE299207FED9500DA7D0E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -473,6 +477,7 @@
 		8AD6B1F72083D43C0073721E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8AE2772620B1F69400D8E65F /* SSEView */,
 				8AE2771D20B0A5F800D8E65F /* SPFSelectionView */,
 				8AC3C3F620A4CF9200FFFB20 /* SegmentChooserView */,
 				8A00E934209F7B61000C6882 /* ProfileView */,
@@ -521,6 +526,15 @@
 				8AE2772020B0ADDF00D8E65F /* SPFSelectionView.swift */,
 			);
 			path = SPFSelectionView;
+			sourceTree = "<group>";
+		};
+		8AE2772620B1F69400D8E65F /* SSEView */ = {
+			isa = PBXGroup;
+			children = (
+				8AE2772720B1F73500D8E65F /* SSEView.xib */,
+				8AE2772920B1FE8C00D8E65F /* SSEView.swift */,
+			);
+			path = SSEView;
 			sourceTree = "<group>";
 		};
 		8AFAE298207FED8400DA7D0E /* Settings */ = {
@@ -596,6 +610,7 @@
 				8A502EE92073C8330039D598 /* LaunchScreen.storyboard in Resources */,
 				8A5748312074316B00B295B9 /* Archivo-SemiBoldItalic.ttf in Resources */,
 				8AE2771F20B0A79300D8E65F /* SPFSelectionView.xib in Resources */,
+				8AE2772820B1F73500D8E65F /* SSEView.xib in Resources */,
 				8AC3C3F820A4CFC400FFFB20 /* SegmentChooserView.xib in Resources */,
 				8A502EE62073C8330039D598 /* Assets.xcassets in Resources */,
 				8A5748382075222400B295B9 /* nevis.ttf in Resources */,
@@ -635,6 +650,7 @@
 				8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */,
 				8A00045120AE07C7006A854E /* Weather+CoreDataClass.swift in Sources */,
 				8AD6B1FA2083D47E0073721E /* MainButton.swift in Sources */,
+				8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */,
 				8A00045420AEB45D006A854E /* Date.swift in Sources */,
 				8A00041C20AAD4E4006A854E /* CoreDataStack.swift in Sources */,
 				8A0D7BB0208FCA1400003245 /* NibLoadable.swift in Sources */,
