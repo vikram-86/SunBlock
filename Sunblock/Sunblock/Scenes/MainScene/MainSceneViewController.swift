@@ -13,20 +13,18 @@ class MainSceneViewController: UIViewController {
     // Private
     private let spfSegue	= "spfSegue"
 
-    @IBOutlet weak var spfStackView	: UIStackView!
     @IBOutlet weak var segmentView	: SegmentChooserView!
+    @IBOutlet weak var spfSelectionView: SPFSelectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.appColor(.perryWinkle)
-
-        // setting up touch gesture for spf
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(selectSunscreen))
-        spfStackView.addGestureRecognizer(gesture)
-		LocationService.current.delegate = self
-        segmentView.delegate = self
+        
+		LocationService.current.delegate	= self
+        segmentView.delegate 				= self
+        spfSelectionView.delegate 			= self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -42,12 +40,7 @@ extension MainSceneViewController{
     @objc private func selectSunscreen(){
         performSegue(withIdentifier: spfSegue, sender: nil)
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? SPFSelectorSceneViewController{
-            vc.delegate = self
-        }
-    }
+    
 }
 
 //MARK: Location Service Delegate
@@ -73,9 +66,9 @@ extension MainSceneViewController: LocationServiceDelegate{
     }
 }
 
-//MARK: SPFSelectorScene Delegate
-extension MainSceneViewController: SPFSelectorSceneDelegate{
-    func sceneSelected(spf: Int) {
+//MARK: SPFDelegate
+extension MainSceneViewController: SPFDelegate{
+    func selectorSelected(spf: Int) {
         print(spf)
     }
 }

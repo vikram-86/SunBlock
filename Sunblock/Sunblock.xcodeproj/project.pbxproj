@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A0003B820A5BEE3006A854E /* SPFSelectorSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003B720A5BEE3006A854E /* SPFSelectorSceneViewController.swift */; };
-		8A0003BB20A5CB1E006A854E /* SPFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0003BA20A5CB1E006A854E /* SPFView.xib */; };
-		8A0003BD20A5CC9D006A854E /* SPFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003BC20A5CC9D006A854E /* SPFView.swift */; };
 		8A0003C520A8ADA2006A854E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003C420A8ADA2006A854E /* LocationService.swift */; };
 		8A0003C720A96E85006A854E /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003C620A96E85006A854E /* UserLocation.swift */; };
 		8A0003CA20A96F7C006A854E /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0003C920A96F7C006A854E /* LocationError.swift */; };
@@ -68,13 +65,13 @@
 		8AD6B1FD2083E2FD0073721E /* SkinChooser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6B1FC2083E2FD0073721E /* SkinChooser.storyboard */; };
 		8AD6B2002083E80F0073721E /* SkinChooserSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B1FF2083E80F0073721E /* SkinChooserSceneViewController.swift */; };
 		8AD6B2032083E8A10073721E /* SkinTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B2022083E8A10073721E /* SkinTypeCell.swift */; };
+		8AE2771F20B0A79300D8E65F /* SPFSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE2771E20B0A79300D8E65F /* SPFSelectionView.xib */; };
+		8AE2772120B0ADDF00D8E65F /* SPFSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772020B0ADDF00D8E65F /* SPFSelectionView.swift */; };
+		8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772420B1CA7900D8E65F /* UIFont.swift */; };
 		8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAE299207FED9500DA7D0E /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A0003B720A5BEE3006A854E /* SPFSelectorSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFSelectorSceneViewController.swift; sourceTree = "<group>"; };
-		8A0003BA20A5CB1E006A854E /* SPFView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPFView.xib; sourceTree = "<group>"; };
-		8A0003BC20A5CC9D006A854E /* SPFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFView.swift; sourceTree = "<group>"; };
 		8A0003C420A8ADA2006A854E /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		8A0003C620A96E85006A854E /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		8A0003C920A96F7C006A854E /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
@@ -135,6 +132,9 @@
 		8AD6B1FC2083E2FD0073721E /* SkinChooser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkinChooser.storyboard; sourceTree = "<group>"; };
 		8AD6B1FF2083E80F0073721E /* SkinChooserSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinChooserSceneViewController.swift; sourceTree = "<group>"; };
 		8AD6B2022083E8A10073721E /* SkinTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinTypeCell.swift; sourceTree = "<group>"; };
+		8AE2771E20B0A79300D8E65F /* SPFSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPFSelectionView.xib; sourceTree = "<group>"; };
+		8AE2772020B0ADDF00D8E65F /* SPFSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFSelectionView.swift; sourceTree = "<group>"; };
+		8AE2772420B1CA7900D8E65F /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		8AFAE299207FED9500DA7D0E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,23 +149,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A0003B620A5BECA006A854E /* SPFSelectorScene */ = {
-			isa = PBXGroup;
-			children = (
-				8A0003B720A5BEE3006A854E /* SPFSelectorSceneViewController.swift */,
-			);
-			path = SPFSelectorScene;
-			sourceTree = "<group>";
-		};
-		8A0003B920A5CB0F006A854E /* SPFView */ = {
-			isa = PBXGroup;
-			children = (
-				8A0003BA20A5CB1E006A854E /* SPFView.xib */,
-				8A0003BC20A5CC9D006A854E /* SPFView.swift */,
-			);
-			path = SPFView;
-			sourceTree = "<group>";
-		};
 		8A0003C220A8AD8B006A854E /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,7 +357,6 @@
 		8A502EF52073C8770039D598 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				8A0003B620A5BECA006A854E /* SPFSelectorScene */,
 				8A9CF543209A5E1F001EFCCC /* AboutScene */,
 				8A9CF540209A508F001EFCCC /* DisclaimerScene */,
 				8A9CF53D209A5018001EFCCC /* SettingScene */,
@@ -410,6 +392,7 @@
 				8A36537220950E1000337B3C /* UIView.swift */,
 				8A00042B20AAEF23006A854E /* CodingUserInfoKey.swift */,
 				8A00045320AEB45D006A854E /* Date.swift */,
+				8AE2772420B1CA7900D8E65F /* UIFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -490,7 +473,7 @@
 		8AD6B1F72083D43C0073721E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8A0003B920A5CB0F006A854E /* SPFView */,
+				8AE2771D20B0A5F800D8E65F /* SPFSelectionView */,
 				8AC3C3F620A4CF9200FFFB20 /* SegmentChooserView */,
 				8A00E934209F7B61000C6882 /* ProfileView */,
 				8AD6B1F82083D46E0073721E /* Button */,
@@ -529,6 +512,15 @@
 				8AD6B2022083E8A10073721E /* SkinTypeCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		8AE2771D20B0A5F800D8E65F /* SPFSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8AE2771E20B0A79300D8E65F /* SPFSelectionView.xib */,
+				8AE2772020B0ADDF00D8E65F /* SPFSelectionView.swift */,
+			);
+			path = SPFSelectionView;
 			sourceTree = "<group>";
 		};
 		8AFAE298207FED8400DA7D0E /* Settings */ = {
@@ -602,8 +594,8 @@
 				8A57482E2074316B00B295B9 /* Archivo-Italic.ttf in Resources */,
 				8A57482F2074316B00B295B9 /* Archivo-BoldItalic.ttf in Resources */,
 				8A502EE92073C8330039D598 /* LaunchScreen.storyboard in Resources */,
-				8A0003BB20A5CB1E006A854E /* SPFView.xib in Resources */,
 				8A5748312074316B00B295B9 /* Archivo-SemiBoldItalic.ttf in Resources */,
+				8AE2771F20B0A79300D8E65F /* SPFSelectionView.xib in Resources */,
 				8AC3C3F820A4CFC400FFFB20 /* SegmentChooserView.xib in Resources */,
 				8A502EE62073C8330039D598 /* Assets.xcassets in Resources */,
 				8A5748382075222400B295B9 /* nevis.ttf in Resources */,
@@ -639,7 +631,6 @@
 				8A0003CA20A96F7C006A854E /* LocationError.swift in Sources */,
 				8A9CF545209A5E2E001EFCCC /* AboutSceneViewController.swift in Sources */,
 				8A0003DA20A9C35B006A854E /* APIError.swift in Sources */,
-				8A0003B820A5BEE3006A854E /* SPFSelectorSceneViewController.swift in Sources */,
 				8A00044A20AE03A7006A854E /* Sunblock.xcdatamodeld in Sources */,
 				8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */,
 				8A00045120AE07C7006A854E /* Weather+CoreDataClass.swift in Sources */,
@@ -655,6 +646,7 @@
 				8A0003E020AA147D006A854E /* WeatherClient.swift in Sources */,
 				8A00045220AE07C7006A854E /* Weather+CoreDataProperties.swift in Sources */,
 				8A00E938209F8912000C6882 /* ProfileView.swift in Sources */,
+				8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */,
 				8A00045620AECA53006A854E /* Environment.swift in Sources */,
 				8A502EDF2073C8330039D598 /* AppDelegate.swift in Sources */,
 				8A502EFA2073C95C0039D598 /* UIColor.swift in Sources */,
@@ -663,9 +655,9 @@
 				8A0D7BA8208FAAC000003245 /* SkinType.swift in Sources */,
 				8A9CF542209A509E001EFCCC /* DisclaimerSceneViewController.swift in Sources */,
 				8A00044720ADF599006A854E /* WeatherHourlyResponse.swift in Sources */,
+				8AE2772120B0ADDF00D8E65F /* SPFSelectionView.swift in Sources */,
 				8AC3C3FA20A577EA00FFFB20 /* SegmentChooserView.swift in Sources */,
 				8A0003D620A9BF54006A854E /* Result.swift in Sources */,
-				8A0003BD20A5CC9D006A854E /* SPFView.swift in Sources */,
 				8A00042C20AAEF23006A854E /* CodingUserInfoKey.swift in Sources */,
 				8A23F6E72091103500A30DDE /* UITableView.swift in Sources */,
 				8A0D7BAB208FABBB00003245 /* SkinImageContainer.swift in Sources */,
