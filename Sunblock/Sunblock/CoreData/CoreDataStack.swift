@@ -88,12 +88,15 @@ class CoreDataStack{
         }
     }
 
-    func createWeathers(from response: WeatherResponse){
+    @discardableResult func createWeathers(from response: WeatherResponse) -> [Weather]{
         let context = persistentContainer.viewContext
-        Weather.createWeather(from: response.currently, in: context)
+        var weathers = [Weather]()
         response.hourly.data.forEach {
-            Weather.createWeather(from: $0, in: context)
+            let weather = Weather.createWeather(from: $0, in: context)
+            weathers.append(weather)
         }
+
         saveContext()
+        return weathers
     }
 }

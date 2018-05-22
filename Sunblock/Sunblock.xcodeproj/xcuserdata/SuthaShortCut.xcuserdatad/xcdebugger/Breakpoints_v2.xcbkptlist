@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sunblock/App/AppDelegate.swift"
-            timestampString = "548683795.595313"
+            filePath = "Sunblock/Scenes/MainScene/MainSceneViewController.swift"
+            timestampString = "548713327.399195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "locationServiceDidFinish(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-            timestampString = "548683795.595417"
+            timestampString = "548713327.3995709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "locationServiceDidFinish(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -19,8 +19,8 @@ enum Environment: Int{
 
     init(value: Int){
         switch value{
-        case 0: self = .mountain
-        case 1: self = .city
+        case 0: self = .city
+        case 1: self = .mountain
         case 2: self = .water
         default: self = .city
         }
@@ -42,8 +42,8 @@ enum Environment: Int{
         let type = UserDefaults.standard.integer(forKey: Keys.environment)
 
         switch type{
-        case 0: return .mountain
-        case 1: return .city
+        case 0: return .city
+        case 1: return .mountain
         case 2: return .water
         default: return .city
         }

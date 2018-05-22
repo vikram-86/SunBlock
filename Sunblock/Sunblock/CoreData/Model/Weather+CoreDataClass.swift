@@ -13,8 +13,8 @@ import CoreData
 
 public class Weather: NSManagedObject {
 
-    class func createWeather(from response: WeatherDataResponse,
-                             in context: NSManagedObjectContext){
+    @discardableResult class func createWeather(from response: WeatherDataResponse,
+                             in context: NSManagedObjectContext) -> Weather{
         let entity = NSEntityDescription.entity(forEntityName: "Weather", in: context)!
         let weather = Weather(entity: entity, insertInto: context)
         weather.icon = response.icon
@@ -22,6 +22,10 @@ public class Weather: NSManagedObject {
         weather.temperature = response.temperature
         weather.time = Int64(response.time)
         weather.uvIndex = response.uvIndex
+        return weather
     }
 
+    class func loadWeathersFromPersistance() -> [Weather]?{
+        return CoreDataStack.current.fetchFromStorage()
+    }
 }

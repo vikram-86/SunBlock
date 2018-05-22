@@ -22,6 +22,26 @@ class MainSceneViewController: UIViewController {
     @IBOutlet weak var segmentView	: SegmentChooserView!
     @IBOutlet weak var spfSelectionView: SPFSelectionView!
 
+    private var currentEnvironment: Environment {
+        return Environment.load()
+    }
+
+    private var currentSkinType: SkinType {
+        return SkinType.load()
+    }
+
+    private var weathers: [Weather] = []{
+        didSet{
+            // Update SSE..
+        }
+    }
+
+    private var currentSPF: Int = 0{
+        didSet{
+            // Update SSE..
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,6 +82,13 @@ class MainSceneViewController: UIViewController {
 
 }
 
+//MARK: - SSE
+extension MainSceneViewController{
+    private func updateSSE(){
+        
+    }
+}
+
 extension MainSceneViewController{
 
     @objc private func selectSunscreen(){
@@ -73,19 +100,44 @@ extension MainSceneViewController{
 //MARK: Location Service Delegate
 extension MainSceneViewController: LocationServiceDelegate{
     func locationServiceDidFinish(with location: UserLocation) {
+        if let lastLocation = UserLocation.load(){
+            if lastLocation != location{
+                // Clear Persistance
+                location.save()
+                CoreDataStack.current.clearStorage()
+                // Load new weather data from Net
+                loadWeathersFromNet(for: location)
+            }else{
+                // Get list of weather for current location,
+                if let weathers = Weather.loadWeathersFromPersistance(),
+                    !weathers.isEmpty{
+                    // Take the first weather and Update SSE
+                }else{
+                    CoreDataStack.current.clearStorage()
+                    loadWeathersFromNet(for: location)
+                }
+            }
+        }else{
+            location.save()
+            loadWeathersFromNet(for: location)
+        }
+    }
 
-        // Check location change and empty weather list
-
-//        let client = WeatherClient()
-//        client.getFeed(from: .getWeather(location)) { (result) in
-//            switch result{
-//            case .success(let weatherResponse):
-//                guard let response = weatherResponse else { return }
-//                CoreDataStack.current.createWeathers(from: response)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+    private func loadWeathersFromNet(for location: UserLocation){
+        let client = WeatherClient()
+        client.getFeed(from: .getWeather(location)) { (result) in
+            switch result{
+            case .success(let response):
+                guard let response = response else {
+                    AlertService.presentAlert(with: "Could not download new weather data, please try again later")
+                    return
+                }
+                let currentWeathers = CoreDataStack.current.createWeathers(from: response)
+                self.weathers = currentWeathers
+            case .failure(let error):
+                AlertService.presentAlert(with: error.localizedDescription)
+            }
+        }
     }
 
     func locationServiceDidFinishWithError(_ error: LocationError) {
@@ -111,5 +163,6 @@ extension MainSceneViewController: SegmentChooserDelegate{
 
     func segmentSelected(environment: Environment) {
         // Update SSE
+        environment.save()
     }
 }
