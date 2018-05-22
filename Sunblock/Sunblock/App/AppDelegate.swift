@@ -21,11 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
         if let weathers = CoreDataStack.current.fetchFromStorage(){
-            weathers.forEach {
-                print($0.time)
-            }
         }
         //CoreDataStack.current.clearStorage()
+
+        if UserDefaults.standard.bool(forKey: "shouldSkipOnboarding"){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            window?.rootViewController = storyboard.instantiateInitialViewController()
+        }
         return true
     }
 

@@ -15,6 +15,17 @@ class SkinChooserSceneViewController: UIViewController {
     @IBOutlet var skinColorButtons		: [MainButton]!
     @IBOutlet weak var buttonContainer	: UIView!
 
+    struct SegueIdentifiers{
+        static let disclaimer 			= "disclaimerSegue"
+        static let disclaimerToLocation	= "disclaimerToLocation"
+        static let disclaimerToMain		= "disclaimerToMain"
+        static let location				= "location"
+        static let locationToMain		= "locationToMain"
+        static let main					= "main"
+
+
+    }
+
     private lazy var source    : [SkinType] = {
         return SkinType.allSkinTypes
     }()
@@ -25,6 +36,8 @@ class SkinChooserSceneViewController: UIViewController {
                 ColorNames.copper, ColorNames.cocoa ]
     }()
 
+    var fromOnboarding = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource 			= self
@@ -32,6 +45,11 @@ class SkinChooserSceneViewController: UIViewController {
         buttonContainer.setRoundedCorners	= true
 
         setupButtons()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(fromOnboarding)
     }
 
     @IBAction func SkinButtonPressed(_ sender: MainButton) {
@@ -53,12 +71,18 @@ class SkinChooserSceneViewController: UIViewController {
         }
 
         let type = source[index.item]
-        print(type)
+        type.save()
+        if fromOnboarding{
+            calculateSegue()
+            fromOnboarding = false
+
+        }else{
+            if let navController = self.navigationController{
+                navController.popViewController(animated: true)
+            }
+        }
         
         // Save current skintype to persistance
-        if let navController = self.navigationController{
-            navController.popViewController(animated: true)
-        }
     }
 }
 
@@ -70,6 +94,15 @@ extension SkinChooserSceneViewController{
             button.currentBackgroundName = skinButtonColors[index]
 
         }
+    }
+
+    private func calculateSegue(){
+        guard let status = OnboardingStatus.load() else {
+            self.navigationController?.popViewController(animated: true)
+            return
+        }
+
+        performSegue(withIdentifier: SegueIdentifiers.main, sender: nil)
     }
 }
 

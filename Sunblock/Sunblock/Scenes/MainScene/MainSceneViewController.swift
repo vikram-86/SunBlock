@@ -11,7 +11,13 @@ import UIKit
 class MainSceneViewController: UIViewController {
 
     // Private
-    private let spfSegue	= "spfSegue"
+    private struct SegueIdentifers{
+        static let spfSegue    		= "spfSegue"
+        static let mainToDisclaimer	= "mainToDisclaimer"
+        static let mainToLocation	= "mainToLocation"
+
+        private init(){}
+    }
 
     @IBOutlet weak var segmentView	: SegmentChooserView!
     @IBOutlet weak var spfSelectionView: SPFSelectionView!
@@ -22,14 +28,35 @@ class MainSceneViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.appColor(.perryWinkle)
         
-		LocationService.current.delegate	= self
+
         segmentView.delegate 				= self
         spfSelectionView.delegate 			= self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        LocationService.current.requestLocation()
+        LocationService.current.delegate    = self
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let status = OnboardingStatus.load(){
+            switch (status.hasCompletedOnboardin, status.locationServiceGranted){
+            case (false, _):
+                performSegue(withIdentifier: SegueIdentifers.mainToDisclaimer, sender: nil)
+            case (true, true):
+                LocationService.current.requestLocation()
+            case (true, false):
+                performSegue(withIdentifier: SegueIdentifers.mainToLocation, sender: nil)
+
+            }
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        LocationService.current.delegate = nil
+
     }
 
 
@@ -38,7 +65,7 @@ class MainSceneViewController: UIViewController {
 extension MainSceneViewController{
 
     @objc private func selectSunscreen(){
-        performSegue(withIdentifier: spfSegue, sender: nil)
+        performSegue(withIdentifier: SegueIdentifers.spfSegue, sender: nil)
     }
     
 }
@@ -63,6 +90,12 @@ extension MainSceneViewController: LocationServiceDelegate{
 
     func locationServiceDidFinishWithError(_ error: LocationError) {
         AlertService.presentAlert(with: error.errorDescription!)
+    }
+
+    func permissionChanged(_ permission: PermissionStatus) {
+        if permission == .granted{
+            LocationService.current.requestLocation()
+        }
     }
 }
 

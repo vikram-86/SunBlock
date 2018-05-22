@@ -191,11 +191,20 @@
                         <outletCollection property="skinColorButtons" destination="E1g-CG-SGE" collectionClass="NSMutableArray" id="583-sT-lXa"/>
                         <outletCollection property="skinColorButtons" destination="mOY-rQ-WGY" collectionClass="NSMutableArray" id="l2M-BK-esR"/>
                         <outletCollection property="skinColorButtons" destination="NN5-xC-P1C" collectionClass="NSMutableArray" id="EJX-9k-tNU"/>
+                        <segue destination="q6D-eN-pXh" kind="show" identifier="main" id="Ny6-t9-Zjt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxM-aa-q21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178.5" y="239.5"/>
+            <point key="canvasLocation" x="-70" y="215"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="4dS-dG-a6q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="q6D-eN-pXh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5X-1o-4de" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="890"/>
         </scene>
     </scenes>
     <resources>

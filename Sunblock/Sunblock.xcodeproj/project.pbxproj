@@ -41,6 +41,9 @@
 		8A23F6E92091140A00A30DDE /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A23F6E82091140A00A30DDE /* StoryboardIdentifiable.swift */; };
 		8A23F6EB2091143300A30DDE /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A23F6EA2091143300A30DDE /* UIStoryboard.swift */; };
 		8A36537320950E1000337B3C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36537220950E1000337B3C /* UIView.swift */; };
+		8A4A3A8720B347D80043D0FA /* OnboardingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */; };
+		8A4A3A8920B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */; };
+		8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */; };
 		8A502EDF2073C8330039D598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A502EDE2073C8330039D598 /* AppDelegate.swift */; };
 		8A502EE42073C8330039D598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A502EE22073C8330039D598 /* Main.storyboard */; };
 		8A502EE62073C8330039D598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A502EE52073C8330039D598 /* Assets.xcassets */; };
@@ -56,9 +59,14 @@
 		8A5748332074316B00B295B9 /* Archivo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A57482B2074316B00B295B9 /* Archivo-Regular.ttf */; };
 		8A5748342074316B00B295B9 /* Archivo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A57482C2074316B00B295B9 /* Archivo-Medium.ttf */; };
 		8A5748382075222400B295B9 /* nevis.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A5748372075222400B295B9 /* nevis.ttf */; };
+		8A9CB2A620B4294B009720C2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CB2A520B4294B009720C2 /* UIViewController.swift */; };
 		8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CF53E209A5034001EFCCC /* SettingsSceneViewController.swift */; };
 		8A9CF542209A509E001EFCCC /* DisclaimerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CF541209A509E001EFCCC /* DisclaimerSceneViewController.swift */; };
 		8A9CF545209A5E2E001EFCCC /* AboutSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CF544209A5E2E001EFCCC /* AboutSceneViewController.swift */; };
+		8ABC18C820B20852007EA149 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC18C720B20852007EA149 /* Onboarding.storyboard */; };
+		8ABC18CB20B20CAE007EA149 /* OnboardingSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC18CA20B20CAE007EA149 /* OnboardingSceneViewController.swift */; };
+		8ABC18CD20B21175007EA149 /* OnboardingInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC18CC20B21175007EA149 /* OnboardingInfoView.xib */; };
+		8ABC18CF20B211AC007EA149 /* OnboardingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC18CE20B211AC007EA149 /* OnboardingInfoView.swift */; };
 		8AC3C3F820A4CFC400FFFB20 /* SegmentChooserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC3C3F720A4CFC400FFFB20 /* SegmentChooserView.xib */; };
 		8AC3C3FA20A577EA00FFFB20 /* SegmentChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3C3F920A577EA00FFFB20 /* SegmentChooserView.swift */; };
 		8AD6B1FA2083D47E0073721E /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B1F92083D47E0073721E /* MainButton.swift */; };
@@ -108,6 +116,9 @@
 		8A23F6E82091140A00A30DDE /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		8A23F6EA2091143300A30DDE /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		8A36537220950E1000337B3C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStatus.swift; sourceTree = "<group>"; };
+		8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinDisclaimerSceneViewController.swift; sourceTree = "<group>"; };
+		8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinLocationSceneViewController.swift; sourceTree = "<group>"; };
 		8A502EDB2073C8330039D598 /* Sunblock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunblock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A502EDE2073C8330039D598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A502EE32073C8330039D598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,9 +136,14 @@
 		8A57482B2074316B00B295B9 /* Archivo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Regular.ttf"; sourceTree = "<group>"; };
 		8A57482C2074316B00B295B9 /* Archivo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Medium.ttf"; sourceTree = "<group>"; };
 		8A5748372075222400B295B9 /* nevis.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nevis.ttf; sourceTree = "<group>"; };
+		8A9CB2A520B4294B009720C2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8A9CF53E209A5034001EFCCC /* SettingsSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSceneViewController.swift; sourceTree = "<group>"; };
 		8A9CF541209A509E001EFCCC /* DisclaimerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerSceneViewController.swift; sourceTree = "<group>"; };
 		8A9CF544209A5E2E001EFCCC /* AboutSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSceneViewController.swift; sourceTree = "<group>"; };
+		8ABC18C720B20852007EA149 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		8ABC18CA20B20CAE007EA149 /* OnboardingSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSceneViewController.swift; sourceTree = "<group>"; };
+		8ABC18CC20B21175007EA149 /* OnboardingInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingInfoView.xib; sourceTree = "<group>"; };
+		8ABC18CE20B211AC007EA149 /* OnboardingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInfoView.swift; sourceTree = "<group>"; };
 		8AC3C3F720A4CFC400FFFB20 /* SegmentChooserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentChooserView.xib; sourceTree = "<group>"; };
 		8AC3C3F920A577EA00FFFB20 /* SegmentChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentChooserView.swift; sourceTree = "<group>"; };
 		8AD6B1F92083D47E0073721E /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
@@ -263,6 +279,7 @@
 				8A00E939209F8A71000C6882 /* Profile.swift */,
 				8A0003C620A96E85006A854E /* UserLocation.swift */,
 				8A00045520AECA53006A854E /* Environment.swift */,
+				8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +378,7 @@
 		8A502EF52073C8770039D598 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8ABC18C920B20C8F007EA149 /* OnboardingScene */,
 				8A9CF543209A5E1F001EFCCC /* AboutScene */,
 				8A9CF540209A508F001EFCCC /* DisclaimerScene */,
 				8A9CF53D209A5018001EFCCC /* SettingScene */,
@@ -374,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				8A502EE72073C8330039D598 /* LaunchScreen.storyboard */,
+				8ABC18C720B20852007EA149 /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -397,6 +416,7 @@
 				8A00042B20AAEF23006A854E /* CodingUserInfoKey.swift */,
 				8A00045320AEB45D006A854E /* Date.swift */,
 				8AE2772420B1CA7900D8E65F /* UIFont.swift */,
+				8A9CB2A520B4294B009720C2 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -465,6 +485,25 @@
 			path = AboutScene;
 			sourceTree = "<group>";
 		};
+		8ABC18C920B20C8F007EA149 /* OnboardingScene */ = {
+			isa = PBXGroup;
+			children = (
+				8ABC18CA20B20CAE007EA149 /* OnboardingSceneViewController.swift */,
+				8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */,
+				8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */,
+			);
+			path = OnboardingScene;
+			sourceTree = "<group>";
+		};
+		8ABC18D020B30289007EA149 /* OnboardingInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				8ABC18CC20B21175007EA149 /* OnboardingInfoView.xib */,
+				8ABC18CE20B211AC007EA149 /* OnboardingInfoView.swift */,
+			);
+			path = OnboardingInfoView;
+			sourceTree = "<group>";
+		};
 		8AC3C3F620A4CF9200FFFB20 /* SegmentChooserView */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +521,7 @@
 				8AC3C3F620A4CF9200FFFB20 /* SegmentChooserView */,
 				8A00E934209F7B61000C6882 /* ProfileView */,
 				8AD6B1F82083D46E0073721E /* Button */,
+				8ABC18D020B30289007EA149 /* OnboardingInfoView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -605,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A57482D2074316B00B295B9 /* Archivo-MediumItalic.ttf in Resources */,
+				8ABC18CD20B21175007EA149 /* OnboardingInfoView.xib in Resources */,
 				8A57482E2074316B00B295B9 /* Archivo-Italic.ttf in Resources */,
 				8A57482F2074316B00B295B9 /* Archivo-BoldItalic.ttf in Resources */,
 				8A502EE92073C8330039D598 /* LaunchScreen.storyboard in Resources */,
@@ -615,6 +656,7 @@
 				8A502EE62073C8330039D598 /* Assets.xcassets in Resources */,
 				8A5748382075222400B295B9 /* nevis.ttf in Resources */,
 				8AD6B1FD2083E2FD0073721E /* SkinChooser.storyboard in Resources */,
+				8ABC18C820B20852007EA149 /* Onboarding.storyboard in Resources */,
 				8A5748322074316B00B295B9 /* Archivo-Bold.ttf in Resources */,
 				8A5748342074316B00B295B9 /* Archivo-Medium.ttf in Resources */,
 				8A5748302074316B00B295B9 /* Archivo-SemiBold.ttf in Resources */,
@@ -641,6 +683,7 @@
 				8AD6B2032083E8A10073721E /* SkinTypeCell.swift in Sources */,
 				8A0003D820A9BF99006A854E /* Endpoint.swift in Sources */,
 				8AD6B2002083E80F0073721E /* SkinChooserSceneViewController.swift in Sources */,
+				8A9CB2A620B4294B009720C2 /* UIViewController.swift in Sources */,
 				8A23F6E320910B8400A30DDE /* NibOwnerLoadable.swift in Sources */,
 				8A0003C720A96E85006A854E /* UserLocation.swift in Sources */,
 				8A0003CA20A96F7C006A854E /* LocationError.swift in Sources */,
@@ -652,9 +695,11 @@
 				8AD6B1FA2083D47E0073721E /* MainButton.swift in Sources */,
 				8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */,
 				8A00045420AEB45D006A854E /* Date.swift in Sources */,
+				8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */,
 				8A00041C20AAD4E4006A854E /* CoreDataStack.swift in Sources */,
 				8A0D7BB0208FCA1400003245 /* NibLoadable.swift in Sources */,
 				8A23F6EB2091143300A30DDE /* UIStoryboard.swift in Sources */,
+				8ABC18CB20B20CAE007EA149 /* OnboardingSceneViewController.swift in Sources */,
 				8A00E93A209F8A71000C6882 /* Profile.swift in Sources */,
 				8A0D7BAE208FC3C200003245 /* Reusable.swift in Sources */,
 				8A00044120ADF166006A854E /* WeatherResponse.swift in Sources */,
@@ -662,7 +707,9 @@
 				8A0003E020AA147D006A854E /* WeatherClient.swift in Sources */,
 				8A00045220AE07C7006A854E /* Weather+CoreDataProperties.swift in Sources */,
 				8A00E938209F8912000C6882 /* ProfileView.swift in Sources */,
+				8ABC18CF20B211AC007EA149 /* OnboardingInfoView.swift in Sources */,
 				8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */,
+				8A4A3A8920B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift in Sources */,
 				8A00045620AECA53006A854E /* Environment.swift in Sources */,
 				8A502EDF2073C8330039D598 /* AppDelegate.swift in Sources */,
 				8A502EFA2073C95C0039D598 /* UIColor.swift in Sources */,
@@ -671,6 +718,7 @@
 				8A0D7BA8208FAAC000003245 /* SkinType.swift in Sources */,
 				8A9CF542209A509E001EFCCC /* DisclaimerSceneViewController.swift in Sources */,
 				8A00044720ADF599006A854E /* WeatherHourlyResponse.swift in Sources */,
+				8A4A3A8720B347D80043D0FA /* OnboardingStatus.swift in Sources */,
 				8AE2772120B0ADDF00D8E65F /* SPFSelectionView.swift in Sources */,
 				8AC3C3FA20A577EA00FFFB20 /* SegmentChooserView.swift in Sources */,
 				8A0003D620A9BF54006A854E /* Result.swift in Sources */,

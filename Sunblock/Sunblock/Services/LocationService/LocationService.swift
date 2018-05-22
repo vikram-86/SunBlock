@@ -12,6 +12,12 @@ import CoreLocation
 protocol LocationServiceDelegate: class{
     func locationServiceDidFinish(with location: UserLocation)
     func locationServiceDidFinishWithError(_ error: LocationError)
+    func permissionChanged(_ permission: PermissionStatus)
+}
+
+enum PermissionStatus{
+    case granted
+    case noGranted
 }
 
 class LocationService: NSObject{
@@ -39,6 +45,7 @@ class LocationService: NSObject{
 
         if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse){
             // User has authorized Location Service
+            delegate?.locationServiceDidFinishWithError(.permissionGranted)
             return
         }
 
@@ -51,8 +58,11 @@ class LocationService: NSObject{
     }
 
     func requestLocation(){
-        requestAuthorization()
-        locationManager.startUpdatingLocation()
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse{
+            requestAuthorization()
+        }else{
+            locationManager.startUpdatingLocation()
+        }
     }
 }
 
@@ -83,5 +93,13 @@ extension LocationService: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         delegate?.locationServiceDidFinishWithError(.notDetermined("Could not locate you location, please try again later"))
 
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            delegate?.permissionChanged(.granted)
+        }else{
+            delegate?.permissionChanged(.noGranted)
+        }
     }
 }
