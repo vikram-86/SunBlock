@@ -32,7 +32,6 @@ struct SSEController{
         case "partly-cloudy-day"	: return #imageLiteral(resourceName: "icWeatherCloudedAndSun")
         case "partly-cloudy-night"	: return #imageLiteral(resourceName: "icWeatherCloudedNight")
         default						: return #imageLiteral(resourceName: "icWeatherCloud")
-
         }
     }
 
@@ -110,6 +109,5 @@ struct SSEController{
         }else{
             return ("\(time/60)", "hours")
         }
-
     }
 }

@@ -113,34 +113,77 @@ extension SPFSelectionView{
     // Expand scroll view
     private func animateOut(){
 
-        scrollContainerWidthContraint.constant = self.bounds.width
-        labelLeadingConstraint.constant    = (self.bounds.width / 2) - (labelWidth / 2)
+//        scrollContainerWidthContraint.constant = self.bounds.width
+//        labelLeadingConstraint.constant    = (self.bounds.width / 2) - (labelWidth / 2)
+//
+//        titleLabel.isHidden = true
+//        UIView.animate(withDuration: 0.33, animations: {
+//            self.layoutIfNeeded()
+//            self.spfLabel.alpha = 0
+//            self.buttonContainerView.alpha = 0
+//
+//        }) { (_) in
+//            self.valueLabel.isHidden = true
+//        }
+        let index = dataSource.index(of: value)!
+        scrollView.contentOffset = CGPoint(x: xCoordinates[index], y: 0)
+        scrollView.alpha = 0
 
-        titleLabel.isHidden = true
-        UIView.animate(withDuration: 0.33, animations: {
-            self.layoutIfNeeded()
-            self.spfLabel.alpha = 0
-            self.buttonContainerView.alpha = 0
+        UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeLinear, animations: {
+            self.labelLeadingConstraint.constant    = (self.bounds.width / 2) - (self.labelWidth / 2)
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1 / 3, animations: {
+                self.layoutIfNeeded()
+                self.spfLabel.alpha = 0
+                self.buttonContainerView.alpha = 0
+                self.titleLabel.alpha = 0
+            })
+			self.scrollContainerWidthContraint.constant = self.bounds.width
+            UIView.addKeyframe(withRelativeStartTime: 1 / 3, relativeDuration: 1 / 3, animations: {
+                self.layoutIfNeeded()
+            })
 
+            UIView.addKeyframe(withRelativeStartTime: 2 / 3, relativeDuration: 1 / 3, animations: {
+                self.scrollView.alpha = 1
+            })
         }) { (_) in
             self.valueLabel.isHidden = true
         }
-
     }
 
     // collapse Scrollview
     private func animateIn(){
-        scrollContainerWidthContraint.constant = 0
-        labelLeadingConstraint.constant = 40
+//        scrollContainerWidthContraint.constant = 0
+//        labelLeadingConstraint.constant = 40
+//
+//
+//        UIView.animate(withDuration: 0.33, animations: {
+//            self.layoutIfNeeded()
+//            self.spfLabel.alpha = 1
+//            self.buttonContainerView.alpha = 1
+//            self.valueLabel.isHidden = false
+//            }){ (_) in
+//                self.titleLabel.isHidden = false
+//        }
 
+        UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeLinear, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1 / 3, animations: {
+                self.titleLabel.isHidden	= false
+                self.scrollView.alpha 		= 0
+                self.valueLabel.isHidden	= false
+            })
+			self.scrollContainerWidthContraint.constant = 0
+            UIView.addKeyframe(withRelativeStartTime: 1 / 3, relativeDuration: 1 / 3, animations: {
+                self.layoutIfNeeded()
+            })
+			self.labelLeadingConstraint.constant = 40
+            UIView.addKeyframe(withRelativeStartTime: 2 / 3, relativeDuration: 1 / 3, animations: {
+                self.layoutIfNeeded()
+                self.spfLabel.alpha = 1
+                self.buttonContainerView.alpha = 1
+                self.titleLabel.alpha = 1
+            })
+        }) { (_) in
 
-        UIView.animate(withDuration: 0.33, animations: {
-            self.layoutIfNeeded()
-            self.spfLabel.alpha = 1
-            self.buttonContainerView.alpha = 1
-            self.valueLabel.isHidden = false
-            }){ (_) in
-                self.titleLabel.isHidden = false
         }
     }
 }
