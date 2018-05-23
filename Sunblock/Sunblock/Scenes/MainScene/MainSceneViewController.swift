@@ -57,6 +57,9 @@ class MainSceneViewController: UIViewController {
         }
     }
 
+    let reachability = Reachability()!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -86,6 +89,25 @@ class MainSceneViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         LocationService.current.delegate    = self
+
+
+        reachability.whenReachable = { reachability in
+            if reachability.connection == .wifi{
+                print("Reachable wia wifi")
+            }else{
+                print("Reacahble wia Cellular")
+            }
+        }
+
+        reachability.whenUnreachable = { _ in
+            print("not reachable")
+        }
+
+        do{
+            try reachability.startNotifier()
+        }catch{
+            print("Unable to start notifier")
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -106,6 +128,7 @@ class MainSceneViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         LocationService.current.delegate = nil
+        reachability.stopNotifier()
 
     }
 

@@ -26,7 +26,7 @@ protocol SPFDelegate: class{
     @IBOutlet private weak var titleLabel						: UILabel!
 
 
-
+	// Ingen spf 0,2 eller 4
     private var dataSource = [
         0,2,4,6,8,10,15,20,25,30,40,50
     ]

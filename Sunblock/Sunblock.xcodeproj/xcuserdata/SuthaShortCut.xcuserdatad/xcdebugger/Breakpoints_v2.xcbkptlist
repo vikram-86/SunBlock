@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-            timestampString = "548770881.609271"
+            timestampString = "548774072.576636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "updateSSE()"
             landmarkType = "7">
             <Locations>

@@ -79,6 +79,7 @@
 		8AE2772820B1F73500D8E65F /* SSEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE2772720B1F73500D8E65F /* SSEView.xib */; };
 		8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772920B1FE8C00D8E65F /* SSEView.swift */; };
 		8AE78EFE20B4BB27002B7F8D /* SSEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE78EFD20B4BB27002B7F8D /* SSEController.swift */; };
+		8AE78F0020B595A4002B7F8D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE78EFF20B595A4002B7F8D /* Reachability.swift */; };
 		8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAE299207FED9500DA7D0E /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,7 @@
 		8AE2772720B1F73500D8E65F /* SSEView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSEView.xib; sourceTree = "<group>"; };
 		8AE2772920B1FE8C00D8E65F /* SSEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEView.swift; sourceTree = "<group>"; };
 		8AE78EFD20B4BB27002B7F8D /* SSEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEController.swift; sourceTree = "<group>"; };
+		8AE78EFF20B595A4002B7F8D /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8AFAE299207FED9500DA7D0E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +213,7 @@
 			children = (
 				8A0003DD20AA1210006A854E /* Clients */,
 				8A0003DE20AA121A006A854E /* Model */,
+				8AE78EFF20B595A4002B7F8D /* Reachability.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				8A23F6E92091140A00A30DDE /* StoryboardIdentifiable.swift in Sources */,
 				8A0003CC20A983C2006A854E /* AlertService.swift in Sources */,
 				8A0003DC20A9C912006A854E /* APIClient.swift in Sources */,
+				8AE78F0020B595A4002B7F8D /* Reachability.swift in Sources */,
 				8AD6B2032083E8A10073721E /* SkinTypeCell.swift in Sources */,
 				8A0003D820A9BF99006A854E /* Endpoint.swift in Sources */,
 				8AD6B2002083E80F0073721E /* SkinChooserSceneViewController.swift in Sources */,
