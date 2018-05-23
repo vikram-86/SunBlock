@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-            timestampString = "548760616.268851"
+            timestampString = "548764747.211086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
@@ -26,7 +26,7 @@
                   moduleName = "Sunblock"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/SuthaShortCut/Documents/SunBlock/Sunblock/Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-                  timestampString = "548760616.492021"
+                  timestampString = "548764643.201162"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
@@ -41,7 +41,7 @@
                   moduleName = "Sunblock"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/SuthaShortCut/Documents/SunBlock/Sunblock/Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-                  timestampString = "548760616.494869"
+                  timestampString = "548764643.203506"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "126"
@@ -49,6 +49,22 @@
                   offsetFromSymbolStart = "72">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sunblock/Model/SSEController.swift"
+            timestampString = "548764747.21137"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "sse"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

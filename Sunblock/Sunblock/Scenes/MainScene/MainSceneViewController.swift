@@ -167,6 +167,7 @@ extension MainSceneViewController{
 //MARK: Location Service Delegate
 extension MainSceneViewController: LocationServiceDelegate{
     func locationServiceDidFinish(with location: UserLocation) {
+
         if let lastLocation = UserLocation.load(){
             if lastLocation != location{
                 // Clear Persistance
@@ -178,7 +179,13 @@ extension MainSceneViewController: LocationServiceDelegate{
                 // Get list of weather for current location,
                 if let weathers = Weather.loadWeathersFromPersistance(),
                     !weathers.isEmpty{
-                    self.weathers = weathers
+                    let downloadTime = UserDefaults.standard.integer(forKey: "downloadTime")
+                    if Date.isCurrentDay(from: Double(downloadTime)){
+                        self.weathers = weathers
+                    }else{
+                        CoreDataStack.current.clearStorage()
+                        loadWeathersFromNet(for: location)
+                    }
                     // Take the first weather and Update SSE
                 }else{
                     CoreDataStack.current.clearStorage()
@@ -202,6 +209,7 @@ extension MainSceneViewController: LocationServiceDelegate{
                 }
                 let currentWeathers = CoreDataStack.current.createWeathers(from: response)
                 self.weathers = currentWeathers
+                UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "downloadTime")
             case .failure(let error):
                 AlertService.presentAlert(with: error.localizedDescription)
             }

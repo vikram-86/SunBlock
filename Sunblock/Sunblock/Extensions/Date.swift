@@ -17,4 +17,9 @@ extension Date{
         let date = calendar.date(from: components)!
         return date.timeIntervalSince1970
     }
+
+    static func isCurrentDay(from timeInterval: TimeInterval) -> Bool{
+        let date = Date(timeIntervalSince1970: timeInterval)
+        return Calendar.current.isDateInToday(date)
+    }
 }

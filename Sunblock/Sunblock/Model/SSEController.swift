@@ -95,8 +95,8 @@ struct SSEController{
         let location = UserLocation.load()!
 
         var altitudeModifier = (location.altitude / 1000) * 0.16
-        altitudeModifier = altitudeModifier == 0 ? 1 : altitudeModifier
-        let currentUV = weather.uvIndex == 0 ? 0.0 : weather.uvIndex * altitudeModifier * environment.modifier
+        
+        let currentUV = weather.uvIndex == 0 ? 0.0 : weather.uvIndex * (1 + altitudeModifier) * environment.modifier
         if currentUV == 0 {
             return ("\(24)", "+hours")
         }
