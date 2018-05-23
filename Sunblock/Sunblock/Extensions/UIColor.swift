@@ -14,6 +14,7 @@ enum ColorNames: String{
     case dirtyPurple	= "dirtyPurple"
     case lightGrey		= "lightGrey"
     case fadedOrange	= "fadedOrange"
+    case fadedOrange2	= "fadedOrange2"
     case greenishTeal	= "greenishTeal"
     case aquaMarine		= "aquaMarine"
     case wheat			= "wheat"

@@ -72,7 +72,7 @@ class CoreDataStack{
         let managedObjectContext = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Weather>(entityName: "Weather")
         let sort = NSSortDescriptor(key: #keyPath(Weather.time), ascending: true)
-        let time = Date.timeIntervalForCurrentHour
+        let time = Int64(Date.timeIntervalForCurrentHour)
 
         let predicate = NSPredicate(format: "time >= %i", time)
         fetchRequest.predicate = predicate

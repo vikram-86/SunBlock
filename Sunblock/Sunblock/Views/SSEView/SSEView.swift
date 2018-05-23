@@ -28,6 +28,8 @@ import UIKit
 
     private func setup(){
         loadNibContent()
+        valueLabel.alpha	= 0
+        unitLabel.alpha		= 0
     }
 }
 
@@ -36,6 +38,14 @@ extension SSEView{
 
     @IBAction private func startReminder(){
 
+    }
+
+    func configure(with value: SSEValue){
+        valueLabel.text = value.duration
+        unitLabel.text	= value.unit
+
+        valueLabel.alpha	= 1
+        unitLabel.alpha		= 1
     }
 }
 

@@ -41,7 +41,7 @@ protocol SPFDelegate: class{
         didSet{
             impact.selectionChanged()
             self.valueLabel.text = "\(value)"
-            delegate?.selectorSelected(spf: value)
+            delegate?.selectorSelected(spf: (value == 0 ? 1 : value))
         }
     }
 

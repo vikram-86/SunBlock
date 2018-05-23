@@ -78,6 +78,7 @@
 		8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772420B1CA7900D8E65F /* UIFont.swift */; };
 		8AE2772820B1F73500D8E65F /* SSEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE2772720B1F73500D8E65F /* SSEView.xib */; };
 		8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772920B1FE8C00D8E65F /* SSEView.swift */; };
+		8AE78EFE20B4BB27002B7F8D /* SSEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE78EFD20B4BB27002B7F8D /* SSEController.swift */; };
 		8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAE299207FED9500DA7D0E /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,7 @@
 		8AE2772420B1CA7900D8E65F /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		8AE2772720B1F73500D8E65F /* SSEView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSEView.xib; sourceTree = "<group>"; };
 		8AE2772920B1FE8C00D8E65F /* SSEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEView.swift; sourceTree = "<group>"; };
+		8AE78EFD20B4BB27002B7F8D /* SSEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEController.swift; sourceTree = "<group>"; };
 		8AFAE299207FED9500DA7D0E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,6 +282,7 @@
 				8A0003C620A96E85006A854E /* UserLocation.swift */,
 				8A00045520AECA53006A854E /* Environment.swift */,
 				8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */,
+				8AE78EFD20B4BB27002B7F8D /* SSEController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				8A0D7BAE208FC3C200003245 /* Reusable.swift in Sources */,
 				8A00044120ADF166006A854E /* WeatherResponse.swift in Sources */,
 				8A23F6E520910C6700A30DDE /* UICollectionView.swift in Sources */,
+				8AE78EFE20B4BB27002B7F8D /* SSEController.swift in Sources */,
 				8A0003E020AA147D006A854E /* WeatherClient.swift in Sources */,
 				8A00045220AE07C7006A854E /* Weather+CoreDataProperties.swift in Sources */,
 				8A00E938209F8912000C6882 /* ProfileView.swift in Sources */,

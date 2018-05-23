@@ -10,6 +10,20 @@ import UIKit
 
 class MainSceneViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel			: UILabel!
+    @IBOutlet weak var subTitleLabel		: UILabel!
+    @IBOutlet weak var uvLabel				: UILabel!
+    @IBOutlet weak var uvImageView			: UIImageView!
+    @IBOutlet weak var temperatureLabel		: UILabel!
+    @IBOutlet weak var weatherIconImageView	: UIImageView!
+    @IBOutlet weak var sseView				: SSEView!
+    @IBOutlet weak var segmentView    		: SegmentChooserView!
+    @IBOutlet weak var spfSelectionView		: SPFSelectionView!
+    @IBOutlet weak var uvTitleLabel			: UILabel!
+    @IBOutlet weak var temperatureUnitLabel	: UILabel!
+    @IBOutlet weak var scrollView			: UIScrollView!
+
+
     // Private
     private struct SegueIdentifers{
         static let spfSegue    		= "spfSegue"
@@ -19,8 +33,7 @@ class MainSceneViewController: UIViewController {
         private init(){}
     }
 
-    @IBOutlet weak var segmentView	: SegmentChooserView!
-    @IBOutlet weak var spfSelectionView: SPFSelectionView!
+
 
     private var currentEnvironment: Environment {
         return Environment.load()
@@ -33,12 +46,14 @@ class MainSceneViewController: UIViewController {
     private var weathers: [Weather] = []{
         didSet{
             // Update SSE..
+            updateSSE()
         }
     }
 
-    private var currentSPF: Int = 0{
+    private var currentSPF: Int = 1{
         didSet{
             // Update SSE..
+            updateSSE()
         }
     }
 
@@ -51,6 +66,21 @@ class MainSceneViewController: UIViewController {
 
         segmentView.delegate 				= self
         spfSelectionView.delegate 			= self
+
+        titleLabel.isHidden 			= true
+        subTitleLabel.isHidden 			= true
+        uvLabel.isHidden 				= true
+        uvImageView.isHidden 			= true
+        temperatureLabel.isHidden 		= true
+        weatherIconImageView.isHidden	= true
+
+        let refreshControl = UIRefreshControl()
+        let attributes : [NSAttributedStringKey: Any] = [.foregroundColor: UIColor.appColor(.white)]
+        refreshControl.attributedTitle  = NSAttributedString(string: "Updating weather data", attributes: attributes)
+        refreshControl.tintColor = UIColor.appColor(.white)
+        refreshControl.addTarget(self, action: #selector(refresh(refreshView:)), for: .valueChanged)
+        scrollView.insertSubview(refreshControl, at: 0)
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -85,7 +115,39 @@ class MainSceneViewController: UIViewController {
 //MARK: - SSE
 extension MainSceneViewController{
     private func updateSSE(){
-        
+        guard let weather = weathers.first else{
+            AlertService.presentAlert(with: "Weather list is empty")
+            return
+        }
+
+        let sse = SSEController(weather: weather, environment: currentEnvironment, skinType: currentSkinType, spf: currentSPF)
+
+        DispatchQueue.main.async {
+            self.titleLabel.text                 = sse.title
+            self.subTitleLabel.text              = sse.subTitle
+            self.uvLabel.text                    = sse.uvIndex
+            self.uvImageView.image               = sse.uvIcon
+            self.temperatureLabel.text           = sse.temperature
+            self.weatherIconImageView.image      = sse.weatherIcon
+
+            self.view.backgroundColor            = sse.headerColor
+
+
+
+            self.uvTitleLabel.isHidden                = false
+            self.temperatureUnitLabel.isHidden        = false
+            self.titleLabel.isHidden                  = false
+            self.subTitleLabel.isHidden               = false
+            self.uvLabel.isHidden                     = false
+            self.uvImageView.isHidden                 = false
+            self.temperatureLabel.isHidden            = false
+            self.weatherIconImageView.isHidden        = false
+
+            self.sseView.configure(with: sse.sse)
+        }
+        UIView.animate(withDuration: 1, animations: {
+            self.view.backgroundColor = sse.headerColor
+        })
     }
 }
 
@@ -93,6 +155,11 @@ extension MainSceneViewController{
 
     @objc private func selectSunscreen(){
         performSegue(withIdentifier: SegueIdentifers.spfSegue, sender: nil)
+    }
+
+    @objc func refresh(refreshView: UIRefreshControl){
+        LocationService.current.requestLocation()
+        refreshView.endRefreshing()
     }
     
 }
@@ -111,6 +178,7 @@ extension MainSceneViewController: LocationServiceDelegate{
                 // Get list of weather for current location,
                 if let weathers = Weather.loadWeathersFromPersistance(),
                     !weathers.isEmpty{
+                    self.weathers = weathers
                     // Take the first weather and Update SSE
                 }else{
                     CoreDataStack.current.clearStorage()
@@ -154,7 +222,7 @@ extension MainSceneViewController: LocationServiceDelegate{
 //MARK: SPFDelegate
 extension MainSceneViewController: SPFDelegate{
     func selectorSelected(spf: Int) {
-        print(spf)
+        currentSPF = spf
     }
 }
 
@@ -164,5 +232,6 @@ extension MainSceneViewController: SegmentChooserDelegate{
     func segmentSelected(environment: Environment) {
         // Update SSE
         environment.save()
+        updateSSE()
     }
 }
