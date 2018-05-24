@@ -8,12 +8,20 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archivo-Medium.ttf">
+            <string>Archivo-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SegmentChooserView" customModule="Sunblock" customModuleProvider="target">
             <connections>
                 <outlet property="firstDimmerView" destination="oaW-oO-78C" id="2Ko-ev-EUr"/>
+                <outlet property="firstLabel" destination="8Di-c4-6ts" id="0V8-QA-nSB"/>
                 <outlet property="secondDimmerView" destination="V2u-OU-NZk" id="GHl-ys-wkF"/>
+                <outlet property="secondLabel" destination="nbK-SM-Jc9" id="RJL-qD-Hk3"/>
                 <outlet property="thirdDimmerView" destination="Mpj-lF-jTi" id="csf-Z8-IRk"/>
+                <outlet property="thirdLabel" destination="mus-5X-8YB" id="soo-Sg-3M1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,9 +36,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="119.5" height="92"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOUNTAINS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Di-c4-6ts">
-                                    <rect key="frame" x="10.5" y="62" width="99" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <rect key="frame" x="24" y="69" width="71.5" height="13.5"/>
+                                    <fontDescription key="fontDescription" name="Archivo-Medium" family="Archivo" pointSize="12"/>
+                                    <color key="textColor" red="0.33725490196078434" green="0.25882352941176473" blue="0.33725490196078434" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="Plu-dP-RtA">
@@ -64,9 +72,9 @@
                             <rect key="frame" x="119.5" y="0.0" width="120" height="92"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbK-SM-Jc9">
-                                    <rect key="frame" x="41.5" y="61.5" width="37.5" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <rect key="frame" x="47" y="68.5" width="27.5" height="13.5"/>
+                                    <fontDescription key="fontDescription" name="Archivo-Medium" family="Archivo" pointSize="12"/>
+                                    <color key="textColor" red="0.33725490200000002" green="0.25882352939999997" blue="0.33725490200000002" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="36b-aO-kEf">
@@ -100,9 +108,9 @@
                             <rect key="frame" x="239.5" y="0.0" width="119.5" height="92"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEACH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mus-5X-8YB">
-                                    <rect key="frame" x="32" y="62" width="55.5" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <rect key="frame" x="38" y="69" width="42" height="13.5"/>
+                                    <fontDescription key="fontDescription" name="Archivo-Medium" family="Archivo" pointSize="12"/>
+                                    <color key="textColor" red="0.33725490200000002" green="0.25882352939999997" blue="0.33725490200000002" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beachIcons" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-o9-3x3">

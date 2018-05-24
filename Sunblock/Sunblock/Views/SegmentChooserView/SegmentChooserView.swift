@@ -18,6 +18,11 @@ protocol SegmentChooserDelegate: class {
     @IBOutlet private weak var secondDimmerView: UIView!
     @IBOutlet private weak var thirdDimmerView: UIView!
 
+    @IBOutlet weak var firstLabel	: UILabel!
+    @IBOutlet weak var secondLabel	: UILabel!
+    @IBOutlet weak var thirdLabel	: UILabel!
+
+
     private var environtment = Environment.city
     weak var delegate	: SegmentChooserDelegate?
 
@@ -53,16 +58,33 @@ extension SegmentChooserView{
         UIView.animate(withDuration: 0.33) {
             if index == 0 {
                 self.firstDimmerView.alpha	= 0
+                self.firstLabel.alpha 		= 1
+
                 self.secondDimmerView.alpha = 0.75
+                self.secondLabel.alpha		= 0
+
                 self.thirdDimmerView.alpha 	= 0.75
+                self.thirdLabel.alpha		= 0
+
             }else if index == 1{
                 self.firstDimmerView.alpha	= 0.75
+                self.firstLabel.alpha		= 0
+
                 self.secondDimmerView.alpha	= 0
+				self.secondLabel.alpha		= 1
+
                 self.thirdDimmerView.alpha	= 0.75
+                self.thirdLabel.alpha		= 0
+
             }else{
                 self.firstDimmerView.alpha	= 0.75
+                self.firstLabel.alpha		= 0
+
                 self.secondDimmerView.alpha	= 0.75
+                self.secondLabel.alpha		= 0
+
                 self.thirdDimmerView.alpha	= 0
+                self.thirdLabel.alpha		= 1
             }
         }
     }

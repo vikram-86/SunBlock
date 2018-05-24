@@ -22,8 +22,6 @@ class SkinChooserSceneViewController: UIViewController {
         static let location				= "location"
         static let locationToMain		= "locationToMain"
         static let main					= "main"
-
-
     }
 
     private lazy var source    : [SkinType] = {
@@ -44,6 +42,9 @@ class SkinChooserSceneViewController: UIViewController {
         collectionView.delegate 			= self
         buttonContainer.setRoundedCorners	= true
 
+        if UIDevice.isIPhone5{
+            buttonContainer.isHidden = true
+        }
         setupButtons()
     }
 

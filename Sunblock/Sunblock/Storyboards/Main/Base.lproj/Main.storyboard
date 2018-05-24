@@ -64,7 +64,7 @@
                                                     <constraint firstItem="I5U-eC-Iby" firstAttribute="top" secondItem="I01-Ss-317" secondAttribute="top" constant="28" id="qIs-y7-pEK"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzQ-FY-KvU">
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzQ-FY-KvU">
                                                 <rect key="frame" x="36" y="85" width="295" height="0.0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="295" id="N50-OW-MDM"/>
@@ -73,7 +73,7 @@
                                                 <color key="textColor" name="white"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVz-Qf-0z9">
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVz-Qf-0z9">
                                                 <rect key="frame" x="36" y="85" width="0.0" height="61"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="61" id="jIw-ek-6Ff"/>
@@ -85,7 +85,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b82-LI-N8P">
                                                 <rect key="frame" x="36" y="194" width="98" height="29"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hR-Y0-e0j">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hR-Y0-e0j">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="29"/>
                                                         <fontDescription key="fontDescription" name="nevis-Bold" family="nevis" pointSize="50"/>
                                                         <color key="textColor" name="white"/>
@@ -94,14 +94,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wnj-5C-DNj">
                                                         <rect key="frame" x="58" y="0.0" width="40" height="29"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="2vz-7X-5yY">
+                                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="2vz-7X-5yY">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="29"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="40" id="Nth-oN-TWK"/>
                                                                     <constraint firstAttribute="height" constant="29" id="sKA-ai-LTa"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxE-Ak-bk8">
+                                                            <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxE-Ak-bk8">
                                                                 <rect key="frame" x="-11" y="-194" width="62.5" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="white"/>
@@ -114,7 +114,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7gS-oa-coM">
                                                 <rect key="frame" x="241.5" y="194.5" width="98.5" height="29"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX1-g2-XEX">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX1-g2-XEX">
                                                         <rect key="frame" x="0.0" y="0.0" width="50.5" height="29"/>
                                                         <fontDescription key="fontDescription" name="nevis-Bold" family="nevis" pointSize="50"/>
                                                         <color key="textColor" name="white"/>
@@ -123,14 +123,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2yK-vB-DEH">
                                                         <rect key="frame" x="58.5" y="0.0" width="40" height="29"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="1xA-rl-tZC">
+                                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="1xA-rl-tZC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="29"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="40" id="XhV-0I-7mX"/>
                                                                     <constraint firstAttribute="height" constant="29" id="v38-GK-Ibf"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celcius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5D9-4E-e0e">
+                                                            <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celcius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5D9-4E-e0e">
                                                                 <rect key="frame" x="-8" y="-194.5" width="56" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="white"/>
@@ -142,14 +142,14 @@
                                                 <viewLayoutGuide key="safeArea" id="OaT-mj-7KB"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNw-RG-B1U">
-                                                <rect key="frame" x="334" y="44" width="20" height="22"/>
+                                                <rect key="frame" x="334" y="44" width="20" height="42"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" image="iconSettings"/>
                                                 <connections>
                                                     <segue destination="a6d-lU-pH1" kind="show" id="Mf9-dP-Ayg"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgWaves" translatesAutoresizingMaskIntoConstraints="NO" id="LEY-4l-25L">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgWaves" translatesAutoresizingMaskIntoConstraints="NO" id="LEY-4l-25L">
                                                 <rect key="frame" x="0.0" y="472" width="375" height="48"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHR-y8-ekb" customClass="SegmentChooserView" customModule="Sunblock" customModuleProvider="target">
@@ -260,19 +260,19 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkM-e9-oQB">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disclaimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJJ-GW-5vr">
-                                                <rect key="frame" x="32" y="80" width="152" height="34"/>
+                                                <rect key="frame" x="32" y="80" width="140.5" height="35"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="30"/>
                                                 <color key="textColor" name="dark"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavBarShadow" translatesAutoresizingMaskIntoConstraints="NO" id="yqS-d3-FfG">
-                                                <rect key="frame" x="30" y="148" width="315" height="4"/>
+                                                <rect key="frame" x="30" y="149" width="315" height="4"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2r-5R-yLX">
-                                                <rect key="frame" x="30" y="184" width="315" height="304.5"/>
+                                                <rect key="frame" x="30" y="185" width="315" height="304.5"/>
                                                 <string key="text">Apply suncreen to dry skin 15 minutes  before going outdoors.
 
 This app is meant as guidance, please remember that your skin may react differently to direct sunlight, always follow directions on sunscreen bottle.
@@ -283,7 +283,7 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0Q-tc-qm4" customClass="MainButton" customModule="Sunblock" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="529.5" width="315" height="64"/>
+                                                <rect key="frame" x="30" y="530.5" width="315" height="64"/>
                                                 <color key="backgroundColor" name="aquaMarine"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="UKQ-YJ-5Fx"/>
@@ -448,9 +448,6 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
         </namedColor>
         <namedColor name="white">
             <color red="0.98799997569999998" green="0.98799997569999998" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="white">
-            <color red="0.98799997568130493" green="0.98799997568130493" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

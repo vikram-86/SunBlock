@@ -41,6 +41,8 @@
 		8A23F6E92091140A00A30DDE /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A23F6E82091140A00A30DDE /* StoryboardIdentifiable.swift */; };
 		8A23F6EB2091143300A30DDE /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A23F6EA2091143300A30DDE /* UIStoryboard.swift */; };
 		8A36537320950E1000337B3C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36537220950E1000337B3C /* UIView.swift */; };
+		8A40F84A20B7639400C16725 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84920B7639400C16725 /* UIDevice.swift */; };
+		8A40F84C20B76B8900C16725 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84B20B76B8900C16725 /* Bundle.swift */; };
 		8A4A3A8720B347D80043D0FA /* OnboardingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */; };
 		8A4A3A8920B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */; };
 		8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */; };
@@ -119,6 +121,8 @@
 		8A23F6E82091140A00A30DDE /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		8A23F6EA2091143300A30DDE /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		8A36537220950E1000337B3C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8A40F84920B7639400C16725 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		8A40F84B20B76B8900C16725 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStatus.swift; sourceTree = "<group>"; };
 		8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinDisclaimerSceneViewController.swift; sourceTree = "<group>"; };
 		8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinLocationSceneViewController.swift; sourceTree = "<group>"; };
@@ -426,6 +430,8 @@
 				8A00045320AEB45D006A854E /* Date.swift */,
 				8AE2772420B1CA7900D8E65F /* UIFont.swift */,
 				8A9CB2A520B4294B009720C2 /* UIViewController.swift */,
+				8A40F84920B7639400C16725 /* UIDevice.swift */,
+				8A40F84B20B76B8900C16725 /* Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -693,10 +699,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A0003E220AA1D51006A854E /* WeatherFeed.swift in Sources */,
+				8A40F84C20B76B8900C16725 /* Bundle.swift in Sources */,
 				8A36537320950E1000337B3C /* UIView.swift in Sources */,
 				8A23F6E92091140A00A30DDE /* StoryboardIdentifiable.swift in Sources */,
 				8A0003CC20A983C2006A854E /* AlertService.swift in Sources */,
 				8A0003DC20A9C912006A854E /* APIClient.swift in Sources */,
+				8A40F84A20B7639400C16725 /* UIDevice.swift in Sources */,
 				8AE78F0020B595A4002B7F8D /* Reachability.swift in Sources */,
 				8AD6B2032083E8A10073721E /* SkinTypeCell.swift in Sources */,
 				8A0003D820A9BF99006A854E /* Endpoint.swift in Sources */,
