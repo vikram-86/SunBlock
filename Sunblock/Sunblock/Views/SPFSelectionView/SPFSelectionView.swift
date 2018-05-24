@@ -72,31 +72,65 @@ extension SPFSelectionView{
     private func initializeContent(){
         scrollContainerWidthContraint.constant = 0
 
-        var xCoordinate = (self.frame.width / 2) - (labelWidth / 2)
-        var markerOffset: CGFloat = 0
+        var xCoordinate		: CGFloat = 0 //(self.frame.width / 2) - (labelWidth / 2)
+        var markerOffset	: CGFloat = 0
         dataSource.forEach {
-            let label = UILabel(frame: CGRect(x: xCoordinate, y: 0, width: labelWidth, height: 50))
-            label.text 			= "\($0)"
-            label.textAlignment	= .center
-            label.textColor		= UIColor.appColor(.dirtyPurple)
-            label.font			= UIFont.appFont(with: .nevis, size: 50)
+//            let label = UILabel(frame: CGRect(x: xCoordinate, y: 0, width: labelWidth, height: 50))
+//            label.text             = "\($0)"
+//            label.textAlignment    = .center
+//            label.textColor        = UIColor.appColor(.dirtyPurple)
+//            label.font            = UIFont.appFont(with: .nevis, size: 50)
+//
+//            let gesture = UITapGestureRecognizer(target: self, action: #selector(tapped(sender:)))
+//            label.addGestureRecognizer(gesture)
+//            label.isUserInteractionEnabled = true
 
-            let gesture = UITapGestureRecognizer(target: self, action: #selector(tapped(sender:)))
-            label.addGestureRecognizer(gesture)
-            label.isUserInteractionEnabled = true
+            let content = createSliderContent(with: "\($0)", coordinateX: xCoordinate)
+            xCoordinate = content.xCoordinate
+            scrollView.addSubview(content.label)
 
-            scrollView.addSubview(label)
-            labels.append(label)
-            xCoordinates.append(markerOffset)
+            labels.append(content.label)
+            if $0 == 0{
+                xCoordinates.append(markerOffset)
+            }else{
+                markerOffset = (content.xCoordinate + (content.width / 2)) - (frame.width / 2)
+                xCoordinates.append(markerOffset)
+            }
 
-            xCoordinate += labelWidth + 10
-            markerOffset += labelWidth + 10
+            xCoordinate += content.width + 10
         }
+
+
 
         scrollView.contentSize = CGSize(width: (self.bounds.width + 950), height: 50)
         scrollView.delegate = self
         markerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selected)))
         self.layoutIfNeeded()
+    }
+
+    private func  createSliderContent(with text: String, coordinateX: CGFloat) -> (label: UILabel, xCoordinate: CGFloat, width: CGFloat){
+        // Create Label
+        let label 			= UILabel()
+        label.text			= text
+        label.textAlignment	= .center
+        label.textColor		= UIColor.appColor(.dirtyPurple)
+        label.font			= UIFont.appFont(with: .nevis, size: 50)
+
+        label.sizeToFit()
+
+        //add Gesture
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapped(sender:)))
+        label.addGestureRecognizer(gesture)
+        label.isUserInteractionEnabled = true
+        var x: CGFloat
+        if coordinateX == 0{
+            x = (frame.width / 2) - (label.frame.width / 2)
+        }else{
+            x = coordinateX
+        }
+        // adjust label frame
+        label.frame = CGRect(x: x, y: 0, width: label.frame.width, height: 50)
+        return (label, x, label.frame.width)
     }
 }
 
@@ -144,7 +178,8 @@ extension SPFSelectionView{
         scrollView.alpha = 0
 
         UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeLinear, animations: {
-            self.labelLeadingConstraint.constant    = (self.bounds.width / 2) - (self.labelWidth / 2)
+
+            self.labelLeadingConstraint.constant    = (self.bounds.width / 2) - (self.valueLabel.frame.width / 2)
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1 / 3, animations: {
                 self.layoutIfNeeded()
                 self.spfLabel.alpha = 0
@@ -167,13 +202,17 @@ extension SPFSelectionView{
     // collapse Scrollview
     private func animateIn(){
         UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeLinear, animations: {
+            self.valueLabel.sizeToFit()
+            self.labelLeadingConstraint.constant    = (self.bounds.width / 2) - (self.valueLabel.frame.width / 2)
+            self.layoutIfNeeded()
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1 / 3, animations: {
                 self.titleLabel.isHidden	= false
                 self.scrollView.alpha 		= 0
-                self.valueLabel.isHidden	= false
+
             })
 			self.scrollContainerWidthContraint.constant = 0
             UIView.addKeyframe(withRelativeStartTime: 1 / 3, relativeDuration: 1 / 3, animations: {
+                self.valueLabel.isHidden    = false
                 self.layoutIfNeeded()
             })
 			self.labelLeadingConstraint.constant = 40
