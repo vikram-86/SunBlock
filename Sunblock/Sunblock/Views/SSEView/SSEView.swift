@@ -30,6 +30,7 @@ import UIKit
         loadNibContent()
         valueLabel.alpha	= 0
         unitLabel.alpha		= 0
+        buttonView.isHidden = true
     }
 }
 
@@ -37,7 +38,8 @@ import UIKit
 extension SSEView{
 
     @IBAction private func startReminder(){
-
+        print("starting reminder")
+        UserNotificationService.current.scheduleNotification(with: 60)
     }
 
     func configure(with value: SSEValue){

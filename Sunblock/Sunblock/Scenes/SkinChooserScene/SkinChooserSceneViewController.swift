@@ -97,7 +97,7 @@ extension SkinChooserSceneViewController{
     }
 
     private func calculateSegue(){
-        guard let status = OnboardingStatus.load() else {
+        guard let _ = OnboardingStatus.load() else {
             self.navigationController?.popViewController(animated: true)
             return
         }

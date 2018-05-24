@@ -80,6 +80,7 @@
 		8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772920B1FE8C00D8E65F /* SSEView.swift */; };
 		8AE78EFE20B4BB27002B7F8D /* SSEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE78EFD20B4BB27002B7F8D /* SSEController.swift */; };
 		8AE78F0020B595A4002B7F8D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE78EFF20B595A4002B7F8D /* Reachability.swift */; };
+		8AE78F0320B5F890002B7F8D /* UserNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE78F0220B5F890002B7F8D /* UserNotificationService.swift */; };
 		8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAE299207FED9500DA7D0E /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,7 @@
 		8AE2772920B1FE8C00D8E65F /* SSEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEView.swift; sourceTree = "<group>"; };
 		8AE78EFD20B4BB27002B7F8D /* SSEController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEController.swift; sourceTree = "<group>"; };
 		8AE78EFF20B595A4002B7F8D /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8AE78F0220B5F890002B7F8D /* UserNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationService.swift; sourceTree = "<group>"; };
 		8AFAE299207FED9500DA7D0E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,7 @@
 		8A0003C220A8AD8B006A854E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8AE78F0120B5F874002B7F8D /* UserNotificationService */,
 				8A0003CE20A9B4F4006A854E /* NetworkService */,
 				8A0003C320A8AD96006A854E /* LocationService */,
 				8A0003CD20A9AD2C006A854E /* AlertService */,
@@ -583,6 +586,14 @@
 			path = SSEView;
 			sourceTree = "<group>";
 		};
+		8AE78F0120B5F874002B7F8D /* UserNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				8AE78F0220B5F890002B7F8D /* UserNotificationService.swift */,
+			);
+			path = UserNotificationService;
+			sourceTree = "<group>";
+		};
 		8AFAE298207FED8400DA7D0E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,6 +729,7 @@
 				8ABC18CF20B211AC007EA149 /* OnboardingInfoView.swift in Sources */,
 				8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */,
 				8A4A3A8920B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift in Sources */,
+				8AE78F0320B5F890002B7F8D /* UserNotificationService.swift in Sources */,
 				8A00045620AECA53006A854E /* Environment.swift in Sources */,
 				8A502EDF2073C8330039D598 /* AppDelegate.swift in Sources */,
 				8A502EFA2073C95C0039D598 /* UIColor.swift in Sources */,

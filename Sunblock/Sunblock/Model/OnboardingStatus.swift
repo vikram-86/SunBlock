@@ -16,7 +16,7 @@ struct OnboardingStatus: Codable{
     let hasCompletedOnboardin	: Bool
     let locationServiceGranted	: Bool
 
-    func save() -> Bool{
+    @discardableResult func save() -> Bool{
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self){
             UserDefaults.standard.set(encoded, forKey: Keys.oboardinStatus)

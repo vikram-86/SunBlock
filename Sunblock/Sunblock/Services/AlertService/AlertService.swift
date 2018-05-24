@@ -10,13 +10,13 @@ import UIKit
 
 class AlertService{
 
-    class func presentAlert(with text: String, handler: ((UIAlertAction) -> Void)? = nil ){
+    class func presentAlert(with text: String,title: String? = nil, handler: ((UIAlertAction) -> Void)? = nil ){
         DispatchQueue.main.async {
             guard let vc = appDelegate.window?.rootViewController?.topMostViewController() else {
                 return
             }
-
-            let alertController = UIAlertController(title: "Ops! Something went wrong", message: text, preferredStyle: .alert)
+			let title = title ?? "Ops! Something went wrong"
+            let alertController = UIAlertController(title: title, message: text, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
 
             vc.present(alertController, animated: true)

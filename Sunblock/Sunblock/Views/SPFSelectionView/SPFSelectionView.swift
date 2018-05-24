@@ -28,7 +28,7 @@ protocol SPFDelegate: class{
 
 	// Ingen spf 0,2 eller 4
     private var dataSource = [
-        0,2,4,6,8,10,15,20,25,30,40,50
+        0,10,15,20,25,30,40,50
     ]
 
     private var xCoordinates	= [CGFloat]()
@@ -63,6 +63,10 @@ extension SPFSelectionView{
     private func setup(){
         loadNibContent()
         initializeContent()
+
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(labelSelected))
+        valueLabel.addGestureRecognizer(gesture)
+        valueLabel.isUserInteractionEnabled = true
     }
 
     private func initializeContent(){
@@ -76,10 +80,15 @@ extension SPFSelectionView{
             label.textAlignment	= .center
             label.textColor		= UIColor.appColor(.dirtyPurple)
             label.font			= UIFont.appFont(with: .nevis, size: 50)
-            
+
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(tapped(sender:)))
+            label.addGestureRecognizer(gesture)
+            label.isUserInteractionEnabled = true
+
             scrollView.addSubview(label)
             labels.append(label)
             xCoordinates.append(markerOffset)
+
             xCoordinate += labelWidth + 10
             markerOffset += labelWidth + 10
         }
@@ -94,6 +103,23 @@ extension SPFSelectionView{
 //MARK: IBAction
 extension SPFSelectionView{
     @IBAction func selectSunScreen(){
+        animate()
+    }
+
+    @objc func tapped(sender: UITapGestureRecognizer){
+        guard
+        	let label = sender.view as? UILabel,
+        	let index = labels.index(of: label)
+        else {
+            return
+        }
+        let xCoordinate	= xCoordinates[index]
+        let point 		= CGPoint(x: xCoordinate, y: 0)
+        scrollView.setContentOffset(point, animated: true)
+    }
+
+    @objc func labelSelected(){
+        shouldShowPicker = false
         animate()
     }
 
@@ -113,18 +139,6 @@ extension SPFSelectionView{
     // Expand scroll view
     private func animateOut(){
 
-//        scrollContainerWidthContraint.constant = self.bounds.width
-//        labelLeadingConstraint.constant    = (self.bounds.width / 2) - (labelWidth / 2)
-//
-//        titleLabel.isHidden = true
-//        UIView.animate(withDuration: 0.33, animations: {
-//            self.layoutIfNeeded()
-//            self.spfLabel.alpha = 0
-//            self.buttonContainerView.alpha = 0
-//
-//        }) { (_) in
-//            self.valueLabel.isHidden = true
-//        }
         let index = dataSource.index(of: value)!
         scrollView.contentOffset = CGPoint(x: xCoordinates[index], y: 0)
         scrollView.alpha = 0
@@ -152,19 +166,6 @@ extension SPFSelectionView{
 
     // collapse Scrollview
     private func animateIn(){
-//        scrollContainerWidthContraint.constant = 0
-//        labelLeadingConstraint.constant = 40
-//
-//
-//        UIView.animate(withDuration: 0.33, animations: {
-//            self.layoutIfNeeded()
-//            self.spfLabel.alpha = 1
-//            self.buttonContainerView.alpha = 1
-//            self.valueLabel.isHidden = false
-//            }){ (_) in
-//                self.titleLabel.isHidden = false
-//        }
-
         UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeLinear, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1 / 3, animations: {
                 self.titleLabel.isHidden	= false
@@ -216,7 +217,8 @@ extension SPFSelectionView: UIScrollViewDelegate{
     }
 
     private func getOffsetPoint() -> CGPoint{
-        guard let index = dataSource.index(of: value) else { return .zero}
+        guard let index	= dataSource.index(of: value) else { return .zero}
+        
         let offset = xCoordinates[index]
         return CGPoint(x: offset, y: 0)
     }

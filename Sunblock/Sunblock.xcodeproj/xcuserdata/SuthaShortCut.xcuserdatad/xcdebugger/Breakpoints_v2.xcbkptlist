@@ -6,49 +6,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-            timestampString = "548774072.576636"
+            timestampString = "548841809.747596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "updateSSE()"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "locationServiceDidFinish(with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sunblock.MainSceneViewController.(updateSSE in _AD6897A3A340FA3E052E945BADEF6E07)() -&gt; ()"
-                  moduleName = "Sunblock"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/SuthaShortCut/Documents/SunBlock/Sunblock/Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-                  timestampString = "548764643.201162"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "244">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Sunblock.MainSceneViewController.(updateSSE in _AD6897A3A340FA3E052E945BADEF6E07)() -&gt; ()"
-                  moduleName = "Sunblock"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/SuthaShortCut/Documents/SunBlock/Sunblock/Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-                  timestampString = "548764643.203506"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sunblock/Services/UserNotificationService/UserNotificationService.swift"
+            timestampString = "548878695.520713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "userNotificationCenter(_:willPresent:withCompletionHandler:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
