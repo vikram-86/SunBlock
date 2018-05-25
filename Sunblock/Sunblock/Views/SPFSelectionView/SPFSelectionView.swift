@@ -60,6 +60,7 @@ protocol SPFDelegate: class{
 
 //MARK: Private functions
 extension SPFSelectionView{
+
     private func setup(){
         loadNibContent()
         initializeContent()
@@ -75,15 +76,6 @@ extension SPFSelectionView{
         var xCoordinate		: CGFloat = 0 //(self.frame.width / 2) - (labelWidth / 2)
         var markerOffset	: CGFloat = 0
         dataSource.forEach {
-//            let label = UILabel(frame: CGRect(x: xCoordinate, y: 0, width: labelWidth, height: 50))
-//            label.text             = "\($0)"
-//            label.textAlignment    = .center
-//            label.textColor        = UIColor.appColor(.dirtyPurple)
-//            label.font            = UIFont.appFont(with: .nevis, size: 50)
-//
-//            let gesture = UITapGestureRecognizer(target: self, action: #selector(tapped(sender:)))
-//            label.addGestureRecognizer(gesture)
-//            label.isUserInteractionEnabled = true
 
             let content = createSliderContent(with: "\($0)", coordinateX: xCoordinate)
             xCoordinate = content.xCoordinate
@@ -106,6 +98,12 @@ extension SPFSelectionView{
         scrollView.delegate = self
         markerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selected)))
         self.layoutIfNeeded()
+    }
+
+    func userTappedOut(){
+        if shouldShowPicker{
+            animate()
+        }
     }
 
     private func  createSliderContent(with text: String, coordinateX: CGFloat) -> (label: UILabel, xCoordinate: CGFloat, width: CGFloat){

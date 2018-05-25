@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDR-k8-pee">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="872"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8u-dk-Io7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
@@ -143,7 +143,9 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNw-RG-B1U">
                                                 <rect key="frame" x="334" y="44" width="20" height="42"/>
-                                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="f9b-fF-b1X"/>
+                                                </constraints>
                                                 <state key="normal" image="iconSettings"/>
                                                 <connections>
                                                     <segue destination="a6d-lU-pH1" kind="show" id="Mf9-dP-Ayg"/>
@@ -177,7 +179,7 @@
                                             <constraint firstAttribute="trailing" secondItem="7gS-oa-coM" secondAttribute="trailing" constant="35" id="W0I-i0-ebu"/>
                                             <constraint firstItem="sVz-Qf-0z9" firstAttribute="top" secondItem="EzQ-FY-KvU" secondAttribute="bottom" id="WUO-7x-iNV"/>
                                             <constraint firstItem="I01-Ss-317" firstAttribute="leading" secondItem="A8u-dk-Io7" secondAttribute="leading" id="b9Y-Cq-QdG"/>
-                                            <constraint firstItem="YNw-RG-B1U" firstAttribute="top" secondItem="A8u-dk-Io7" secondAttribute="top" constant="44" id="eeO-XZ-cde"/>
+                                            <constraint firstItem="YNw-RG-B1U" firstAttribute="top" secondItem="A8u-dk-Io7" secondAttribute="top" constant="20" id="eeO-XZ-cde"/>
                                             <constraint firstItem="LEY-4l-25L" firstAttribute="top" secondItem="A8u-dk-Io7" secondAttribute="top" constant="472" id="n3f-tV-ijY"/>
                                             <constraint firstAttribute="trailing" secondItem="YNw-RG-B1U" secondAttribute="trailing" constant="21" id="n4W-Xq-J2Q"/>
                                             <constraint firstAttribute="bottom" secondItem="lHR-y8-ekb" secondAttribute="bottom" constant="8" id="sO9-4V-J1l"/>
@@ -196,13 +198,14 @@
                         <color key="backgroundColor" name="greenishTeal"/>
                         <constraints>
                             <constraint firstItem="A8u-dk-Io7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="7Vk-Ju-Pf4"/>
-                            <constraint firstItem="ZDR-k8-pee" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mnb-vh-ZMI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZDR-k8-pee" secondAttribute="trailing" id="Qgq-c2-qA6"/>
                             <constraint firstItem="ZDR-k8-pee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Soo-KJ-EtT"/>
                             <constraint firstAttribute="bottom" secondItem="ZDR-k8-pee" secondAttribute="bottom" id="Ur9-Zd-EGg"/>
+                            <constraint firstItem="ZDR-k8-pee" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w6z-PU-IKd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <size key="freeformSize" width="375" height="900"/>
                     <connections>
                         <outlet property="scrollView" destination="ZDR-k8-pee" id="lkh-ae-Lfk"/>
@@ -223,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-303.19999999999999" y="126.83658170914543"/>
+            <point key="canvasLocation" x="-303.19999999999999" y="126.38680659670166"/>
         </scene>
         <!--Settings-->
         <scene sceneID="H67-aR-zsl">
@@ -260,19 +263,19 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkM-e9-oQB">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disclaimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJJ-GW-5vr">
-                                                <rect key="frame" x="32" y="80" width="140.5" height="35"/>
+                                                <rect key="frame" x="32" y="80" width="152" height="34"/>
                                                 <fontDescription key="fontDescription" name="Archivo-Bold" family="Archivo" pointSize="30"/>
                                                 <color key="textColor" name="dark"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavBarShadow" translatesAutoresizingMaskIntoConstraints="NO" id="yqS-d3-FfG">
-                                                <rect key="frame" x="30" y="149" width="315" height="4"/>
+                                                <rect key="frame" x="30" y="148" width="315" height="4"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2r-5R-yLX">
-                                                <rect key="frame" x="30" y="185" width="315" height="304.5"/>
+                                                <rect key="frame" x="30" y="184" width="315" height="304.5"/>
                                                 <string key="text">Apply suncreen to dry skin 15 minutes  before going outdoors.
 
 This app is meant as guidance, please remember that your skin may react differently to direct sunlight, always follow directions on sunscreen bottle.
@@ -283,7 +286,7 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0Q-tc-qm4" customClass="MainButton" customModule="Sunblock" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="530.5" width="315" height="64"/>
+                                                <rect key="frame" x="30" y="529.5" width="315" height="64"/>
                                                 <color key="backgroundColor" name="aquaMarine"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="UKQ-YJ-5Fx"/>

@@ -43,6 +43,8 @@
 		8A36537320950E1000337B3C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36537220950E1000337B3C /* UIView.swift */; };
 		8A40F84A20B7639400C16725 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84920B7639400C16725 /* UIDevice.swift */; };
 		8A40F84C20B76B8900C16725 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84B20B76B8900C16725 /* Bundle.swift */; };
+		8A40F84E20B7F90A00C16725 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84D20B7F90A00C16725 /* ScrollView.swift */; };
+		8A40F85020B7FE8700C16725 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84F20B7FE8700C16725 /* NotificationName.swift */; };
 		8A4A3A8720B347D80043D0FA /* OnboardingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */; };
 		8A4A3A8920B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */; };
 		8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */; };
@@ -123,6 +125,8 @@
 		8A36537220950E1000337B3C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8A40F84920B7639400C16725 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		8A40F84B20B76B8900C16725 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		8A40F84D20B7F90A00C16725 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		8A40F84F20B7FE8700C16725 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStatus.swift; sourceTree = "<group>"; };
 		8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinDisclaimerSceneViewController.swift; sourceTree = "<group>"; };
 		8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinLocationSceneViewController.swift; sourceTree = "<group>"; };
@@ -432,6 +436,8 @@
 				8A9CB2A520B4294B009720C2 /* UIViewController.swift */,
 				8A40F84920B7639400C16725 /* UIDevice.swift */,
 				8A40F84B20B76B8900C16725 /* Bundle.swift */,
+				8A40F84D20B7F90A00C16725 /* ScrollView.swift */,
+				8A40F84F20B7FE8700C16725 /* NotificationName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -718,6 +724,7 @@
 				8A00044A20AE03A7006A854E /* Sunblock.xcdatamodeld in Sources */,
 				8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */,
 				8A00045120AE07C7006A854E /* Weather+CoreDataClass.swift in Sources */,
+				8A40F84E20B7F90A00C16725 /* ScrollView.swift in Sources */,
 				8AD6B1FA2083D47E0073721E /* MainButton.swift in Sources */,
 				8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */,
 				8A00045420AEB45D006A854E /* Date.swift in Sources */,
@@ -728,6 +735,7 @@
 				8ABC18CB20B20CAE007EA149 /* OnboardingSceneViewController.swift in Sources */,
 				8A00E93A209F8A71000C6882 /* Profile.swift in Sources */,
 				8A0D7BAE208FC3C200003245 /* Reusable.swift in Sources */,
+				8A40F85020B7FE8700C16725 /* NotificationName.swift in Sources */,
 				8A00044120ADF166006A854E /* WeatherResponse.swift in Sources */,
 				8A23F6E520910C6700A30DDE /* UICollectionView.swift in Sources */,
 				8AE78EFE20B4BB27002B7F8D /* SSEController.swift in Sources */,

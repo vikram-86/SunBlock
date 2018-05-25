@@ -57,6 +57,8 @@ class MainSceneViewController: UIViewController {
         }
     }
 
+    private var isReloading = false
+
     let reachability = Reachability()!
 
 
@@ -108,6 +110,9 @@ class MainSceneViewController: UIViewController {
         }catch{
             print("Unable to start notifier")
         }
+
+        NotificationCenter.default.addObserver(self, selector: #selector(viewTouched(_:)),
+                                               name: .viewTouched, object: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -129,14 +134,14 @@ class MainSceneViewController: UIViewController {
         super.viewWillDisappear(animated)
         LocationService.current.delegate = nil
         reachability.stopNotifier()
+        NotificationCenter.default.removeObserver(self, name: .viewTouched, object: nil)
 
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        guard let touch = touches.first else { return }
+    @objc func viewTouched(_ notification: Notification){
+        guard let touch = notification.userInfo?["touch"] as? UITouch else { return }
         if touch.view != spfSelectionView{
-            print("Touched outside of spf selection view")
+            spfSelectionView.userTappedOut()
         }
     }
 }
