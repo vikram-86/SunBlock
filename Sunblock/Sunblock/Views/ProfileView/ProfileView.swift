@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ProfileViewDelegate: class {
+
+    func view(didSelectURL url: URL)
+}
 @IBDesignable class ProfileView: UIView{
 
     @IBOutlet weak private var profileImageView	: UIImageView!
@@ -15,6 +19,7 @@ import UIKit
     @IBOutlet weak private var descriptionLabel	: UILabel!
 
     private var profile: Profile!
+    weak var delegate : ProfileViewDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,4 +43,17 @@ extension ProfileView{
     }
 }
 
+extension ProfileView{
+    @IBAction func facebookButtonPressed(){
+        let url = URL(string: self.profile.facebook)!
+        delegate?.view(didSelectURL: url)
+    }
+
+    @IBAction func linkedInButtonPressed(){
+        let url = URL(string: self.profile.linkedIn)!
+        delegate?.view(didSelectURL: url)
+    }
+}
+
 extension ProfileView: NibFileOwnerLoadable{}
+

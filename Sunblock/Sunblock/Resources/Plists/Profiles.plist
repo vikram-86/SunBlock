@@ -3,6 +3,10 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>linkedIn</key>
+		<string>https://www.linkedin.com/in/stievehansen/</string>
+		<key>facebook</key>
+		<string>https://www.messenger.com/t/stieve.hansen</string>
 		<key>profileImageName</key>
 		<string>stieve</string>
 		<key>description</key>
@@ -11,6 +15,10 @@
 		<string>Stieve Hansen</string>
 	</dict>
 	<dict>
+		<key>linkedIn</key>
+		<string>https://www.linkedin.com/in/suthananth/</string>
+		<key>facebook</key>
+		<string>https://www.messenger.com/t/vikram.sutha</string>
 		<key>profileImageName</key>
 		<string>sutha</string>
 		<key>description</key>

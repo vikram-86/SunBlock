@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class AboutSceneViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class AboutSceneViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupProfileViews()
+        profileView1.delegate = self
+        profileView2.delegate = self
     }
 }
 
@@ -33,5 +36,12 @@ extension AboutSceneViewController{
 
     @IBAction private func back(){
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension AboutSceneViewController: ProfileViewDelegate{
+    func view(didSelectURL url: URL) {
+        let vc = SFSafariViewController(url: url, configuration: SFSafariViewController.Configuration())
+        present(vc, animated: true)
     }
 }

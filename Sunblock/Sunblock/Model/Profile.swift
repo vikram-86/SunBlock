@@ -13,6 +13,8 @@ struct Profile: Codable{
     let name						: String
     let description					: String
     private let profileImageName	: String
+    let linkedIn					: String
+    let facebook					: String
 
     var profileImage: UIImage{
         guard

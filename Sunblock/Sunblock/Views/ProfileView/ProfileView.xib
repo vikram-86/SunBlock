@@ -48,10 +48,16 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-VE-xqg">
                     <rect key="frame" x="173" y="97" width="20" height="22"/>
                     <state key="normal" image="facebook"/>
+                    <connections>
+                        <action selector="facebookButtonPressed" destination="-1" eventType="touchUpInside" id="wPf-KP-5L1"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tv-4t-UoI">
                     <rect key="frame" x="209" y="97" width="20" height="22"/>
                     <state key="normal" image="linkedin"/>
+                    <connections>
+                        <action selector="linkedInButtonPressed" destination="-1" eventType="touchUpInside" id="w9h-oZ-Lsv"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
