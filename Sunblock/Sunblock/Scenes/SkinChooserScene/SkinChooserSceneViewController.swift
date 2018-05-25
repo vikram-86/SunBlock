@@ -50,7 +50,10 @@ class SkinChooserSceneViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(fromOnboarding)
+        let skinType = SkinType.load()
+        if let index = source.index(of: skinType){
+            collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
+        }
     }
 
     @IBAction func SkinButtonPressed(_ sender: MainButton) {
