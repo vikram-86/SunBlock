@@ -74,6 +74,7 @@ extension SPFSelectionView{
 
         var xCoordinate		: CGFloat = 0 //(self.frame.width / 2) - (labelWidth / 2)
         var markerOffset	: CGFloat = 0
+        var contentWidth	: CGFloat = 0
         dataSource.forEach {
 
             let content = createSliderContent(with: "\($0)", coordinateX: xCoordinate)
@@ -89,11 +90,14 @@ extension SPFSelectionView{
             }
 
             xCoordinate += content.width + 25
+            contentWidth += content.width + 25
         }
 
+        contentWidth += self.bounds.width
 
 
-        scrollView.contentSize = CGSize(width: (self.bounds.width + 950), height: 50)
+		//(self.bounds.width + 950)
+        scrollView.contentSize = CGSize(width: contentWidth, height: 50)
         scrollView.delegate = self
         markerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selected)))
         self.layoutIfNeeded()
@@ -231,6 +235,7 @@ extension SPFSelectionView{
 //MARK: ScrollViewDelegate
 extension SPFSelectionView: UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.x)
         let markerFrame = CGRect(x: markerView.frame.origin.x + scrollView.contentOffset.x,
                                  y: 0, width: markerView.bounds.width, height: markerView.bounds.height)
 
