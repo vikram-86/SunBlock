@@ -35,7 +35,6 @@ protocol SPFDelegate: class{
     private var labels			= [UILabel]()
     private var impact			= UISelectionFeedbackGenerator()
 
-    private let labelWidth: CGFloat = 70
     private var shouldShowPicker 	= false
     private var value 				= 0{
         didSet{
@@ -89,7 +88,7 @@ extension SPFSelectionView{
                 xCoordinates.append(markerOffset)
             }
 
-            xCoordinate += content.width + 10
+            xCoordinate += content.width + 25
         }
 
 
@@ -102,6 +101,9 @@ extension SPFSelectionView{
 
     func userTappedOut(){
         if shouldShowPicker{
+
+            scrollView.isScrollEnabled = false
+            scrollView.isScrollEnabled = true
             animate()
         }
     }

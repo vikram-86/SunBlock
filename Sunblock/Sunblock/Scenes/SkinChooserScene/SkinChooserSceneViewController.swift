@@ -15,6 +15,36 @@ class SkinChooserSceneViewController: UIViewController {
     @IBOutlet var skinColorButtons		: [MainButton]!
     @IBOutlet weak var buttonContainer	: UIView!
 
+    @IBOutlet weak var firstButtonHeight	: NSLayoutConstraint!
+    @IBOutlet weak var firstButtonWidth		: NSLayoutConstraint!
+
+    @IBOutlet weak var secondButtonHeight	: NSLayoutConstraint!
+    @IBOutlet weak var secondButtonWidth	: NSLayoutConstraint!
+
+    @IBOutlet weak var thirdButtonWidth: NSLayoutConstraint!
+    @IBOutlet weak var thirdButtonHeight: NSLayoutConstraint!
+
+    @IBOutlet weak var fourthButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var fourthButtonWidth: NSLayoutConstraint!
+
+    @IBOutlet weak var fifthButtonWidth: NSLayoutConstraint!
+    @IBOutlet weak var fifthButtonHeight: NSLayoutConstraint!
+
+    @IBOutlet weak var sixthButtonWidth: NSLayoutConstraint!
+    @IBOutlet weak var sixthButtonHeight: NSLayoutConstraint!
+
+    var buttonContstraints: [(width:NSLayoutConstraint, height: NSLayoutConstraint)]{
+        return [
+            (firstButtonWidth, firstButtonHeight),
+            (secondButtonWidth, secondButtonHeight),
+            (thirdButtonWidth, thirdButtonHeight),
+            (fourthButtonWidth, thirdButtonHeight),
+            (fifthButtonWidth, fifthButtonHeight),
+            (sixthButtonWidth, sixthButtonHeight)
+        ]
+    }
+    
+
     struct SegueIdentifiers{
         static let disclaimer 			= "disclaimerSegue"
         static let disclaimerToLocation	= "disclaimerToLocation"
@@ -48,6 +78,10 @@ class SkinChooserSceneViewController: UIViewController {
         setupButtons()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let skinType = SkinType.load()
@@ -61,6 +95,17 @@ class SkinChooserSceneViewController: UIViewController {
         guard
             let index = skinButtonColors.index(of: sender.currentBackgroundName)
         else{ return }
+
+		// reset button width
+        buttonContstraints.forEach { (constraint) in
+            constraint.width.constant = 16
+            constraint.height.constant = 16
+        }
+        self.view.layoutIfNeeded()
+        let constraint = buttonContstraints[index]
+        constraint.height.constant = 24
+        constraint.width.constant = 24
+        self.view.layoutIfNeeded()
 
         let indexPath = IndexPath(item: index, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .left, animated: true)

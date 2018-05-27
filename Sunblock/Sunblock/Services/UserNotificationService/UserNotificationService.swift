@@ -29,11 +29,21 @@ class UserNotificationService: NSObject{
         }
     }
 
+    func hasPendingNotificationRequests(completion: @escaping (Bool)->Void){
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (requests) in
+            completion(requests.count != 0)
+        }
+    }
+
+    func removeAllPendingRequests(){
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+
 
     func scheduleNotification(with timeInterval: TimeInterval){
         requestPermission { (granted) in
             if granted{
-                
+
                 let center = UNUserNotificationCenter.current()
                 center.removeAllPendingNotificationRequests()
 

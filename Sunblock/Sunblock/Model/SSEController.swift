@@ -104,7 +104,7 @@ struct SSEController{
             return ("\(time)", "minutes", Double(time))
         }else if time >= 60, time < 120{
             return ("\(1)", "hour", Double(time))
-        }else if time > 1140{
+        }else if time > 1440{
             return ("\(24)", "+hours", Double(time))
         }else{
             return ("\(time/60)", "hours", Double(time))

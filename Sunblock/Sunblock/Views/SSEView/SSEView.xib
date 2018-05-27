@@ -17,6 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSEView" customModule="Sunblock" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="NWI-U1-h8l" id="NgP-Fe-FTv"/>
+                <outlet property="buttonImageview" destination="Xcr-Hx-ya5" id="I6A-aF-bCU"/>
                 <outlet property="buttonView" destination="ZhE-EK-eVy" id="DOO-Ls-3Ih"/>
                 <outlet property="unitLabel" destination="RDB-Ca-HC6" id="Xc8-R1-mTa"/>
                 <outlet property="valueLabel" destination="PvX-Oy-OmV" id="aZL-XZ-5A8"/>

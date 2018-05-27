@@ -42,6 +42,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Female_type_1" translatesAutoresizingMaskIntoConstraints="NO" id="E4W-zM-CyS">
                                                     <rect key="frame" x="18" y="288" width="170" height="361"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="370" id="blS-eE-bMh"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Male_type_1" translatesAutoresizingMaskIntoConstraints="NO" id="smU-Ca-Atd">
                                                     <rect key="frame" x="206" y="289.5" width="146" height="358"/>
@@ -66,13 +69,13 @@
                                 <rect key="frame" x="22" y="567" width="328" height="73"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkv-QJ-ITt">
-                                        <rect key="frame" x="0.0" y="4" width="257.5" height="65"/>
+                                        <rect key="frame" x="0.0" y="4" width="251" height="65"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="yj0-Yv-elx">
-                                                <rect key="frame" x="0.0" y="0.0" width="257.5" height="65"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="251" height="65"/>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wpq-ob-UGE">
-                                                <rect key="frame" x="32" y="24" width="193.5" height="18"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wpq-ob-UGE">
+                                                <rect key="frame" x="20" y="24" width="211" height="18"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unx-By-KFT" customClass="MainButton" customModule="Sunblock" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
@@ -85,7 +88,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxD-7o-UL1" customClass="MainButton" customModule="Sunblock" customModuleProvider="target">
-                                                        <rect key="frame" x="35" y="0.0" width="18" height="18"/>
+                                                        <rect key="frame" x="38.5" y="0.0" width="18" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="dop-Eb-YA7"/>
                                                             <constraint firstAttribute="width" constant="18" id="qag-yq-z4T"/>
@@ -95,7 +98,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRd-dM-pL1" customClass="MainButton" customModule="Sunblock" customModuleProvider="target">
-                                                        <rect key="frame" x="70" y="0.0" width="18" height="18"/>
+                                                        <rect key="frame" x="77" y="0.0" width="18" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="18" id="Rzw-nh-1xl"/>
                                                             <constraint firstAttribute="height" constant="18" id="rHw-pf-vnS"/>
@@ -105,7 +108,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1g-CG-SGE" customClass="MainButton" customModule="Sunblock" customModuleProvider="target">
-                                                        <rect key="frame" x="105" y="0.0" width="18" height="18"/>
+                                                        <rect key="frame" x="116" y="0.0" width="18" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="9vL-f6-vhs"/>
                                                             <constraint firstAttribute="width" constant="18" id="QnP-jl-Wb1"/>
@@ -115,7 +118,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOY-rQ-WGY" customClass="MainButton" customModule="Sunblock" customModuleProvider="target">
-                                                        <rect key="frame" x="140" y="0.0" width="18" height="18"/>
+                                                        <rect key="frame" x="154.5" y="0.0" width="18" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="18" id="Dwt-R6-gqF"/>
                                                             <constraint firstAttribute="height" constant="18" id="zYd-I5-7UB"/>
@@ -125,9 +128,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN5-xC-P1C" customClass="MainButton" customModule="Sunblock" customModuleProvider="target">
-                                                        <rect key="frame" x="175" y="0.0" width="18.5" height="18"/>
+                                                        <rect key="frame" x="193" y="0.0" width="18" height="18"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="18" id="Fgl-Hb-Meh"/>
+                                                            <constraint firstAttribute="width" constant="18" id="Pfu-NZ-d0j"/>
                                                             <constraint firstAttribute="height" constant="18" id="e6k-WI-b6U"/>
                                                         </constraints>
                                                         <connections>
@@ -145,13 +148,13 @@
                                             <constraint firstAttribute="bottom" secondItem="yj0-Yv-elx" secondAttribute="bottom" id="MCq-0u-mvL"/>
                                             <constraint firstItem="Wpq-ob-UGE" firstAttribute="centerY" secondItem="gkv-QJ-ITt" secondAttribute="centerY" id="X78-tZ-4Lz"/>
                                             <constraint firstItem="Wpq-ob-UGE" firstAttribute="centerX" secondItem="gkv-QJ-ITt" secondAttribute="centerX" id="XDk-ln-5ZP"/>
-                                            <constraint firstItem="Wpq-ob-UGE" firstAttribute="leading" secondItem="gkv-QJ-ITt" secondAttribute="leading" constant="32" id="eiX-DF-0Br"/>
+                                            <constraint firstItem="Wpq-ob-UGE" firstAttribute="leading" secondItem="gkv-QJ-ITt" secondAttribute="leading" constant="20" id="eiX-DF-0Br"/>
                                             <constraint firstItem="yj0-Yv-elx" firstAttribute="leading" secondItem="gkv-QJ-ITt" secondAttribute="leading" id="tLg-vE-AhP"/>
-                                            <constraint firstAttribute="trailing" secondItem="Wpq-ob-UGE" secondAttribute="trailing" constant="32" id="vgJ-Kv-0Em"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wpq-ob-UGE" secondAttribute="trailing" constant="20" id="vgJ-Kv-0Em"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bam-Cy-4Qq">
-                                        <rect key="frame" x="267.5" y="3.5" width="60.5" height="66"/>
+                                        <rect key="frame" x="261" y="0.0" width="67" height="73"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bam-Cy-4Qq" secondAttribute="height" multiplier="67:73" id="wZW-cF-h61"/>
                                         </constraints>
@@ -185,6 +188,18 @@
                     <connections>
                         <outlet property="buttonContainer" destination="gkv-QJ-ITt" id="0ey-No-4S6"/>
                         <outlet property="collectionView" destination="jY7-ge-e7J" id="XIQ-Yd-fA6"/>
+                        <outlet property="fifthButtonHeight" destination="zYd-I5-7UB" id="NQ6-OL-MBS"/>
+                        <outlet property="fifthButtonWidth" destination="Dwt-R6-gqF" id="Vhu-RL-3h6"/>
+                        <outlet property="firstButtonHeight" destination="LmJ-tY-gMO" id="LQ3-E7-Zx6"/>
+                        <outlet property="firstButtonWidth" destination="onh-pA-lX5" id="hoY-YS-Rax"/>
+                        <outlet property="fourthButtonHeight" destination="9vL-f6-vhs" id="5pv-8N-9Sj"/>
+                        <outlet property="fourthButtonWidth" destination="QnP-jl-Wb1" id="SKA-jh-EnL"/>
+                        <outlet property="secondButtonHeight" destination="dop-Eb-YA7" id="aNx-oM-cfZ"/>
+                        <outlet property="secondButtonWidth" destination="qag-yq-z4T" id="ACH-bu-TRe"/>
+                        <outlet property="sixthButtonHeight" destination="e6k-WI-b6U" id="0Eq-j9-ntD"/>
+                        <outlet property="sixthButtonWidth" destination="Pfu-NZ-d0j" id="nUj-F6-8Oy"/>
+                        <outlet property="thirdButtonHeight" destination="rHw-pf-vnS" id="Xp8-wl-bbf"/>
+                        <outlet property="thirdButtonWidth" destination="Rzw-nh-1xl" id="ZrI-wG-bmb"/>
                         <outletCollection property="skinColorButtons" destination="unx-By-KFT" collectionClass="NSMutableArray" id="Yof-Ks-IHv"/>
                         <outletCollection property="skinColorButtons" destination="yxD-7o-UL1" collectionClass="NSMutableArray" id="3MB-VA-WKR"/>
                         <outletCollection property="skinColorButtons" destination="hRd-dM-pL1" collectionClass="NSMutableArray" id="pm8-mW-jli"/>

@@ -14,6 +14,10 @@ import UIKit
     @IBOutlet private var valueLabel	: UILabel!
     @IBOutlet private var unitLabel		: UILabel!
     @IBOutlet private var buttonView	: UIView!
+    @IBOutlet weak var buttonImageview	: UIImageView!
+    @IBOutlet weak var button			: UIButton!
+
+    var sseValue: SSEValue?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +34,21 @@ import UIKit
         loadNibContent()
         valueLabel.alpha	= 0
         unitLabel.alpha		= 0
-        buttonView.isHidden = true
+        setupButton()
+    }
+
+    private func setupButton(){
+        UserNotificationService.current.hasPendingNotificationRequests { (result) in
+            DispatchQueue.main.async {
+                if result{
+                    self.buttonImageview.image = #imageLiteral(resourceName: "icDashboardActive")
+                    self.button.isUserInteractionEnabled = false
+                }else{
+                    self.buttonImageview.image = #imageLiteral(resourceName: "stopWatch")
+                    self.button.isUserInteractionEnabled = true
+                }
+            }
+        }
     }
 }
 
@@ -39,15 +57,28 @@ extension SSEView{
 
     @IBAction private func startReminder(){
         print("starting reminder")
-        UserNotificationService.current.scheduleNotification(with: 60)
+        guard let minutes = sseValue?.minutes else { return }
+        let timeInterval: TimeInterval = minutes * 60
+        UserNotificationService.current.scheduleNotification(with: timeInterval)
+        self.buttonImageview.image = #imageLiteral(resourceName: "icDashboardActive")
     }
 
     func configure(with value: SSEValue){
         valueLabel.text = value.duration
         unitLabel.text	= value.unit
 
+        self.sseValue = value
+
         valueLabel.alpha	= 1
         unitLabel.alpha		= 1
+
+        if value.minutes >= (60 * 24) {
+            buttonView.isHidden = false
+            UserNotificationService.current.removeAllPendingRequests()
+        }else{
+            buttonView.isHidden = true
+        }
+        setupButton()
     }
 }
 

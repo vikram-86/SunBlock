@@ -111,8 +111,8 @@ class MainSceneViewController: UIViewController {
             print("Unable to start notifier")
         }
 
-        NotificationCenter.default.addObserver(self, selector: #selector(viewTouched(_:)),
-                                               name: .viewTouched, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(viewDidBecomeActive), name: .UIApplicationWillEnterForeground, object: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -130,19 +130,16 @@ class MainSceneViewController: UIViewController {
         }
     }
 
+    @objc func viewDidBecomeActive(){
+        updateSSE()
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         LocationService.current.delegate = nil
         reachability.stopNotifier()
         NotificationCenter.default.removeObserver(self, name: .viewTouched, object: nil)
 
-    }
-
-    @objc func viewTouched(_ notification: Notification){
-        guard let touch = notification.userInfo?["touch"] as? UITouch else { return }
-        if touch.view != spfSelectionView{
-            spfSelectionView.userTappedOut()
-        }
     }
 }
 

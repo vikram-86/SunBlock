@@ -18,6 +18,7 @@ protocol ProfileViewDelegate: class {
     @IBOutlet weak private var nameLabel		: UILabel!
     @IBOutlet weak private var descriptionLabel	: UILabel!
 
+
     private var profile: Profile!
     weak var delegate : ProfileViewDelegate?
 
