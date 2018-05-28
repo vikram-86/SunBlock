@@ -254,7 +254,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isx-tK-zkz">
-                                <rect key="frame" x="327" y="60" width="24" height="24"/>
+                                <rect key="frame" x="307" y="60" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HTj-Qe-pV6"/>
+                                    <constraint firstAttribute="width" constant="44" id="Rht-s1-BD7"/>
+                                </constraints>
                                 <state key="normal" image="closeMaterialBlack"/>
                                 <connections>
                                     <action selector="close" destination="G8I-If-aEG" eventType="touchUpInside" id="6jq-4M-Hjc"/>
@@ -410,6 +414,10 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERk-xu-VwB">
                                                 <rect key="frame" x="24" y="27" width="15" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="JVF-dL-i6B"/>
+                                                    <constraint firstAttribute="width" constant="44" id="aW1-1j-KFd"/>
+                                                </constraints>
                                                 <state key="normal" image="ionIosArrowBackIonicons"/>
                                                 <connections>
                                                     <action selector="back" destination="sTg-9g-Oso" eventType="touchUpInside" id="kKe-wF-GdI"/>
@@ -483,6 +491,10 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eC-XK-412">
                                                 <rect key="frame" x="24" y="27" width="15" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="6wv-XJ-EZI"/>
+                                                    <constraint firstAttribute="width" constant="44" id="PXZ-gh-NxY"/>
+                                                </constraints>
                                                 <state key="normal" image="ionIosArrowBackIonicons"/>
                                                 <connections>
                                                     <action selector="back" destination="L8B-aS-EkT" eventType="touchUpInside" id="puK-dR-g6a"/>

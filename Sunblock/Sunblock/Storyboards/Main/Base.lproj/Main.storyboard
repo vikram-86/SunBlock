@@ -141,11 +141,8 @@
                                                 </subviews>
                                                 <viewLayoutGuide key="safeArea" id="OaT-mj-7KB"/>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNw-RG-B1U">
-                                                <rect key="frame" x="334" y="44" width="20" height="42"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="22" id="f9b-fF-b1X"/>
-                                                </constraints>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNw-RG-B1U">
+                                                <rect key="frame" x="320" y="41" width="49" height="49"/>
                                                 <state key="normal" image="iconSettings"/>
                                                 <connections>
                                                     <segue destination="a6d-lU-pH1" kind="show" id="Mf9-dP-Ayg"/>
@@ -434,7 +431,7 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
     <resources>
         <image name="NavBarShadow" width="316" height="4"/>
         <image name="bgWaves" width="375" height="48"/>
-        <image name="iconSettings" width="20" height="20"/>
+        <image name="iconSettings" width="49" height="49"/>
         <image name="rain" width="40" height="36"/>
         <image name="sun" width="325" height="325"/>
         <namedColor name="aquaMarine">
