@@ -35,8 +35,8 @@
                     <color key="textColor" name="dirtyPurple"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeU-yK-akP">
-                    <rect key="frame" x="40" y="84" width="301" height="145"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="jeU-yK-akP">
+                    <rect key="frame" x="40" y="84" width="301" height="21.5"/>
                     <fontDescription key="fontDescription" name="Archivo-Regular" family="Archivo" pointSize="19"/>
                     <color key="textColor" name="dirtyPurple"/>
                     <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                 <constraint firstItem="jeU-yK-akP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="KgS-DO-O7R"/>
                 <constraint firstItem="Jec-Bg-aaI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="OEB-ow-ax1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jeU-yK-akP" secondAttribute="trailing" constant="34" id="Rdj-w1-THb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jeU-yK-akP" secondAttribute="bottom" constant="60" id="ycW-Du-pJe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jeU-yK-akP" secondAttribute="bottom" constant="60" id="ycW-Du-pJe"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

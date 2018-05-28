@@ -13,6 +13,11 @@ class OnboardingSceneViewController: UIViewController {
     @IBOutlet weak var scrollView		: UIScrollView!
     @IBOutlet weak var pageController	: UIPageControl!
     @IBOutlet weak var button			: UIButton!
+    @IBOutlet weak var imageScrollView	: UIScrollView!
+    @IBOutlet weak var headerImageView	: UIImageView!
+
+    @IBOutlet weak var viewHeightConstraint			: NSLayoutConstraint!
+    @IBOutlet weak var viewHeightConstraintSmaller	: NSLayoutConstraint!
 
 
     lazy var titles: [String] = [
@@ -39,6 +44,16 @@ class OnboardingSceneViewController: UIViewController {
         didSet{
             pageController.currentPage = Int(pageIndex)
 
+//            let x = self.view.bounds.width * pageIndex
+//            imageScrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
+            let imageName = "onboarding_\(Int(pageIndex + 1))"
+            let image = UIImage(named: imageName)
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.33) {
+                    self.headerImageView.image = image
+                }
+            }
+
             let buttonTitle = Int(pageIndex) == titles.count - 1 ? "accept" : "skip"
             button.setTitle(buttonTitle, for: .normal)
         }
@@ -56,12 +71,14 @@ class OnboardingSceneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScrollView()
+
         pageController.numberOfPages	= titles.count
         service.delegate 				= self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //setupImageScrollView()
         hasShowedLocationAuthorization = UserDefaults.standard.bool(forKey: hasShownKey)
     }
 
@@ -70,6 +87,18 @@ class OnboardingSceneViewController: UIViewController {
         if hasShowedLocationAuthorization{
             print("Hello")
         }
+    }
+
+    private func setupConstraints(){
+        if UIDevice.currentDevice == .iPhoneX{
+            viewHeightConstraintSmaller.isActive = false
+            viewHeightConstraint.isActive = true
+        }else{
+            viewHeightConstraint.isActive = false
+            viewHeightConstraintSmaller.isActive = true
+        }
+
+        view.layoutIfNeeded()
     }
 
 
@@ -91,7 +120,23 @@ class OnboardingSceneViewController: UIViewController {
         scrollView.delegate 		= self
     }
 
-
+    private func setupImageScrollView(){
+        for(i,_) in titles.enumerated(){
+            let image = UIImage(named: "onboarding_\(i+1)")
+            let x = view.bounds.width * CGFloat((i))
+//            let frame = CGRect(x: x, y: 0,
+//                               width: view.bounds.width,
+//                               height: imageScrollView.bounds.height)
+//
+//            let imageView = UIImageView(frame: frame)
+//            imageView.contentMode = .scaleAspectFill
+//            imageView.image = image
+			let headerView = OnboardingHeaderView(with: image!, and: x)
+            imageScrollView.addSubview(headerView)
+        }
+        let contentWidth = view.bounds.width * CGFloat(titles.count)
+        imageScrollView.contentSize = CGSize(width: contentWidth, height: view.bounds.height)
+    }
 }
 
 //MARK: -IBAction

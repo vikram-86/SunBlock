@@ -45,6 +45,8 @@
 		8A40F84C20B76B8900C16725 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84B20B76B8900C16725 /* Bundle.swift */; };
 		8A40F84E20B7F90A00C16725 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84D20B7F90A00C16725 /* ScrollView.swift */; };
 		8A40F85020B7FE8700C16725 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84F20B7FE8700C16725 /* NotificationName.swift */; };
+		8A40F85320BBEC0400C16725 /* OnboardingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A40F85220BBEC0400C16725 /* OnboardingHeaderView.xib */; };
+		8A40F85520BBED8200C16725 /* OnboardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F85420BBED8200C16725 /* OnboardingHeaderView.swift */; };
 		8A4A3A8720B347D80043D0FA /* OnboardingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */; };
 		8A4A3A8920B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */; };
 		8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */; };
@@ -127,6 +129,8 @@
 		8A40F84B20B76B8900C16725 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		8A40F84D20B7F90A00C16725 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		8A40F84F20B7FE8700C16725 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		8A40F85220BBEC0400C16725 /* OnboardingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingHeaderView.xib; sourceTree = "<group>"; };
+		8A40F85420BBED8200C16725 /* OnboardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHeaderView.swift; sourceTree = "<group>"; };
 		8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStatus.swift; sourceTree = "<group>"; };
 		8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinDisclaimerSceneViewController.swift; sourceTree = "<group>"; };
 		8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinLocationSceneViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +314,15 @@
 				8A23F6E82091140A00A30DDE /* StoryboardIdentifiable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8A40F85120BBEBF200C16725 /* OnboardingHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8A40F85220BBEC0400C16725 /* OnboardingHeaderView.xib */,
+				8A40F85420BBED8200C16725 /* OnboardingHeaderView.swift */,
+			);
+			path = OnboardingHeaderView;
 			sourceTree = "<group>";
 		};
 		8A502ED22073C8330039D598 = {
@@ -537,6 +550,7 @@
 		8AD6B1F72083D43C0073721E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A40F85120BBEBF200C16725 /* OnboardingHeaderView */,
 				8AE2772620B1F69400D8E65F /* SSEView */,
 				8AE2771D20B0A5F800D8E65F /* SPFSelectionView */,
 				8AC3C3F620A4CF9200FFFB20 /* SegmentChooserView */,
@@ -691,6 +705,7 @@
 				8A5748302074316B00B295B9 /* Archivo-SemiBold.ttf in Resources */,
 				8A00E936209F7B72000C6882 /* ProfileView.xib in Resources */,
 				8A00E94020A2406C000C6882 /* Profiles.plist in Resources */,
+				8A40F85320BBEC0400C16725 /* OnboardingHeaderView.xib in Resources */,
 				8A5748332074316B00B295B9 /* Archivo-Regular.ttf in Resources */,
 				8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */,
 				8A502EE42073C8330039D598 /* Main.storyboard in Resources */,
@@ -741,6 +756,7 @@
 				8AE78EFE20B4BB27002B7F8D /* SSEController.swift in Sources */,
 				8A0003E020AA147D006A854E /* WeatherClient.swift in Sources */,
 				8A00045220AE07C7006A854E /* Weather+CoreDataProperties.swift in Sources */,
+				8A40F85520BBED8200C16725 /* OnboardingHeaderView.swift in Sources */,
 				8A00E938209F8912000C6882 /* ProfileView.swift in Sources */,
 				8ABC18CF20B211AC007EA149 /* OnboardingInfoView.swift in Sources */,
 				8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */,

@@ -13,6 +13,7 @@ class AboutSceneViewController: UIViewController {
 
     @IBOutlet weak var profileView1: ProfileView!
     @IBOutlet weak var profileView2: ProfileView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +22,17 @@ class AboutSceneViewController: UIViewController {
         profileView1.delegate = self
         profileView2.delegate = self
     }
+
+    @IBAction func launchWebsite(_ sender: UIButton) {
+        guard let urlString = sender.currentTitle,
+            let url = URL(string: urlString) else {
+                return
+        }
+
+        let vc = SFSafariViewController(url: url, configuration: SFSafariViewController.Configuration())
+        present(vc, animated: true)
+    }
+
 }
 
 extension AboutSceneViewController{

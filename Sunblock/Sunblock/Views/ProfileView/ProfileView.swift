@@ -21,7 +21,6 @@ protocol ProfileViewDelegate: class {
 
     private var profile: Profile!
     weak var delegate : ProfileViewDelegate?
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNibContent()

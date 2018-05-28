@@ -159,8 +159,8 @@
                                                 <color key="textColor" name="dirtyPurple"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Understand the data we show you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwq-mK-qGX">
-                                                <rect key="frame" x="35" y="45" width="260.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got any ideas?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwq-mK-qGX">
+                                                <rect key="frame" x="35" y="45" width="113" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="dark"/>
                                                 <nil key="highlightedColor"/>
@@ -509,76 +509,68 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-kD-vgn">
-                                                <rect key="frame" x="32" y="515" width="311" height="337"/>
+                                                <rect key="frame" x="32" y="515" width="311" height="135"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">This app uses free commercial sources which as been used unmodified or modified.
 
 Here is a credit list for their content (n_n)
 
-Avatars by Paolo Stanley https://avataaars.com/ 
-
-</string>
+Avatars by Paolo Stanley</string>
                                                         <attributes>
                                                             <font key="NSFont" size="16" name=".SFNSText"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="Powered by Dark Sky">
-                                                        <attributes>
-                                                            <color key="NSBackgroundColor" red="0.99607999999999997" green="0.99607999999999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="18" name="Helvetica"/>
-                                                            <real key="NSKern" value="0.0"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops/>
-                                                            </paragraphStyle>
-                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                        <attributes>
-                                                            <font key="NSFont" size="16" name=".SFNSText"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops/>
-                                                            </paragraphStyle>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="https://darksky.net/poweredby/">
-                                                        <attributes>
-                                                            <color key="NSBackgroundColor" red="0.96077999999999997" green="0.96077999999999997" blue="0.96077999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="15.300000000000001" name="Courier"/>
-                                                            <real key="NSKern" value="0.0"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops/>
-                                                            </paragraphStyle>
-                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </attributes>
-                                                    </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nah-fe-WuM">
+                                                <rect key="frame" x="32" y="645.5" width="167" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <state key="normal" title="https://avataaars.com/"/>
+                                                <connections>
+                                                    <action selector="launchWebsite:" destination="L8B-aS-EkT" eventType="touchUpInside" id="fD6-eV-6gT"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Dark Sky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1m-na-Xvd">
+                                                <rect key="frame" x="32" y="697.5" width="154" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBe-x4-ncM">
+                                                <rect key="frame" x="32" y="725" width="205" height="30"/>
+                                                <state key="normal" title="https://darsky.net/poweredby/"/>
+                                                <connections>
+                                                    <action selector="launchWebsite:" destination="L8B-aS-EkT" eventType="touchUpInside" id="h1m-dK-3DE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="nah-fe-WuM" firstAttribute="leading" secondItem="dgT-kD-vgn" secondAttribute="leading" id="8Yf-Zl-I9I"/>
                                             <constraint firstItem="7s7-js-hzh" firstAttribute="top" secondItem="TEe-jK-XZV" secondAttribute="bottom" constant="51" id="B3p-9j-Ass"/>
                                             <constraint firstItem="HcW-AY-fxM" firstAttribute="leading" secondItem="s5b-sJ-cQV" secondAttribute="leading" constant="32" id="HIi-Zv-Y6Q"/>
                                             <constraint firstAttribute="trailing" secondItem="dgT-kD-vgn" secondAttribute="trailing" constant="32" id="HNf-na-6lI"/>
                                             <constraint firstAttribute="trailing" secondItem="TEe-jK-XZV" secondAttribute="trailing" id="MmN-6E-FR7"/>
+                                            <constraint firstItem="F1m-na-Xvd" firstAttribute="leading" secondItem="nah-fe-WuM" secondAttribute="leading" id="PLe-Ie-chC"/>
+                                            <constraint firstItem="nah-fe-WuM" firstAttribute="top" secondItem="dgT-kD-vgn" secondAttribute="bottom" id="UK8-aR-Gw7"/>
                                             <constraint firstItem="dgT-kD-vgn" firstAttribute="leading" secondItem="s5b-sJ-cQV" secondAttribute="leading" constant="32" id="VUd-vX-YYq"/>
                                             <constraint firstItem="dgT-kD-vgn" firstAttribute="top" secondItem="7s7-js-hzh" secondAttribute="bottom" constant="48" id="Z5H-2M-PIN"/>
                                             <constraint firstItem="8eC-XK-412" firstAttribute="top" secondItem="s5b-sJ-cQV" secondAttribute="top" constant="27" id="Z6w-V5-H58"/>
                                             <constraint firstAttribute="trailing" secondItem="7s7-js-hzh" secondAttribute="trailing" id="ZTR-kM-z7U"/>
+                                            <constraint firstItem="F1m-na-Xvd" firstAttribute="top" secondItem="nah-fe-WuM" secondAttribute="bottom" constant="20" id="cnC-jV-U4L"/>
                                             <constraint firstItem="TEe-jK-XZV" firstAttribute="leading" secondItem="s5b-sJ-cQV" secondAttribute="leading" id="ek9-lS-3CQ"/>
                                             <constraint firstAttribute="height" constant="850" id="hSA-dm-e4m"/>
                                             <constraint firstItem="8eC-XK-412" firstAttribute="leading" secondItem="s5b-sJ-cQV" secondAttribute="leading" constant="24" id="hXa-0l-nkg"/>
+                                            <constraint firstItem="zBe-x4-ncM" firstAttribute="leading" secondItem="F1m-na-Xvd" secondAttribute="leading" id="itp-Qg-uaN"/>
                                             <constraint firstItem="a65-bM-wEw" firstAttribute="top" secondItem="HcW-AY-fxM" secondAttribute="bottom" constant="34" id="j0g-qe-QTa"/>
                                             <constraint firstItem="a65-bM-wEw" firstAttribute="top" secondItem="s5b-sJ-cQV" secondAttribute="top" constant="152" id="qQR-1s-aFi"/>
                                             <constraint firstItem="a65-bM-wEw" firstAttribute="centerX" secondItem="s5b-sJ-cQV" secondAttribute="centerX" id="ssM-mE-aqr"/>
                                             <constraint firstItem="TEe-jK-XZV" firstAttribute="top" secondItem="a65-bM-wEw" secondAttribute="bottom" constant="20" id="tgI-7b-A9I"/>
                                             <constraint firstItem="7s7-js-hzh" firstAttribute="leading" secondItem="s5b-sJ-cQV" secondAttribute="leading" id="ucL-Ry-kim"/>
+                                            <constraint firstItem="zBe-x4-ncM" firstAttribute="top" secondItem="F1m-na-Xvd" secondAttribute="bottom" constant="8" symbolic="YES" id="vt5-Mh-VuQ"/>
                                         </constraints>
                                     </view>
                                 </subviews>

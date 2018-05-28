@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             window?.rootViewController = storyboard.instantiateInitialViewController()
         }
+        UIApplication.shared.statusBarStyle = .default
         return true
     }
 
