@@ -102,7 +102,7 @@ class MainSceneViewController: UIViewController {
         }
 
         reachability.whenUnreachable = { _ in
-            print("not reachable")
+            AlertService.presentAlert(with: "Please turn on cellular connectivity to download new data", title: "No Connectivity")
         }
 
         do{

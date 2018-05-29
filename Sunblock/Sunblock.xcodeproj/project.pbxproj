@@ -47,6 +47,13 @@
 		8A40F85020B7FE8700C16725 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F84F20B7FE8700C16725 /* NotificationName.swift */; };
 		8A40F85320BBEC0400C16725 /* OnboardingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A40F85220BBEC0400C16725 /* OnboardingHeaderView.xib */; };
 		8A40F85520BBED8200C16725 /* OnboardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F85420BBED8200C16725 /* OnboardingHeaderView.swift */; };
+		8A40F85820BC328200C16725 /* SESkinSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A40F85720BC328200C16725 /* SESkinSelectionView.xib */; };
+		8A40F85A20BC37C600C16725 /* SESkinSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F85920BC37C600C16725 /* SESkinSelectionView.swift */; };
+		8A40F85D20BCA9E700C16725 /* SkinSelectionAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A40F85C20BCA9E700C16725 /* SkinSelectionAvatarView.xib */; };
+		8A40F86020BCABBE00C16725 /* SkinSelectionAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F85F20BCABBE00C16725 /* SkinSelectionAvatarView.swift */; };
+		8A40F86320BD3C6100C16725 /* SkinSelectionSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F86220BD3C6100C16725 /* SkinSelectionSceneViewController.swift */; };
+		8A40F86620BD808400C16725 /* SkinSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A40F86520BD808400C16725 /* SkinSelectionView.xib */; };
+		8A40F86820BD90BB00C16725 /* SkinSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40F86720BD90BB00C16725 /* SkinSelectionView.swift */; };
 		8A4A3A8720B347D80043D0FA /* OnboardingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */; };
 		8A4A3A8920B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */; };
 		8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */; };
@@ -131,6 +138,13 @@
 		8A40F84F20B7FE8700C16725 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		8A40F85220BBEC0400C16725 /* OnboardingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingHeaderView.xib; sourceTree = "<group>"; };
 		8A40F85420BBED8200C16725 /* OnboardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHeaderView.swift; sourceTree = "<group>"; };
+		8A40F85720BC328200C16725 /* SESkinSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SESkinSelectionView.xib; sourceTree = "<group>"; };
+		8A40F85920BC37C600C16725 /* SESkinSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SESkinSelectionView.swift; sourceTree = "<group>"; };
+		8A40F85C20BCA9E700C16725 /* SkinSelectionAvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinSelectionAvatarView.xib; sourceTree = "<group>"; };
+		8A40F85F20BCABBE00C16725 /* SkinSelectionAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinSelectionAvatarView.swift; sourceTree = "<group>"; };
+		8A40F86220BD3C6100C16725 /* SkinSelectionSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinSelectionSceneViewController.swift; sourceTree = "<group>"; };
+		8A40F86520BD808400C16725 /* SkinSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkinSelectionView.xib; sourceTree = "<group>"; };
+		8A40F86720BD90BB00C16725 /* SkinSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinSelectionView.swift; sourceTree = "<group>"; };
 		8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStatus.swift; sourceTree = "<group>"; };
 		8A4A3A8820B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinDisclaimerSceneViewController.swift; sourceTree = "<group>"; };
 		8A4A3A8A20B365E60043D0FA /* OnboardinLocationSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardinLocationSceneViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +339,51 @@
 			path = OnboardingHeaderView;
 			sourceTree = "<group>";
 		};
+		8A40F85620BC31B100C16725 /* SESkinSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8A40F85720BC328200C16725 /* SESkinSelectionView.xib */,
+				8A40F85920BC37C600C16725 /* SESkinSelectionView.swift */,
+			);
+			path = SESkinSelectionView;
+			sourceTree = "<group>";
+		};
+		8A40F85B20BCA9CC00C16725 /* SkinSelection */ = {
+			isa = PBXGroup;
+			children = (
+				8A40F86420BD807500C16725 /* SkinSelectionView */,
+				8A40F85620BC31B100C16725 /* SESkinSelectionView */,
+				8A40F85E20BCABA300C16725 /* SkinSelectionAvatarView */,
+			);
+			path = SkinSelection;
+			sourceTree = "<group>";
+		};
+		8A40F85E20BCABA300C16725 /* SkinSelectionAvatarView */ = {
+			isa = PBXGroup;
+			children = (
+				8A40F85C20BCA9E700C16725 /* SkinSelectionAvatarView.xib */,
+				8A40F85F20BCABBE00C16725 /* SkinSelectionAvatarView.swift */,
+			);
+			path = SkinSelectionAvatarView;
+			sourceTree = "<group>";
+		};
+		8A40F86120BD3C3300C16725 /* SkinSelectionScene */ = {
+			isa = PBXGroup;
+			children = (
+				8A40F86220BD3C6100C16725 /* SkinSelectionSceneViewController.swift */,
+			);
+			path = SkinSelectionScene;
+			sourceTree = "<group>";
+		};
+		8A40F86420BD807500C16725 /* SkinSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8A40F86520BD808400C16725 /* SkinSelectionView.xib */,
+				8A40F86720BD90BB00C16725 /* SkinSelectionView.swift */,
+			);
+			path = SkinSelectionView;
+			sourceTree = "<group>";
+		};
 		8A502ED22073C8330039D598 = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +467,7 @@
 		8A502EF52073C8770039D598 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8A40F86120BD3C3300C16725 /* SkinSelectionScene */,
 				8ABC18C920B20C8F007EA149 /* OnboardingScene */,
 				8A9CF543209A5E1F001EFCCC /* AboutScene */,
 				8A9CF540209A508F001EFCCC /* DisclaimerScene */,
@@ -550,6 +610,7 @@
 		8AD6B1F72083D43C0073721E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A40F85B20BCA9CC00C16725 /* SkinSelection */,
 				8A40F85120BBEBF200C16725 /* OnboardingHeaderView */,
 				8AE2772620B1F69400D8E65F /* SSEView */,
 				8AE2771D20B0A5F800D8E65F /* SPFSelectionView */,
@@ -697,16 +758,19 @@
 				8AE2772820B1F73500D8E65F /* SSEView.xib in Resources */,
 				8AC3C3F820A4CFC400FFFB20 /* SegmentChooserView.xib in Resources */,
 				8A502EE62073C8330039D598 /* Assets.xcassets in Resources */,
+				8A40F85820BC328200C16725 /* SESkinSelectionView.xib in Resources */,
 				8A5748382075222400B295B9 /* nevis.ttf in Resources */,
 				8AD6B1FD2083E2FD0073721E /* SkinChooser.storyboard in Resources */,
 				8ABC18C820B20852007EA149 /* Onboarding.storyboard in Resources */,
 				8A5748322074316B00B295B9 /* Archivo-Bold.ttf in Resources */,
 				8A5748342074316B00B295B9 /* Archivo-Medium.ttf in Resources */,
 				8A5748302074316B00B295B9 /* Archivo-SemiBold.ttf in Resources */,
+				8A40F85D20BCA9E700C16725 /* SkinSelectionAvatarView.xib in Resources */,
 				8A00E936209F7B72000C6882 /* ProfileView.xib in Resources */,
 				8A00E94020A2406C000C6882 /* Profiles.plist in Resources */,
 				8A40F85320BBEC0400C16725 /* OnboardingHeaderView.xib in Resources */,
 				8A5748332074316B00B295B9 /* Archivo-Regular.ttf in Resources */,
+				8A40F86620BD808400C16725 /* SkinSelectionView.xib in Resources */,
 				8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */,
 				8A502EE42073C8330039D598 /* Main.storyboard in Resources */,
 			);
@@ -734,6 +798,7 @@
 				8A23F6E320910B8400A30DDE /* NibOwnerLoadable.swift in Sources */,
 				8A0003C720A96E85006A854E /* UserLocation.swift in Sources */,
 				8A0003CA20A96F7C006A854E /* LocationError.swift in Sources */,
+				8A40F86820BD90BB00C16725 /* SkinSelectionView.swift in Sources */,
 				8A9CF545209A5E2E001EFCCC /* AboutSceneViewController.swift in Sources */,
 				8A0003DA20A9C35B006A854E /* APIError.swift in Sources */,
 				8A00044A20AE03A7006A854E /* Sunblock.xcdatamodeld in Sources */,
@@ -744,6 +809,7 @@
 				8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */,
 				8A00045420AEB45D006A854E /* Date.swift in Sources */,
 				8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */,
+				8A40F86320BD3C6100C16725 /* SkinSelectionSceneViewController.swift in Sources */,
 				8A00041C20AAD4E4006A854E /* CoreDataStack.swift in Sources */,
 				8A0D7BB0208FCA1400003245 /* NibLoadable.swift in Sources */,
 				8A23F6EB2091143300A30DDE /* UIStoryboard.swift in Sources */,
@@ -765,6 +831,7 @@
 				8A00045620AECA53006A854E /* Environment.swift in Sources */,
 				8A502EDF2073C8330039D598 /* AppDelegate.swift in Sources */,
 				8A502EFA2073C95C0039D598 /* UIColor.swift in Sources */,
+				8A40F86020BCABBE00C16725 /* SkinSelectionAvatarView.swift in Sources */,
 				8A00044320ADF174006A854E /* WeatherDataResponse.swift in Sources */,
 				8A0003C520A8ADA2006A854E /* LocationService.swift in Sources */,
 				8A0D7BA8208FAAC000003245 /* SkinType.swift in Sources */,
@@ -773,6 +840,7 @@
 				8A4A3A8720B347D80043D0FA /* OnboardingStatus.swift in Sources */,
 				8AE2772120B0ADDF00D8E65F /* SPFSelectionView.swift in Sources */,
 				8AC3C3FA20A577EA00FFFB20 /* SegmentChooserView.swift in Sources */,
+				8A40F85A20BC37C600C16725 /* SESkinSelectionView.swift in Sources */,
 				8A0003D620A9BF54006A854E /* Result.swift in Sources */,
 				8A00042C20AAEF23006A854E /* CodingUserInfoKey.swift in Sources */,
 				8A23F6E72091103500A30DDE /* UITableView.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DVl-ut-1Yh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vne-mN-D7f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,6 +7,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,13 +42,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Female_type_1" translatesAutoresizingMaskIntoConstraints="NO" id="E4W-zM-CyS">
-                                                    <rect key="frame" x="18" y="288" width="170" height="361"/>
+                                                    <rect key="frame" x="18" y="279" width="170" height="370"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="370" id="blS-eE-bMh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Male_type_1" translatesAutoresizingMaskIntoConstraints="NO" id="smU-Ca-Atd">
-                                                    <rect key="frame" x="206" y="289.5" width="146" height="358"/>
+                                                    <rect key="frame" x="206" y="285" width="146" height="358"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -160,7 +161,7 @@
                                         </constraints>
                                         <state key="normal" image="buttonWithShadow"/>
                                         <connections>
-                                            <action selector="selectButtonPressed:" destination="DVl-ut-1Yh" eventType="touchUpInside" id="MgB-3V-ONc"/>
+                                            <segue destination="Vne-mN-D7f" kind="show" id="wTO-LR-NnI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -219,14 +220,110 @@
                 <viewControllerPlaceholder storyboardName="Main" id="q6D-eN-pXh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5X-1o-4de" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-72" y="890"/>
+            <point key="canvasLocation" x="299" y="792"/>
+        </scene>
+        <!--Skin Selection Scene View Controller-->
+        <scene sceneID="FQR-S0-xuZ">
+            <objects>
+                <viewController id="Vne-mN-D7f" customClass="SkinSelectionSceneViewController" customModule="Sunblock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBl-Cz-smE" customClass="SkinSelectionS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="cxV-wT-W3m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oac-yQ-wY5" customClass="SkinSelectionAvatarView" customModule="Sunblock" customModuleProvider="target">
+                                <rect key="frame" x="10" y="117" width="355" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="5IP-wK-gyv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-Q6-ocN">
+                                <rect key="frame" x="0.0" y="408" width="375" height="259"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQk-Ap-N6X">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQH-ds-2fX" customClass="SESkinSelectionView" customModule="Sunblock" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="177" width="375" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Xcl-pW-TCq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxk-4J-rzz" customClass="SkinSelectionView" customModule="Sunblock" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="144" width="375" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="lqr-jp-aMh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fxk-4J-rzz" secondAttribute="bottom" constant="35" id="2uR-Gx-haQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="TQk-Ap-N6X" secondAttribute="trailing" id="3Uk-6d-8IO"/>
+                                    <constraint firstAttribute="trailing" secondItem="fxk-4J-rzz" secondAttribute="trailing" id="Jnq-Cp-c5Z"/>
+                                    <constraint firstItem="TQk-Ap-N6X" firstAttribute="top" secondItem="oZh-Q6-ocN" secondAttribute="top" id="VAN-Cy-LfZ"/>
+                                    <constraint firstItem="nQH-ds-2fX" firstAttribute="top" secondItem="TQk-Ap-N6X" secondAttribute="bottom" id="Xga-fL-D0L"/>
+                                    <constraint firstItem="TQk-Ap-N6X" firstAttribute="leading" secondItem="oZh-Q6-ocN" secondAttribute="leading" id="bMa-7W-rTb"/>
+                                    <constraint firstItem="fxk-4J-rzz" firstAttribute="leading" secondItem="oZh-Q6-ocN" secondAttribute="leading" id="jHz-eT-oRq"/>
+                                    <constraint firstAttribute="trailing" secondItem="nQH-ds-2fX" secondAttribute="trailing" id="qDZ-FM-MV9"/>
+                                    <constraint firstItem="nQH-ds-2fX" firstAttribute="leading" secondItem="oZh-Q6-ocN" secondAttribute="leading" id="sJ4-gH-eqp"/>
+                                    <constraint firstAttribute="bottom" secondItem="nQH-ds-2fX" secondAttribute="bottom" constant="32" id="uEG-dm-M5k"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgWaves" translatesAutoresizingMaskIntoConstraints="NO" id="eZ9-k8-pac">
+                                <rect key="frame" x="0.0" y="360" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="pBS-m5-bTK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9r9-EA-BNk" firstAttribute="trailing" secondItem="cxV-wT-W3m" secondAttribute="trailing" id="3az-ng-kAp"/>
+                            <constraint firstItem="oZh-Q6-ocN" firstAttribute="height" secondItem="9r9-EA-BNk" secondAttribute="height" multiplier="0.4" id="4TG-Bk-x6L"/>
+                            <constraint firstItem="oac-yQ-wY5" firstAttribute="top" secondItem="9r9-EA-BNk" secondAttribute="top" constant="97" id="7la-sw-q0X"/>
+                            <constraint firstItem="oZh-Q6-ocN" firstAttribute="top" secondItem="eZ9-k8-pac" secondAttribute="bottom" id="7ti-hG-1EI"/>
+                            <constraint firstAttribute="bottom" secondItem="oZh-Q6-ocN" secondAttribute="bottom" id="AgH-Vj-D2M"/>
+                            <constraint firstItem="cxV-wT-W3m" firstAttribute="leading" secondItem="9r9-EA-BNk" secondAttribute="leading" id="Pd4-IC-FHL"/>
+                            <constraint firstAttribute="bottom" secondItem="cxV-wT-W3m" secondAttribute="bottom" id="Q13-FW-rMI"/>
+                            <constraint firstItem="oZh-Q6-ocN" firstAttribute="leading" secondItem="9r9-EA-BNk" secondAttribute="leading" id="YEE-Cg-v6P"/>
+                            <constraint firstAttribute="trailing" secondItem="eZ9-k8-pac" secondAttribute="trailing" id="fKg-jX-L1j"/>
+                            <constraint firstItem="eZ9-k8-pac" firstAttribute="leading" secondItem="LBl-Cz-smE" secondAttribute="leading" id="gEO-Lt-bsN"/>
+                            <constraint firstItem="9r9-EA-BNk" firstAttribute="trailing" secondItem="oac-yQ-wY5" secondAttribute="trailing" constant="10" id="mL7-u0-pj1"/>
+                            <constraint firstItem="cxV-wT-W3m" firstAttribute="top" secondItem="LBl-Cz-smE" secondAttribute="top" id="osw-t9-21g"/>
+                            <constraint firstItem="oac-yQ-wY5" firstAttribute="leading" secondItem="9r9-EA-BNk" secondAttribute="leading" constant="10" id="vVu-DV-O6E"/>
+                            <constraint firstItem="oZh-Q6-ocN" firstAttribute="trailing" secondItem="9r9-EA-BNk" secondAttribute="trailing" id="yTP-lQ-JSQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9r9-EA-BNk"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarView" destination="oac-yQ-wY5" id="kly-fU-xeS"/>
+                        <outlet property="infoContainerView" destination="oZh-Q6-ocN" id="sNy-RQ-4Q4"/>
+                        <outlet property="labelScrollView" destination="TQk-Ap-N6X" id="YT2-fa-80a"/>
+                        <outlet property="seSelectionView" destination="nQH-ds-2fX" id="Lvm-bD-XfW"/>
+                        <outlet property="skinSelectionView" destination="fxk-4J-rzz" id="sxU-OM-4Zp"/>
+                        <segue destination="q6D-eN-pXh" kind="show" identifier="main" id="MYp-1E-SDc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAB-ke-yWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="1126"/>
         </scene>
     </scenes>
     <resources>
         <image name="Female_type_1" width="170" height="361"/>
         <image name="Male_type_1" width="146" height="358"/>
         <image name="beach" width="375" height="667"/>
+        <image name="bgWaves" width="375" height="48"/>
         <image name="buttonBackground" width="261" height="73"/>
         <image name="buttonWithShadow" width="67" height="73"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MYp-1E-SDc"/>
+    </inferredMetricsTieBreakers>
 </document>

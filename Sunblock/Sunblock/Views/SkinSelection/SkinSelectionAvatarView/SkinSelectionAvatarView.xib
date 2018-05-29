@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SkinSelectionAvatarView" customModule="Sunblock" customModuleProvider="target">
+            <connections>
+                <outlet property="femaleImageView" destination="tC1-Tw-2hZ" id="BbE-47-scc"/>
+                <outlet property="maleImageView" destination="e9f-DV-x2B" id="NUV-3b-ekg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="506"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9f-DV-x2B">
+                    <rect key="frame" x="206" y="135" width="169" height="371"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="371" id="1tq-Xf-WMC"/>
+                        <constraint firstAttribute="width" constant="169" id="xXk-yy-wMz"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tC1-Tw-2hZ">
+                    <rect key="frame" x="0.0" y="135" width="169" height="371"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="371" id="fdX-rw-pD0"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tC1-Tw-2hZ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="DPi-ht-io9"/>
+                <constraint firstItem="tC1-Tw-2hZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GtR-tE-bH0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e9f-DV-x2B" secondAttribute="trailing" id="Jfv-ND-Y0F"/>
+                <constraint firstItem="tC1-Tw-2hZ" firstAttribute="width" secondItem="e9f-DV-x2B" secondAttribute="width" id="bwe-CD-i5i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="e9f-DV-x2B" secondAttribute="bottom" id="tka-H8-yhf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-76.5" y="-78"/>
+        </view>
+    </objects>
+</document>

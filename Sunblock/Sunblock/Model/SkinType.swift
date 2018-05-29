@@ -6,7 +6,7 @@
 //  Copyright © 2018 Shortcut. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum SkinType: String {
     struct Keys{
@@ -94,6 +94,19 @@ enum SkinType: String {
         case .type6:
             return "African, Afro-American"
         }
+    }
+
+    var skinColor: UIColor{
+        let colorNames: ColorNames!
+        switch self{
+        case .type1 : colorNames = .lightMustard
+        case .type2	: colorNames = .lightPeach
+        case .type3	: colorNames = .blush
+        case .type4	: colorNames = .sandbrown
+        case .type5	: colorNames = .copper
+        case .type6	: colorNames = .cocoa
+        }
+        return UIColor.appColor(colorNames)
     }
 
     func save(){

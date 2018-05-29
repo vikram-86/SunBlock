@@ -48,11 +48,14 @@ class OnboardingSceneViewController: UIViewController {
 //            imageScrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
             let imageName = "onboarding_\(Int(pageIndex + 1))"
             let image = UIImage(named: imageName)
-            DispatchQueue.main.async {
-                UIView.animate(withDuration: 0.33) {
+            //DispatchQueue.main.async {
+//                UIView.animate(withDuration: 0.33) {
+//                    self.headerImageView.image = image
+//                }
+                UIView.transition(with: self.headerImageView, duration: 2, options: .transitionCrossDissolve, animations: {
                     self.headerImageView.image = image
-                }
-            }
+                }, completion: nil)
+            //}
 
             let buttonTitle = Int(pageIndex) == titles.count - 1 ? "accept" : "skip"
             button.setTitle(buttonTitle, for: .normal)
@@ -165,7 +168,7 @@ extension OnboardingSceneViewController{
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? SkinChooserSceneViewController{
+        if let vc = segue.destination as? SkinSelectionSceneViewController{
             vc.fromOnboarding = true
         }
     }
