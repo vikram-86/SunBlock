@@ -47,6 +47,8 @@ class MainSceneViewController: UIViewController {
         didSet{
             // Update SSE..
             updateSSE()
+
+            // Get peak
         }
     }
 
@@ -57,10 +59,12 @@ class MainSceneViewController: UIViewController {
         }
     }
 
+    private var currentWeather: Weather?
+
     private var isReloading = false
 
     let reachability = Reachability()!
-
+    private var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +89,7 @@ class MainSceneViewController: UIViewController {
         refreshControl.tintColor = UIColor.appColor(.white)
         refreshControl.addTarget(self, action: #selector(refresh(refreshView:)), for: .valueChanged)
         scrollView.insertSubview(refreshControl, at: 0)
+        self.refreshControl = refreshControl
         
     }
 
@@ -151,11 +156,13 @@ extension MainSceneViewController{
             return
         }
 
+        currentWeather = weather
         let sse = SSEController(weather: weather, environment: currentEnvironment, skinType: currentSkinType, spf: currentSPF)
-
+		let subtitleContent = calculatePeak()
+        let subtitleText = "Todays uv peak starts at \(subtitleContent.time) and is at level \(subtitleContent.uv)"
         DispatchQueue.main.async {
             self.titleLabel.text                 = sse.title
-            self.subTitleLabel.text              = sse.subTitle
+            self.subTitleLabel.text              = subtitleText
             self.uvLabel.text                    = sse.uvIndex
             self.uvImageView.image               = sse.uvIcon
             self.temperatureLabel.text           = sse.temperature
@@ -179,6 +186,23 @@ extension MainSceneViewController{
         UIView.animate(withDuration: 1, animations: {
             self.view.backgroundColor = sse.headerColor
         })
+    }
+
+    private func calculatePeak()->(uv: Int, time: String){
+        var currentPeakUV	= 0
+        var time	: Int64 = 0
+        var index           = 0
+
+        for (weatherIndex, weather) in weathers.enumerated() {
+            if Int(weather.uvIndex) > currentPeakUV{
+                time = weather.time
+                index = weatherIndex
+                currentPeakUV = Int(weather.uvIndex)
+            }
+        }
+
+        let timeString = Date.timeString(for: Double(time))
+        return (currentPeakUV, timeString)
     }
 }
 

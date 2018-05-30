@@ -91,7 +91,14 @@ class SkinSelectionSceneViewController: UIViewController {
     private func saveCurrentSkin(){
         let type = skinTypes[pageIndex]
         type.save()
-        calculateSegue()
+        if fromOnboarding{
+            calculateSegue()
+            fromOnboarding = false
+        }else{
+            if let navController = self.navigationController{
+                navController.popViewController(animated: true)
+            }
+        }
     }
 
     private func calculateSegue(){

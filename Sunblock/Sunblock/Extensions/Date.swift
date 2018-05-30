@@ -22,4 +22,19 @@ extension Date{
         let date = Date(timeIntervalSince1970: timeInterval)
         return Calendar.current.isDateInToday(date)
     }
+
+    static func dateString(for timeInterval: TimeInterval)-> String{
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM HH:mm"
+        return dateFormatter.string(from: date)
+    }
+
+    static func timeString(for timeInterval: TimeInterval) -> String {
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: date)
+    }
+
 }

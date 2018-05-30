@@ -24,6 +24,7 @@ protocol SPFDelegate: class{
     @IBOutlet private weak var spfLabel							: UILabel!
     @IBOutlet private weak var buttonContainerView				: UIView!
     @IBOutlet private weak var titleLabel						: UILabel!
+    @IBOutlet private weak var tapButton						: UIButton!
 
 
 	// Ingen spf 0,2 eller 4
@@ -161,6 +162,10 @@ extension SPFSelectionView{
         animate()
     }
 
+    @IBAction private func sectionTapped(){
+        animate()
+    }
+
     private func animate(){
         shouldShowPicker = !shouldShowPicker
         if shouldShowPicker{
@@ -180,7 +185,7 @@ extension SPFSelectionView{
         let index = dataSource.index(of: value)!
         scrollView.contentOffset = CGPoint(x: xCoordinates[index], y: 0)
         scrollView.alpha = 0
-
+		tapButton.isHidden = true
         UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeLinear, animations: {
 
             self.labelLeadingConstraint.constant    = (self.bounds.width / 2) - (self.valueLabel.frame.width / 2)
@@ -205,6 +210,7 @@ extension SPFSelectionView{
 
     // collapse Scrollview
     private func animateIn(){
+
         UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeLinear, animations: {
             self.valueLabel.sizeToFit()
             self.labelLeadingConstraint.constant    = (self.bounds.width / 2) - (self.valueLabel.frame.width / 2)
@@ -227,7 +233,7 @@ extension SPFSelectionView{
                 self.titleLabel.alpha = 1
             })
         }) { (_) in
-
+            self.tapButton.isHidden = false
         }
     }
 }

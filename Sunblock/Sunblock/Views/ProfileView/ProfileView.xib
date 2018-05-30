@@ -24,7 +24,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sutha" translatesAutoresizingMaskIntoConstraints="NO" id="fNd-BW-ivd">
@@ -46,29 +46,28 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-VE-xqg">
-                    <rect key="frame" x="173" y="97" width="20" height="22"/>
-                    <state key="normal" image="facebook"/>
+                    <rect key="frame" x="173" y="93.5" width="49" height="49"/>
+                    <state key="normal" image="icSettingsLinkedin"/>
                     <connections>
-                        <action selector="facebookButtonPressed" destination="-1" eventType="touchUpInside" id="wPf-KP-5L1"/>
+                        <action selector="linkedInButtonPressed" destination="-1" eventType="touchUpInside" id="iSf-V6-3FC"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tv-4t-UoI">
-                    <rect key="frame" x="209" y="97" width="20" height="22"/>
-                    <state key="normal" image="linkedin"/>
+                    <rect key="frame" x="238" y="93.5" width="48" height="49"/>
+                    <state key="normal" image="icSettingsWeb"/>
                     <connections>
-                        <action selector="linkedInButtonPressed" destination="-1" eventType="touchUpInside" id="w9h-oZ-Lsv"/>
+                        <action selector="facebookButtonPressed" destination="-1" eventType="touchUpInside" id="99a-Qx-mb2"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fNd-BW-ivd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="29" id="2zT-qa-mQv"/>
-                <constraint firstItem="rvw-VE-xqg" firstAttribute="top" secondItem="Z2e-bG-Aa7" secondAttribute="bottom" constant="3.5" id="Hbv-td-brG"/>
+                <constraint firstItem="rvw-VE-xqg" firstAttribute="top" secondItem="Z2e-bG-Aa7" secondAttribute="bottom" id="Hbv-td-brG"/>
                 <constraint firstItem="djv-BB-Xro" firstAttribute="leading" secondItem="fNd-BW-ivd" secondAttribute="trailing" constant="24" id="HsM-e0-y5W"/>
                 <constraint firstItem="2Tv-4t-UoI" firstAttribute="top" secondItem="rvw-VE-xqg" secondAttribute="top" id="Vpu-nh-D3T"/>
                 <constraint firstItem="Z2e-bG-Aa7" firstAttribute="width" secondItem="djv-BB-Xro" secondAttribute="width" id="XRL-0f-EJX"/>
                 <constraint firstItem="fNd-BW-ivd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XeF-U1-IJt"/>
-                <constraint firstAttribute="bottom" secondItem="fNd-BW-ivd" secondAttribute="bottom" id="Z38-6m-xJm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="djv-BB-Xro" secondAttribute="trailing" constant="24" id="bMm-5e-OgH"/>
                 <constraint firstItem="Z2e-bG-Aa7" firstAttribute="top" secondItem="djv-BB-Xro" secondAttribute="bottom" constant="3" id="bcQ-ut-aHe"/>
                 <constraint firstItem="Z2e-bG-Aa7" firstAttribute="leading" secondItem="djv-BB-Xro" secondAttribute="leading" id="bk2-u1-hKt"/>
@@ -78,12 +77,12 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="33.5" y="-17"/>
+            <point key="canvasLocation" x="33.5" y="-5.5"/>
         </view>
     </objects>
     <resources>
-        <image name="facebook" width="20" height="20"/>
-        <image name="linkedin" width="20" height="20"/>
+        <image name="icSettingsLinkedin" width="49" height="49"/>
+        <image name="icSettingsWeb" width="48" height="49"/>
         <image name="sutha" width="120" height="120"/>
         <namedColor name="dark">
             <color red="0.13725490196078433" green="0.11372549019607843" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

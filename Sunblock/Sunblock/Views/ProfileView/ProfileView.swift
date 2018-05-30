@@ -45,12 +45,12 @@ extension ProfileView{
 
 extension ProfileView{
     @IBAction func facebookButtonPressed(){
-        let url = URL(string: self.profile.facebook)!
+        guard let url = URL(string: self.profile.facebook) else { return }
         delegate?.view(didSelectURL: url)
     }
 
     @IBAction func linkedInButtonPressed(){
-        let url = URL(string: self.profile.linkedIn)!
+        guard let url = URL(string: self.profile.linkedIn) else { return }
         delegate?.view(didSelectURL: url)
     }
 }

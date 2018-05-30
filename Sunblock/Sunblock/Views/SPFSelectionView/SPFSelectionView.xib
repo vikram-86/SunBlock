@@ -24,6 +24,7 @@
                 <outlet property="scrollContainerWidthContraint" destination="JD0-bk-nB5" id="Zb6-GL-bzK"/>
                 <outlet property="scrollView" destination="6v4-Fa-MGE" id="QLL-cQ-kMC"/>
                 <outlet property="spfLabel" destination="Sjt-r0-ZXD" id="CAY-fI-rm4"/>
+                <outlet property="tapButton" destination="Bzr-K2-qAt" id="Rfv-Th-AE7"/>
                 <outlet property="titleLabel" destination="Pye-Dp-foP" id="cCF-2Y-aG9"/>
                 <outlet property="valueLabel" destination="ern-GP-uAe" id="Ye5-Qh-g4s"/>
             </connections>
@@ -134,13 +135,21 @@
                     <color key="textColor" name="dirtyPurple"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzr-K2-qAt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+                    <connections>
+                        <action selector="sectionTapped" destination="-1" eventType="touchUpInside" id="2bB-lQ-rOm"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="ern-GP-uAe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0Hw-bZ-9rT"/>
+                <constraint firstAttribute="trailing" secondItem="Bzr-K2-qAt" secondAttribute="trailing" id="5pa-zf-kJM"/>
                 <constraint firstItem="LSV-ue-pwT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8EX-9b-bgV"/>
                 <constraint firstItem="ern-GP-uAe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="FG0-uc-2lg"/>
                 <constraint firstItem="Pye-Dp-foP" firstAttribute="leading" secondItem="ern-GP-uAe" secondAttribute="leading" id="FG4-zl-6Bq"/>
                 <constraint firstItem="Sjt-r0-ZXD" firstAttribute="top" secondItem="ern-GP-uAe" secondAttribute="top" id="JPb-Jk-Bxd"/>
+                <constraint firstItem="Bzr-K2-qAt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lee-Vz-kNh"/>
                 <constraint firstItem="LSV-ue-pwT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="R1g-lq-SLM"/>
                 <constraint firstItem="Sjt-r0-ZXD" firstAttribute="leading" secondItem="ern-GP-uAe" secondAttribute="trailing" id="ReO-eK-Xdg"/>
                 <constraint firstItem="ern-GP-uAe" firstAttribute="top" secondItem="Pye-Dp-foP" secondAttribute="bottom" constant="1.5" id="WDq-lI-2Oe"/>
@@ -148,6 +157,8 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LSV-ue-pwT" secondAttribute="bottom" id="dbW-u7-hLP"/>
                 <constraint firstItem="qWq-mR-yfx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="doz-eR-Ff3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="qWq-mR-yfx" secondAttribute="trailing" constant="37" id="r4e-OF-CyM"/>
+                <constraint firstAttribute="bottom" secondItem="Bzr-K2-qAt" secondAttribute="bottom" id="r53-1A-Nde"/>
+                <constraint firstItem="Bzr-K2-qAt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xa2-jU-VxA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
