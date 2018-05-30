@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Views/SPFSelectionView/SPFSelectionView.swift"
-            timestampString = "549364490.551175"
+            timestampString = "549376124.34971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Scenes/OnboardingScene/OnboardingSceneViewController.swift"
-            timestampString = "549364490.551483"
+            timestampString = "549376124.3499939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -42,27 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Scenes/SkinSelectionScene/SkinSelectionSceneViewController.swift"
-            timestampString = "549364490.551697"
+            timestampString = "549376124.3506809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "didSelectSkin()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sunblock/Scenes/SkinSelectionScene/SkinSelectionSceneViewController.swift"
-            timestampString = "549364490.551928"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "calculateSegue()"
             landmarkType = "7">
          </BreakpointContent>

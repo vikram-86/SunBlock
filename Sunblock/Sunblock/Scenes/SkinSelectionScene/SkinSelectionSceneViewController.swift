@@ -64,6 +64,8 @@ class SkinSelectionSceneViewController: UIViewController {
         if let index = skinTypes.index(of: skinType){
             self.labelScrollView.setContentOffset(CGPoint(x: self.view.bounds.width * CGFloat(index), y: 0), animated: false)
         }
+
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
     private func setupLabels(){

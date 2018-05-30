@@ -83,6 +83,7 @@ class OnboardingSceneViewController: UIViewController {
         super.viewWillAppear(animated)
         //setupImageScrollView()
         hasShowedLocationAuthorization = UserDefaults.standard.bool(forKey: hasShownKey)
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
     override func viewDidAppear(_ animated: Bool) {

@@ -116,7 +116,7 @@ class MainSceneViewController: UIViewController {
             print("Unable to start notifier")
         }
 
-        
+        UIApplication.shared.statusBarStyle = .lightContent
         NotificationCenter.default.addObserver(self, selector: #selector(viewDidBecomeActive), name: .UIApplicationWillEnterForeground, object: nil)
     }
 
