@@ -159,7 +159,7 @@ extension MainSceneViewController{
         currentWeather = weather
         let sse = SSEController(weather: weather, environment: currentEnvironment, skinType: currentSkinType, spf: currentSPF)
 		let subtitleContent = calculatePeak()
-        let subtitleText = "Todays uv peak starts at \(subtitleContent.time) and is at level \(subtitleContent.uv)"
+        let subtitleText = "Max. UV level is \(subtitleContent.uv) at \(subtitleContent.time)"
         DispatchQueue.main.async {
             self.titleLabel.text                 = sse.title
             self.subTitleLabel.text              = subtitleText

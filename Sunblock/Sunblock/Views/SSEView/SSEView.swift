@@ -16,6 +16,7 @@ import UIKit
     @IBOutlet private var buttonView	: UIView!
     @IBOutlet weak var buttonImageview	: UIImageView!
     @IBOutlet weak var button			: UIButton!
+    @IBOutlet weak var buttonTitle		: UILabel!
 
     var sseValue: SSEValue?
 
@@ -42,10 +43,13 @@ import UIKit
             DispatchQueue.main.async {
                 if result{
                     self.buttonImageview.image = #imageLiteral(resourceName: "icDashboardActive")
-                    self.button.isUserInteractionEnabled = false
+                    self.button.isUserInteractionEnabled = true
+                    self.buttonTitle.text	= "Reset reminder"
+
                 }else{
                     self.buttonImageview.image = #imageLiteral(resourceName: "stopWatch")
                     self.button.isUserInteractionEnabled = true
+                    self.buttonTitle.text = "Start reminder"
                 }
             }
         }
@@ -61,6 +65,7 @@ extension SSEView{
         let timeInterval: TimeInterval = minutes * 60
         UserNotificationService.current.scheduleNotification(with: timeInterval)
         self.buttonImageview.image = #imageLiteral(resourceName: "icDashboardActive")
+        self.buttonTitle.text = "Reset reminder"
     }
 
     func configure(with value: SSEValue){
@@ -75,6 +80,8 @@ extension SSEView{
         if value.minutes >= (60 * 24) {
             buttonView.isHidden = false
             UserNotificationService.current.removeAllPendingRequests()
+            buttonTitle.text	= "Start reminder"
+            buttonImageview.image = #imageLiteral(resourceName: "stopWatch")
         }else{
             buttonView.isHidden = true
         }

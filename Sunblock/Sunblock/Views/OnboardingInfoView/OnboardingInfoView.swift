@@ -31,7 +31,14 @@ class OnboardingInfoView: UIView, NibFileOwnerLoadable{
     }
 
     func setupView(title: String, content: String){
-        titleLabel.text 	= title
-        contentLabel.text	= content
+        titleLabel.text     = title
+        let attributedText = NSMutableAttributedString(string: content)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 0
+        paragraphStyle.lineHeightMultiple = 1.4
+        attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
+        contentLabel.attributedText	= attributedText
+        let fontSize: CGFloat = UIDevice.currentDevice == .iPhone5 ? 15 : 19
+        contentLabel.font = UIFont.appFont(with: .archivoRegular, size: fontSize)
     }
 }

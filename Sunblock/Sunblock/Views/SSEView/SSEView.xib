@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="button" destination="NWI-U1-h8l" id="NgP-Fe-FTv"/>
                 <outlet property="buttonImageview" destination="Xcr-Hx-ya5" id="I6A-aF-bCU"/>
+                <outlet property="buttonTitle" destination="eRY-6b-IeQ" id="NMy-Qj-WdM"/>
                 <outlet property="buttonView" destination="ZhE-EK-eVy" id="DOO-Ls-3Ih"/>
                 <outlet property="unitLabel" destination="RDB-Ca-HC6" id="Xc8-R1-mTa"/>
                 <outlet property="valueLabel" destination="PvX-Oy-OmV" id="aZL-XZ-5A8"/>

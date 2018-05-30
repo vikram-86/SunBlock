@@ -97,7 +97,7 @@ struct SSEController{
         
         let currentUV = weather.uvIndex == 0 ? 0.0 : weather.uvIndex * (1 + altitudeModifier) * environment.modifier
         if currentUV == 0 {
-            return ("\(24)", "+hours", 0)
+            return ("\(24)", "+hours", 1440)
         }
         let time = Int((Float(skinType.maximumTimeInSun) / currentUV) * Float(spf))
         if time < 60 {

@@ -46,16 +46,7 @@ class OnboardingSceneViewController: UIViewController {
 
 //            let x = self.view.bounds.width * pageIndex
 //            imageScrollView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
-            let imageName = "onboarding_\(Int(pageIndex + 1))"
-            let image = UIImage(named: imageName)
-            //DispatchQueue.main.async {
-//                UIView.animate(withDuration: 0.33) {
-//                    self.headerImageView.image = image
-//                }
-                UIView.transition(with: self.headerImageView, duration: 2, options: .transitionCrossDissolve, animations: {
-                    self.headerImageView.image = image
-                }, completion: nil)
-            //}
+            animateImageChange()
 
             let buttonTitle = Int(pageIndex) == titles.count - 1 ? "accept" : "skip"
             button.setTitle(buttonTitle, for: .normal)
@@ -89,7 +80,7 @@ class OnboardingSceneViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if hasShowedLocationAuthorization{
-            print("Hello")
+            
         }
     }
 
@@ -103,6 +94,19 @@ class OnboardingSceneViewController: UIViewController {
         }
 
         view.layoutIfNeeded()
+    }
+
+    private func  animateImageChange(){
+        let imageName = "onboarding_\(Int(pageIndex + 1))"
+        let image = UIImage(named: imageName)
+
+        DispatchQueue.main.async {
+            UIView.transition(with: self.headerImageView,
+                              duration:0.33,
+                              options: .transitionCrossDissolve,
+                              animations: { self.headerImageView.image = image},
+                              completion: nil)
+        }
     }
 
 
@@ -177,8 +181,10 @@ extension OnboardingSceneViewController{
 
 extension OnboardingSceneViewController: UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
-        pageIndex = round(scrollView.contentOffset.x / view.frame.width)
+		let index =	round(scrollView.contentOffset.x / view.frame.width)
+        if index != pageIndex{
+            pageIndex = index
+        }
     }
 
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

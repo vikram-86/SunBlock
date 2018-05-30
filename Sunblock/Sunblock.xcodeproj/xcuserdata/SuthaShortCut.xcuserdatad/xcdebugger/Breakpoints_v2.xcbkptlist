@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Views/SPFSelectionView/SPFSelectionView.swift"
-            timestampString = "549376124.34971"
+            timestampString = "549403957.361251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -25,14 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sunblock/Scenes/OnboardingScene/OnboardingSceneViewController.swift"
-            timestampString = "549376124.3499939"
+            filePath = "Sunblock/Scenes/SkinSelectionScene/SkinSelectionSceneViewController.swift"
+            timestampString = "549403957.36158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "pageIndex"
-            landmarkType = "24">
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "calculateSegue()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sunblock/Scenes/SkinSelectionScene/SkinSelectionSceneViewController.swift"
-            timestampString = "549376124.3506809"
+            filePath = "Sunblock/Scenes/MainScene/MainSceneViewController.swift"
+            timestampString = "549403957.36221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "calculateSegue()"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "updateSSE()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

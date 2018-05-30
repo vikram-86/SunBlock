@@ -73,16 +73,26 @@ class SkinSelectionSceneViewController: UIViewController {
 
             let x 		= self.view.bounds.width * CGFloat(index) + 30
             let y 		= CGFloat(0)
-            let width 	= CGFloat(256)
+            let width 	= CGFloat(270)
             let height	= labelScrollView.bounds.height
             let label	= UILabel(frame: CGRect(x: x, y: y, width: width, height: height))
 
-            label.text 		= type.skinDescription
-            label.font		= UIFont.appFont(with: .archivoRegular, size: 19)
-            label.textColor	= UIColor.appColor(.dirtyPurple)
+
+            let attributedString	= NSMutableAttributedString(string: type.skinDescription)
+            let paragafStyle = NSMutableParagraphStyle()
+            paragafStyle.lineHeightMultiple = 1.4
+            paragafStyle.lineSpacing = 0
+            attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragafStyle, range: NSMakeRange(0, attributedString.length))
+
+
+            label.attributedText	= attributedString
+            let size	: CGFloat	= UIDevice.currentDevice == .iPhone5 ? 15 : 19
+            label.font				= UIFont.appFont(with: .archivoRegular, size: size)
+            label.textColor			= UIColor.appColor(.dirtyPurple)
 
 
             label.numberOfLines	= 0
+            label.contentMode = .top
             labelScrollView.addSubview(label)
         }
         labelScrollView.contentSize = CGSize(width:

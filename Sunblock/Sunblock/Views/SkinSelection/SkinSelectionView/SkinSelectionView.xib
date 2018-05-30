@@ -31,11 +31,11 @@
                         <action selector="selectButtonPressed:" destination="-1" eventType="touchUpInside" id="tgl-Uc-ZuK"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="dST-ck-ump">
-                    <rect key="frame" x="16" y="3.5" width="261" height="73"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skinSelectorBackgroundWithShadowSupper2000" translatesAutoresizingMaskIntoConstraints="NO" id="dST-ck-ump">
+                    <rect key="frame" x="16" y="3.5" width="263" height="73"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="wu7-f1-3I8">
-                    <rect key="frame" x="29.5" y="28" width="234" height="24"/>
+                    <rect key="frame" x="30.5" y="28" width="234" height="24"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKw-dr-FeJ">
                             <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -55,7 +55,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="Aak-eC-vNp" firstAttribute="centerY" secondItem="GKw-dr-FeJ" secondAttribute="centerY" id="8jc-7B-pCb"/>
                                 <constraint firstItem="kNi-KZ-cCA" firstAttribute="top" secondItem="GKw-dr-FeJ" secondAttribute="top" id="CGK-LQ-sIB"/>
@@ -85,7 +85,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="Mr1-fP-tnZ" secondAttribute="trailing" id="5df-Ly-myt"/>
                                 <constraint firstAttribute="bottom" secondItem="Mr1-fP-tnZ" secondAttribute="bottom" id="8iR-QM-sZ3"/>
@@ -115,7 +115,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="al1-dk-PlX" firstAttribute="top" secondItem="Qtd-ez-bYs" secondAttribute="top" id="1Zd-Vp-1wV"/>
                                 <constraint firstItem="WYg-QL-fCb" firstAttribute="centerX" secondItem="Qtd-ez-bYs" secondAttribute="centerX" id="9ot-ES-Gbo"/>
@@ -145,7 +145,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="9jt-Bu-Csc" firstAttribute="centerY" secondItem="moZ-Ni-dXR" secondAttribute="centerY" id="3HI-34-jos"/>
                                 <constraint firstAttribute="bottom" secondItem="bEs-He-Te6" secondAttribute="bottom" id="94l-uM-lCL"/>
@@ -175,7 +175,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="aQC-GN-oZO" secondAttribute="trailing" id="AUR-64-J2Y"/>
                                 <constraint firstAttribute="bottom" secondItem="aQC-GN-oZO" secondAttribute="bottom" id="Fzb-Vd-wFl"/>
@@ -205,7 +205,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="kr2-Q8-de6" firstAttribute="top" secondItem="Zf9-mj-5MI" secondAttribute="top" id="68X-Ed-0xR"/>
                                 <constraint firstAttribute="trailing" secondItem="kr2-Q8-de6" secondAttribute="trailing" id="ZzO-dt-PMH"/>
@@ -235,7 +235,7 @@
         </view>
     </objects>
     <resources>
-        <image name="buttonBackground" width="261" height="73"/>
         <image name="buttonWithShadow" width="67" height="73"/>
+        <image name="skinSelectorBackgroundWithShadowSupper2000" width="263" height="73"/>
     </resources>
 </document>
