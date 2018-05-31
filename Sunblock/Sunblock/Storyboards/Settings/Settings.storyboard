@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DWi-oH-LTe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DWi-oH-LTe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -413,7 +413,7 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERk-xu-VwB">
-                                                <rect key="frame" x="24" y="27" width="15" height="25"/>
+                                                <rect key="frame" x="24" y="27" width="44" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="JVF-dL-i6B"/>
                                                     <constraint firstAttribute="width" constant="44" id="aW1-1j-KFd"/>
@@ -428,6 +428,7 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                         <constraints>
                                             <constraint firstItem="P6T-Sl-sUb" firstAttribute="leading" secondItem="PD0-w1-r1i" secondAttribute="leading" id="HfI-F6-WoW"/>
                                             <constraint firstItem="1wE-AB-GjE" firstAttribute="leading" secondItem="knD-tO-CZT" secondAttribute="leading" constant="32" id="PWn-cS-8gL"/>
+                                            <constraint firstItem="ERk-xu-VwB" firstAttribute="top" secondItem="knD-tO-CZT" secondAttribute="top" constant="27" id="PaT-kV-bc6"/>
                                             <constraint firstItem="ERk-xu-VwB" firstAttribute="leading" secondItem="knD-tO-CZT" secondAttribute="leading" constant="24" id="RhI-hU-BSD"/>
                                             <constraint firstItem="P6T-Sl-sUb" firstAttribute="width" secondItem="PD0-w1-r1i" secondAttribute="width" id="TU0-ar-QLF"/>
                                             <constraint firstItem="Uh6-xL-X9Y" firstAttribute="leading" secondItem="P6T-Sl-sUb" secondAttribute="leading" id="U33-Ds-9W5"/>
@@ -455,7 +456,6 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                             <constraint firstItem="To8-cf-ybC" firstAttribute="leading" secondItem="yTT-iQ-gco" secondAttribute="leading" id="0o7-9N-hkK"/>
                             <constraint firstItem="knD-tO-CZT" firstAttribute="height" secondItem="K8x-yz-4Zj" secondAttribute="height" priority="250" id="7VT-LA-ynm"/>
                             <constraint firstItem="To8-cf-ybC" firstAttribute="trailing" secondItem="yTT-iQ-gco" secondAttribute="trailing" id="C1A-La-Kzb"/>
-                            <constraint firstItem="ERk-xu-VwB" firstAttribute="top" secondItem="yTT-iQ-gco" secondAttribute="top" constant="27" id="emc-T2-Ge4"/>
                             <constraint firstItem="To8-cf-ybC" firstAttribute="bottom" secondItem="yTT-iQ-gco" secondAttribute="bottom" id="pkD-Ds-0h1"/>
                             <constraint firstItem="To8-cf-ybC" firstAttribute="top" secondItem="yTT-iQ-gco" secondAttribute="top" id="res-LA-FQk"/>
                             <constraint firstItem="knD-tO-CZT" firstAttribute="width" secondItem="K8x-yz-4Zj" secondAttribute="width" id="tth-ZP-5Pl"/>
@@ -490,7 +490,7 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eC-XK-412">
-                                                <rect key="frame" x="24" y="27" width="15" height="25"/>
+                                                <rect key="frame" x="24" y="27" width="44" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="6wv-XJ-EZI"/>
                                                     <constraint firstAttribute="width" constant="44" id="PXZ-gh-NxY"/>
@@ -538,7 +538,7 @@ Avatars by Paolo Stanley</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nah-fe-WuM">
-                                                <rect key="frame" x="32" y="645.5" width="167" height="32"/>
+                                                <rect key="frame" x="32" y="645.5" width="163" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="https://avataaars.com/"/>
                                                 <connections>
