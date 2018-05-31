@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Scenes/SkinSelectionScene/SkinSelectionSceneViewController.swift"
-            timestampString = "549403957.36158"
+            timestampString = "549491797.2179739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "calculateSegue()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sunblock/Scenes/MainScene/MainSceneViewController.swift"
-            timestampString = "549447866.895232"
+            timestampString = "549488177.273289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "154"

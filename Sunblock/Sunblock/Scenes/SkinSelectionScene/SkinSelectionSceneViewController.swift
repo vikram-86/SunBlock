@@ -51,7 +51,7 @@ class SkinSelectionSceneViewController: UIViewController {
         skinSelectionView.setupButtonBackground()
         skinSelectionView.updateButtonView(at: pageIndex)
 
-        if UIDevice.currentDevice == .iPhone5{
+        if UIDevice.currentDevice == .iPhone5 || UIDevice.currentDevice == .unknown{
 
             seSelectionView.isHidden 	= false
             skinSelectionView.isHidden	= true
@@ -74,7 +74,7 @@ class SkinSelectionSceneViewController: UIViewController {
             let x 		= self.view.bounds.width * CGFloat(index) + 30
             let y 		= CGFloat(0)
             let width 	= CGFloat(270)
-            let height	= labelScrollView.bounds.height
+            let height	= labelScrollView.bounds.height - 40
             let label	= UILabel(frame: CGRect(x: x, y: y, width: width, height: height))
 
 
@@ -87,7 +87,12 @@ class SkinSelectionSceneViewController: UIViewController {
 
             label.attributedText	= attributedString
             let size	: CGFloat	= UIDevice.currentDevice == .iPhone5 ? 15 : 19
-            label.font				= UIFont.appFont(with: .archivoRegular, size: size)
+            if UIDevice.currentDevice == .unknown{
+                label.font = UIFont.appFont(with: .archivoRegular, size: 11)
+            }else{
+                 label.font                = UIFont.appFont(with: .archivoRegular, size: size)
+            }
+
             label.textColor			= UIColor.appColor(.dirtyPurple)
 
 
