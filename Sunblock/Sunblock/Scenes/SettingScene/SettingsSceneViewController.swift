@@ -11,8 +11,11 @@ import MessageUI
 
 class SettingsSceneViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.isScrollEnabled = UIDevice.currentDevice == .unknown
     }
 
     override func viewWillAppear(_ animated: Bool) {

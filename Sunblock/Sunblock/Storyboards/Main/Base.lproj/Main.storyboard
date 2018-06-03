@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDR-k8-pee">
-                                <rect key="frame" x="0.0" y="28" width="375" height="872"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="880"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8u-dk-Io7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
@@ -74,7 +74,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVz-Qf-0z9">
-                                                <rect key="frame" x="36" y="85" width="0.0" height="61"/>
+                                                <rect key="frame" x="36" y="85" width="279" height="61"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="61" id="jIw-ek-6Ff"/>
                                                 </constraints>
@@ -102,7 +102,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxE-Ak-bk8">
-                                                                <rect key="frame" x="-11" y="-194" width="62.5" height="0.0"/>
+                                                                <rect key="frame" x="-11" y="-214" width="62.5" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="white"/>
                                                                 <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celcius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5D9-4E-e0e">
-                                                                <rect key="frame" x="-8" y="-194.5" width="56" height="0.0"/>
+                                                                <rect key="frame" x="-8" y="-214.5" width="56" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="white"/>
                                                                 <nil key="highlightedColor"/>
@@ -217,6 +217,7 @@
                         <outlet property="uvImageView" destination="2vz-7X-5yY" id="f1n-dh-iqV"/>
                         <outlet property="uvLabel" destination="6hR-Y0-e0j" id="7cs-Ww-zR0"/>
                         <outlet property="uvTitleLabel" destination="XxE-Ak-bk8" id="hpS-oq-RCQ"/>
+                        <outlet property="uvTopContstraints" destination="TqO-F0-2sy" id="NPU-YS-GJK"/>
                         <outlet property="weatherIconImageView" destination="1xA-rl-tZC" id="uAZ-0a-oyY"/>
                         <segue destination="fze-9g-ciC" kind="show" identifier="mainToDisclaimer" id="Z7a-ZB-QI6"/>
                         <segue destination="tW7-si-jmv" kind="show" identifier="mainToLocation" id="fZI-YG-dRZ"/>
