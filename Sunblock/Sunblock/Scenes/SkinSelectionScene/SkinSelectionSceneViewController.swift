@@ -113,7 +113,9 @@ class SkinSelectionSceneViewController: UIViewController {
             fromOnboarding = false
         }else{
             if let navController = self.navigationController{
-                navController.popViewController(animated: true)
+                DispatchQueue.main.async {
+                    navController.popViewController(animated: true)
+                }
             }
         }
     }
