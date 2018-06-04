@@ -22,6 +22,10 @@ class MainSceneViewController: UIViewController {
     @IBOutlet weak var uvTitleLabel			: UILabel!
     @IBOutlet weak var temperatureUnitLabel	: UILabel!
     @IBOutlet weak var scrollView			: UIScrollView!
+    
+    // Constraints
+    @IBOutlet weak var uvTopContstraints: NSLayoutConstraint!
+    
 
 
     // Private
@@ -96,7 +100,13 @@ class MainSceneViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         LocationService.current.delegate    = self
-
+        
+        switch UIDevice.currentDevice{
+        case .iPhone5, .unknown:
+            uvTopContstraints.constant = 20
+        default:
+            break
+        }
 
         reachability.whenReachable = { reachability in
             if reachability.connection == .wifi{
