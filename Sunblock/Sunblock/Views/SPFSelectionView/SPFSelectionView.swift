@@ -29,7 +29,7 @@ protocol SPFDelegate: class{
 
 	// Ingen spf 0,2 eller 4
     private var dataSource = [
-        0,10,15,20,25,30,40,50
+        0,10,15,20,25,30,35,40,45,50
     ]
 
     private var xCoordinates	= [CGFloat]()

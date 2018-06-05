@@ -36,7 +36,7 @@ class OnboardingSceneViewController: UIViewController {
     lazy var contents: [String] = [
         "This app is meant as guidance, please remember that your skin may react differently to direct sunlight, always follow directions on sunscreen bottle.",
         "We require your GPS location to measure the right amount of UV radiation, so that we can suggest you appropriate actions.",
-        "Apply suncreen to dry skin 15 minutes  before going outdoors.",
+        "Apply sunscreen to dry skin 15 minutes before going outdoors.",
         "Dermatologists always recommend reaplying suncreen every two hours, and after swimming or sweating, follow the directions on the bottle."
     ]
 

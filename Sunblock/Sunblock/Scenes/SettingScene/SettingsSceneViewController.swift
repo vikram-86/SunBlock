@@ -32,12 +32,13 @@ extension SettingsSceneViewController{
 
 
     @IBAction private func composeMail(){
-        let mailVC = configureMailComposeViewController()
+
         if MFMailComposeViewController.canSendMail(){
+            let mailVC = configureMailComposeViewController()
             present(mailVC, animated: true)
         }else{
             // present error alert
-            AlertService.presentAlert(with: "No mail Configured", title: "You have not configured a mail client")
+            AlertService.presentAlert(with: "Please send an email to : sunblockapp@gmail.com", title: "Native mail client not configured")
         }
     }
 
