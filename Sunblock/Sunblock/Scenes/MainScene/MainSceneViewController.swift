@@ -143,6 +143,7 @@ class MainSceneViewController: UIViewController {
 
             }
         }
+        spfSelectionView.initializeContent()
     }
 
     @objc func viewDidBecomeActive(){

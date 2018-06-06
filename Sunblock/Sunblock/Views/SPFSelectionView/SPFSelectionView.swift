@@ -63,14 +63,14 @@ extension SPFSelectionView{
 
     private func setup(){
         loadNibContent()
-        initializeContent()
+        //initializeContent()
 
         let gesture = UITapGestureRecognizer(target: self, action: #selector(labelSelected))
         valueLabel.addGestureRecognizer(gesture)
         valueLabel.isUserInteractionEnabled = true
     }
 
-    private func initializeContent(){
+    func initializeContent(){
         scrollContainerWidthContraint.constant = 0
 
         var xCoordinate		: CGFloat = 0 //(self.frame.width / 2) - (labelWidth / 2)
@@ -120,6 +120,7 @@ extension SPFSelectionView{
         label.textAlignment	= .center
         label.textColor		= UIColor.appColor(.dirtyPurple)
         label.font			= UIFont.appFont(with: .nevis, size: 50)
+        
 
         label.sizeToFit()
 
