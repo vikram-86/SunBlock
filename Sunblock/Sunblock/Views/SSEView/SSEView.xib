@@ -36,14 +36,14 @@
                     <color key="textColor" name="dirtyPurple"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-Oy-OmV">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" text="12" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-Oy-OmV">
                     <rect key="frame" x="40" y="22.5" width="55" height="56"/>
                     <fontDescription key="fontDescription" name="nevis-Bold" family="nevis" pointSize="50"/>
                     <color key="textColor" name="dirtyPurple"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDB-Ca-HC6">
-                    <rect key="frame" x="95" y="22.5" width="70.5" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" text="+hours" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="RDB-Ca-HC6">
+                    <rect key="frame" x="95" y="22.5" width="87.5" height="30"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                     <color key="textColor" name="dirtyPurple"/>
                     <nil key="highlightedColor"/>
@@ -103,7 +103,9 @@
                 <constraint firstItem="PvX-Oy-OmV" firstAttribute="top" secondItem="kI6-Q3-DYR" secondAttribute="bottom" constant="2" id="HcJ-p3-MCJ"/>
                 <constraint firstItem="Ygw-Ok-dDM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Jcz-xG-PvB"/>
                 <constraint firstItem="PvX-Oy-OmV" firstAttribute="leading" secondItem="kI6-Q3-DYR" secondAttribute="leading" id="OVz-6O-Sj7"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ygw-Ok-dDM" secondAttribute="trailing" constant="33" id="UhX-uw-boR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ygw-Ok-dDM" secondAttribute="trailing" constant="10" id="UhX-uw-boR"/>
+                <constraint firstItem="Ygw-Ok-dDM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RDB-Ca-HC6" secondAttribute="trailing" constant="30" id="cz5-zv-cne"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ygw-Ok-dDM" secondAttribute="trailing" priority="750" constant="33" id="qsX-By-ZfW"/>
                 <constraint firstItem="RDB-Ca-HC6" firstAttribute="leading" secondItem="PvX-Oy-OmV" secondAttribute="trailing" id="sp6-zn-nzS"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

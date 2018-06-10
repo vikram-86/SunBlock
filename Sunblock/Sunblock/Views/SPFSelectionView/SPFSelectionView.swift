@@ -26,6 +26,7 @@ protocol SPFDelegate: class{
     @IBOutlet private weak var titleLabel						: UILabel!
     @IBOutlet private weak var tapButton						: UIButton!
 
+    @IBOutlet weak var buttonViewLeadingConstraint: NSLayoutConstraint!
 
 	// Ingen spf 0,2 eller 4
     private var dataSource = [
@@ -41,6 +42,19 @@ protocol SPFDelegate: class{
         didSet{
             impact.selectionChanged()
             self.valueLabel.text = "\(value)"
+            DispatchQueue.main.async {
+                if self.value >= 10{
+                    let currentDevice = UIDevice.currentDevice
+                    if currentDevice == .iPhone5 || currentDevice == .unknown{
+                        self.buttonViewLeadingConstraint.constant = 40
+                        self.layoutIfNeeded()
+                    }
+                }else{
+                    self.buttonViewLeadingConstraint.constant = 70
+                    self.layoutIfNeeded()
+                }
+            }
+
             delegate?.selectorSelected(spf: (value == 0 ? 1 : value))
         }
     }
@@ -64,16 +78,17 @@ extension SPFSelectionView{
     private func setup(){
         loadNibContent()
         //initializeContent()
-
         let gesture = UITapGestureRecognizer(target: self, action: #selector(labelSelected))
         valueLabel.addGestureRecognizer(gesture)
         valueLabel.isUserInteractionEnabled = true
+
+
     }
 
     func initializeContent(){
         scrollContainerWidthContraint.constant = 0
 
-        var xCoordinate		: CGFloat = 0 //(self.frame.width / 2) - (labelWidth / 2)
+        var xCoordinate		: CGFloat = 0
         var markerOffset	: CGFloat = 0
         var contentWidth	: CGFloat = 0
         dataSource.forEach {
@@ -120,7 +135,7 @@ extension SPFSelectionView{
         label.textAlignment	= .center
         label.textColor		= UIColor.appColor(.dirtyPurple)
         label.font			= UIFont.appFont(with: .nevis, size: 50)
-        
+
 
         label.sizeToFit()
 

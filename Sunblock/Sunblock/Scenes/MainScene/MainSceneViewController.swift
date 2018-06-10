@@ -104,6 +104,9 @@ class MainSceneViewController: UIViewController {
         switch UIDevice.currentDevice{
         case .iPhone5, .unknown:
             uvTopContstraints.constant = 20
+            let font = UIFont.appFont(with: .nevis, size: 40)
+            temperatureLabel.font = font
+            uvLabel.font = font
         default:
             break
         }
@@ -128,6 +131,8 @@ class MainSceneViewController: UIViewController {
 
         UIApplication.shared.statusBarStyle = .lightContent
         NotificationCenter.default.addObserver(self, selector: #selector(viewDidBecomeActive), name: .UIApplicationWillEnterForeground, object: nil)
+
+       // setupLabelsForScreenSize()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -156,6 +161,18 @@ class MainSceneViewController: UIViewController {
         reachability.stopNotifier()
         NotificationCenter.default.removeObserver(self, name: .viewTouched, object: nil)
 
+    }
+}
+
+//MARK: - Private
+extension MainSceneViewController{
+
+    private func setupLabelsForScreenSize(){
+        let device 	= UIDevice.currentDevice
+        let titleFont 	= (device == .iPhone5 || device == .unknown) ?
+        UIFont.appFont(with: .archivoBold, size: 44) : UIFont.appFont(with: .archivoBold, size: 54)
+
+        titleLabel.font = titleFont
     }
 }
 

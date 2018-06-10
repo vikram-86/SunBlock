@@ -13,6 +13,11 @@ class SettingsSceneViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var skinDescriptionLabel			: UILabel!
+    @IBOutlet weak var disclaimerDiscriptionLabel	: UILabel!
+    @IBOutlet weak var suggestionDescriptionLabel	: UILabel!
+    @IBOutlet weak var aboutDescriptionLabel		: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.isScrollEnabled = UIDevice.currentDevice == .unknown
@@ -21,10 +26,23 @@ class SettingsSceneViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIApplication.shared.statusBarStyle = .default
+        setupLabelsForSmallerScreens()
     }
 }
 
 extension SettingsSceneViewController{
+
+    private func setupLabelsForSmallerScreens(){
+        let device = UIDevice.currentDevice
+        if device == .iPhone5 || device == .unknown{
+            let font = UIFont.systemFont(ofSize: 14, weight: .regular)
+
+            skinDescriptionLabel.font 		= font
+            disclaimerDiscriptionLabel.font = font
+            suggestionDescriptionLabel.font	= font
+            aboutDescriptionLabel.font 		= font
+        }
+    }
 
     @IBAction private func close(){
         dismiss(animated: true)

@@ -36,6 +36,12 @@ import UIKit
         valueLabel.alpha	= 0
         unitLabel.alpha		= 0
         setupButton()
+
+        let device = UIDevice.currentDevice
+        if device == .iPhone5 || device == .unknown{
+            let font = UIFont.appFont(with: .nevis, size: 40)
+            valueLabel.font = font
+        }
     }
 
     private func setupButton(){

@@ -124,7 +124,7 @@
                                                                 <color key="textColor" name="dirtyPurple"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Understand the data we show you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkK-Gx-JYC">
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Understand the data we show you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gkK-Gx-JYC">
                                                                 <rect key="frame" x="35" y="45" width="260.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="dark"/>
@@ -308,7 +308,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="C2D-UM-pPh"/>
                     <connections>
+                        <outlet property="aboutDescriptionLabel" destination="Xhb-k0-CDL" id="aIc-OG-kvX"/>
+                        <outlet property="disclaimerDiscriptionLabel" destination="gkK-Gx-JYC" id="Y4H-fT-tJo"/>
                         <outlet property="scrollView" destination="ec0-6b-zuI" id="dsC-Ne-gXW"/>
+                        <outlet property="skinDescriptionLabel" destination="rss-oJ-0LS" id="KgP-rh-CMy"/>
+                        <outlet property="suggestionDescriptionLabel" destination="uwq-mK-qGX" id="rW2-6v-Thb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghm-XE-aCY" userLabel="First Responder" sceneMemberID="firstResponder"/>

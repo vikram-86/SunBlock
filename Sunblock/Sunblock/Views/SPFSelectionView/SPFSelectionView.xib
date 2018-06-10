@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SPFSelectionView" customModule="Sunblock" customModuleProvider="target">
             <connections>
                 <outlet property="buttonContainerView" destination="qWq-mR-yfx" id="pYZ-EP-VYL"/>
+                <outlet property="buttonViewLeadingConstraint" destination="Xch-Ed-Cfx" id="Q9G-QR-Ofg"/>
                 <outlet property="labelLeadingConstraint" destination="FG0-uc-2lg" id="NZU-GS-ZO5"/>
                 <outlet property="markerView" destination="Tcx-ji-XON" id="Abj-A2-WMd"/>
                 <outlet property="scrollContainerView" destination="LSV-ue-pwT" id="GPj-1R-cg3"/>
