@@ -13,9 +13,12 @@ class MainButton: UIButton {
 
 
     @IBInspectable
-    var cornerRadius: CGFloat = 0 {
-        didSet{
-            layer.cornerRadius = cornerRadius
+    override var cornerRadius: CGFloat {
+        set{
+            layer.cornerRadius = newValue
+        }
+        get{
+            return layer.cornerRadius
         }
     }
 

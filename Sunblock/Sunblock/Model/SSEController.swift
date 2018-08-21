@@ -7,7 +7,9 @@
 //
 
 import UIKit
+
 typealias SSEValue = (duration: String, unit:String, minutes: Double)
+
 struct SSEController{
 
     let weather		: Weather

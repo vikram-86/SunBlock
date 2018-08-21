@@ -21,4 +21,12 @@ extension UIView{
             return self.layer.cornerRadius == 0
         }
     }
+
+    @IBInspectable public var cornerRadius: CGFloat {
+        get{
+            return layer.cornerRadius
+        }set{
+            layer.cornerRadius = newValue
+        }
+    }
 }

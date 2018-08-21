@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,8 +29,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jec-Bg-aaI">
-                    <rect key="frame" x="40" y="40" width="146.5" height="27"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jec-Bg-aaI">
+                    <rect key="frame" x="40" y="40" width="301" height="27"/>
                     <fontDescription key="fontDescription" name="Archivo-SemiBold" family="Archivo" pointSize="24"/>
                     <color key="textColor" name="dirtyPurple"/>
                     <nil key="highlightedColor"/>
@@ -44,6 +44,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Jec-Bg-aaI" firstAttribute="width" secondItem="jeU-yK-akP" secondAttribute="width" id="3Dx-Cl-O0n"/>
                 <constraint firstItem="jeU-yK-akP" firstAttribute="top" secondItem="Jec-Bg-aaI" secondAttribute="bottom" constant="17" id="Cjt-1y-Zwf"/>
                 <constraint firstItem="Jec-Bg-aaI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="ICK-fO-gcp"/>
                 <constraint firstItem="jeU-yK-akP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="KgS-DO-O7R"/>

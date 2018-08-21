@@ -24,7 +24,9 @@ class OnboardingSceneViewController: UIViewController {
         "Disclaimer",
         "GPS location",
         "15 minutes before",
-        "Reapply sun screen"
+        "Reapply sun screen",
+        "The color represents how safe you are",
+        "On the city or on the beach"
     ]
 
     lazy var width	: CGFloat = UIScreen.main.bounds.width
@@ -37,7 +39,9 @@ class OnboardingSceneViewController: UIViewController {
         "This app is meant as guidance, please remember that your skin may react differently to direct sunlight, always follow directions on sunscreen bottle.",
         "We require your GPS location to measure the right amount of UV radiation, so that we can suggest you appropriate actions.",
         "Apply sunscreen to dry skin 15 minutes before going outdoors.",
-        "Dermatologists always recommend reaplying suncreen every two hours, and after swimming or sweating, follow the directions on the bottle."
+        "Dermatologists always recommend reaplying suncreen every two hours, and after swimming or sweating, follow the directions on the bottle.",
+        "We assume that when you opened the app, you have no screen on, if you have you should add that to the app, as soon that happens we will start the countdown till skindamage.",
+        "It makes a difference, the results vary greatly, make sure you define where you are on the bottom of the app."
     ]
 
     private var pageIndex: CGFloat = 0{
