@@ -86,9 +86,6 @@
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-ar-zKx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
-                                                                <connections>
-                                                                    <segue destination="fah-eS-Rv8" kind="show" id="hzj-Oz-eec"/>
-                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -132,9 +129,6 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsr-eS-hTg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
-                                                                <connections>
-                                                                    <segue destination="sTg-9g-Oso" kind="show" id="iAH-wD-Lbw"/>
-                                                                </connections>
                                                             </button>
                                                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="qZM-J9-unl">
                                                                 <rect key="frame" x="339" y="30.5" width="16" height="16"/>
@@ -247,9 +241,6 @@
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K7-jE-XOo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
-                                                                <connections>
-                                                                    <segue destination="L8B-aS-EkT" kind="show" id="pgG-BS-BLq"/>
-                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -368,7 +359,7 @@
                     <viewLayoutGuide key="safeArea" id="70S-B8-BrM"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2322" y="-353"/>
+            <point key="canvasLocation" x="2937" y="-114"/>
         </scene>
         <!--SkinChooser-->
         <scene sceneID="Tew-TS-LjQ">
@@ -376,13 +367,21 @@
                 <viewControllerPlaceholder storyboardName="SkinChooser" id="fah-eS-Rv8" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0W-XS-fuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2183" y="228"/>
+            <point key="canvasLocation" x="1207" y="-744"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Onboarding-->
+        <scene sceneID="3wz-ry-aVL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="34L-qU-el4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72u-Bs-ue3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="-555"/>
+        </scene>
+        <!--Settings Table View Controller-->
         <scene sceneID="sIV-y9-izX">
             <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Dg8-ML-yYr" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rY0-Ou-s4d">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Dg8-ML-yYr" customClass="SettingsTableViewController" customModule="Sunblock" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rY0-Ou-s4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="white"/>
@@ -404,6 +403,9 @@
                                                         <constraint firstAttribute="width" constant="40" id="ks1-lj-inL"/>
                                                     </constraints>
                                                     <state key="normal" image="ionIosArrowBackIonicons"/>
+                                                    <connections>
+                                                        <action selector="backButtonPressed" destination="Dg8-ML-yYr" eventType="touchUpInside" id="zRV-ZS-cwP"/>
+                                                    </connections>
                                                 </button>
                                                 <view alpha="0.040000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lca-0k-HPE" userLabel="seperatorView">
                                                     <rect key="frame" x="23.5" y="154" width="327" height="4"/>
@@ -493,6 +495,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWf-Be-uNs">
                                                     <rect key="frame" x="306" y="25" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="reminderSwitchTapped:" destination="Dg8-ML-yYr" eventType="valueChanged" id="qeo-9z-u0D"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -538,6 +543,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TMF-dS-p6x">
                                                     <rect key="frame" x="306" y="25" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="updateSwitchTapped:" destination="Dg8-ML-yYr" eventType="valueChanged" id="5Ah-hw-E0t"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -691,9 +699,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="white"/>
-                                        <connections>
-                                            <segue destination="sTg-9g-Oso" kind="show" id="p1z-uh-z1u"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="80" id="evy-QX-j7H">
                                         <rect key="frame" x="0.0" y="674" width="375" height="80"/>
@@ -781,10 +786,19 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="mSZ-Kb-c8J"/>
                     <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="screenReminderSwitch" destination="lWf-Be-uNs" id="xqj-CI-QBN"/>
+                        <outlet property="temperatureLabel" destination="sL1-Bk-YVT" id="vgN-kS-LiD"/>
+                        <outlet property="updateSwitch" destination="TMF-dS-p6x" id="xBu-Nq-Uei"/>
+                        <segue destination="fah-eS-Rv8" kind="show" identifier="SkinChooser" id="Vn8-fQ-SKb"/>
+                        <segue destination="sTg-9g-Oso" kind="show" identifier="Disclaimer" id="9qW-34-xLZ"/>
+                        <segue destination="L8B-aS-EkT" kind="show" identifier="AboutThisApp" id="zyL-cj-PXw"/>
+                        <segue destination="34L-qU-el4" kind="show" identifier="onboarding" id="AE9-SA-Ix7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzj-JB-gQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661.60000000000002" y="-743.47826086956525"/>
+            <point key="canvasLocation" x="436" y="-744"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tdk-9Z-K5c">
@@ -832,7 +846,7 @@
 
 This app is meant as guidance, please remember that your skin may react differently to direct sunlight, always follow directions on sunscreen bottle.
 
-Dermatologists always recommend reaaplying suncreen every two hours, or after swimming or sweating, according to the directions on the bottle. For that reason the app will always show +2 hours when safe sun exposure time exceeds 2 hours.</string>
+Dermatologists always recommend reaaplying suncreen every two hours, or after swimming or sweating, according to the directions on the bottle. For that reason the app will always show 2 hours when safe sun exposure time exceeds 2 hours.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -907,7 +921,7 @@ Dermatologists always recommend reaaplying suncreen every two hours, or after sw
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTX-q9-msn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-1066"/>
+            <point key="canvasLocation" x="436" y="198"/>
         </scene>
         <!--About Scene View Controller-->
         <scene sceneID="vxD-oo-c09">
@@ -1054,7 +1068,7 @@ Avatars by Paolo Stanley</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOF-tv-vOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="1266.5667166416792"/>
+            <point key="canvasLocation" x="1418" y="-1685"/>
         </scene>
     </scenes>
     <resources>
@@ -1146,7 +1160,4 @@ Avatars by Paolo Stanley</string>
             <color red="0.98799997569999998" green="0.98799997569999998" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="p1z-uh-z1u"/>
-    </inferredMetricsTieBreakers>
 </document>

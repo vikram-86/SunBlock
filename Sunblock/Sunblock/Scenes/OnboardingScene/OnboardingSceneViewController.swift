@@ -30,7 +30,6 @@ class OnboardingSceneViewController: UIViewController {
     ]
 
     lazy var width	: CGFloat = UIScreen.main.bounds.width
-
     lazy var height	: CGFloat = {
         return scrollView.bounds.height
     }()
@@ -64,6 +63,8 @@ class OnboardingSceneViewController: UIViewController {
     private var locationServiceGranted			= false
     private var shouldPerfomSegue				= false
     private var hasShownKey						= "hasShown"
+
+    var fromSettings = false
 
 
     override func viewDidLoad() {
@@ -154,6 +155,11 @@ class OnboardingSceneViewController: UIViewController {
 //MARK: -IBAction
 extension OnboardingSceneViewController{
     @IBAction private func buttonPressed(sender: UIButton){
+        if fromSettings{
+            dismiss(animated: true)
+            return
+        }
+
         UserDefaults.standard.set(true, forKey: "shouldSkipOnboarding")
         if sender.currentTitle == "accept"{
             hasCompletedOnboardin = true
@@ -193,7 +199,8 @@ extension OnboardingSceneViewController: UIScrollViewDelegate{
 
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         if pageIndex == 1,
-            !hasShowedLocationAuthorization{
+            !hasShowedLocationAuthorization,
+            !fromSettings{
             scrollView.isScrollEnabled = false
             print("Setting up gps location!")
             service.requestAuthorization()

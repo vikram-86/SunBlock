@@ -21,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
 
+        // Setup Cell Appearance
+        let colorView = UIView()
+        colorView.backgroundColor = .clear
+        UITableViewCell.appearance().selectedBackgroundView = colorView
+
         if UserDefaults.standard.bool(forKey: "shouldSkipOnboarding"){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             window?.rootViewController = storyboard.instantiateInitialViewController()

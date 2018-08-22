@@ -72,6 +72,9 @@
 		8A5748332074316B00B295B9 /* Archivo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A57482B2074316B00B295B9 /* Archivo-Regular.ttf */; };
 		8A5748342074316B00B295B9 /* Archivo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A57482C2074316B00B295B9 /* Archivo-Medium.ttf */; };
 		8A5748382075222400B295B9 /* nevis.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A5748372075222400B295B9 /* nevis.ttf */; };
+		8A7E8D05212C0C5400E0909C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E8D04212C0C5400E0909C /* SettingsTableViewController.swift */; };
+		8A7E8D09212C1F3F00E0909C /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E8D08212C1F3F00E0909C /* TemperatureUnit.swift */; };
+		8A7E8D0C212C22CC00E0909C /* SettingsUtlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E8D0B212C22CC00E0909C /* SettingsUtlity.swift */; };
 		8A9CB2A620B4294B009720C2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CB2A520B4294B009720C2 /* UIViewController.swift */; };
 		8A9CF53F209A5034001EFCCC /* SettingsSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CF53E209A5034001EFCCC /* SettingsSceneViewController.swift */; };
 		8A9CF542209A509E001EFCCC /* DisclaimerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9CF541209A509E001EFCCC /* DisclaimerSceneViewController.swift */; };
@@ -165,6 +168,9 @@
 		8A57482B2074316B00B295B9 /* Archivo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Regular.ttf"; sourceTree = "<group>"; };
 		8A57482C2074316B00B295B9 /* Archivo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Archivo-Medium.ttf"; sourceTree = "<group>"; };
 		8A5748372075222400B295B9 /* nevis.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nevis.ttf; sourceTree = "<group>"; };
+		8A7E8D04212C0C5400E0909C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		8A7E8D08212C1F3F00E0909C /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
+		8A7E8D0B212C22CC00E0909C /* SettingsUtlity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUtlity.swift; sourceTree = "<group>"; };
 		8A9CB2A520B4294B009720C2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8A9CF53E209A5034001EFCCC /* SettingsSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSceneViewController.swift; sourceTree = "<group>"; };
 		8A9CF541209A509E001EFCCC /* DisclaimerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerSceneViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 		8A0003C220A8AD8B006A854E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8A7E8D0A212C22A800E0909C /* SettingsUtility */,
 				8AE78F0120B5F874002B7F8D /* UserNotificationService */,
 				8A0003CE20A9B4F4006A854E /* NetworkService */,
 				8A0003C320A8AD96006A854E /* LocationService */,
@@ -403,6 +410,7 @@
 		8A502EDD2073C8330039D598 /* Sunblock */ = {
 			isa = PBXGroup;
 			children = (
+				8A7E8D06212C1F2300E0909C /* Utility */,
 				8A0003E720AAC93B006A854E /* CoreData */,
 				8A0003C820A96F74006A854E /* Error */,
 				8A0003C220A8AD8B006A854E /* Services */,
@@ -555,10 +563,35 @@
 			path = Nevis;
 			sourceTree = "<group>";
 		};
+		8A7E8D06212C1F2300E0909C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8A7E8D07212C1F3300E0909C /* Temperature */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		8A7E8D07212C1F3300E0909C /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				8A7E8D08212C1F3F00E0909C /* TemperatureUnit.swift */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
+		8A7E8D0A212C22A800E0909C /* SettingsUtility */ = {
+			isa = PBXGroup;
+			children = (
+				8A7E8D0B212C22CC00E0909C /* SettingsUtlity.swift */,
+			);
+			path = SettingsUtility;
+			sourceTree = "<group>";
+		};
 		8A9CF53D209A5018001EFCCC /* SettingScene */ = {
 			isa = PBXGroup;
 			children = (
 				8A9CF53E209A5034001EFCCC /* SettingsSceneViewController.swift */,
+				8A7E8D04212C0C5400E0909C /* SettingsTableViewController.swift */,
 			);
 			path = SettingScene;
 			sourceTree = "<group>";
@@ -811,6 +844,7 @@
 				8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */,
 				8A40F86320BD3C6100C16725 /* SkinSelectionSceneViewController.swift in Sources */,
 				8A00041C20AAD4E4006A854E /* CoreDataStack.swift in Sources */,
+				8A7E8D05212C0C5400E0909C /* SettingsTableViewController.swift in Sources */,
 				8A0D7BB0208FCA1400003245 /* NibLoadable.swift in Sources */,
 				8A23F6EB2091143300A30DDE /* UIStoryboard.swift in Sources */,
 				8ABC18CB20B20CAE007EA149 /* OnboardingSceneViewController.swift in Sources */,
@@ -824,6 +858,7 @@
 				8A00045220AE07C7006A854E /* Weather+CoreDataProperties.swift in Sources */,
 				8A40F85520BBED8200C16725 /* OnboardingHeaderView.swift in Sources */,
 				8A00E938209F8912000C6882 /* ProfileView.swift in Sources */,
+				8A7E8D09212C1F3F00E0909C /* TemperatureUnit.swift in Sources */,
 				8ABC18CF20B211AC007EA149 /* OnboardingInfoView.swift in Sources */,
 				8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */,
 				8A4A3A8920B364BF0043D0FA /* OnboardinDisclaimerSceneViewController.swift in Sources */,
@@ -844,6 +879,7 @@
 				8A0003D620A9BF54006A854E /* Result.swift in Sources */,
 				8A00042C20AAEF23006A854E /* CodingUserInfoKey.swift in Sources */,
 				8A23F6E72091103500A30DDE /* UITableView.swift in Sources */,
+				8A7E8D0C212C22CC00E0909C /* SettingsUtlity.swift in Sources */,
 				8A0D7BAB208FABBB00003245 /* SkinImageContainer.swift in Sources */,
 				8A57482320742E8600B295B9 /* MainSceneViewController.swift in Sources */,
 			);
