@@ -114,7 +114,7 @@ extension SettingsTableViewController{
         }else{
 
             UIPasteboard.general.string = emailAdress
-            let alertController = UIAlertController(title: "Native mail client not configured", message: "Our email address has been copied to your clipboard.\nPlease paste in your preferred mail client and send us an 📧", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Native mail client not configured", message: "Our email address has been copied to your clipboard.\nPlease paste it in your preferred mail client and send us an 📧", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
             present(alertController, animated: true)

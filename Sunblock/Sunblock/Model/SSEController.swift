@@ -101,15 +101,17 @@ struct SSEController{
         if currentUV == 0 {
             return ("\(24)", "+hours", 1440)
         }
+
+
         let time = Int((Float(skinType.maximumTimeInSun) / currentUV) * Float(spf))
         if time < 60 {
             return ("\(time)", "minutes", Double(time))
         }else if time >= 60, time < 120{
             return ("\(1)", "hour", Double(time))
         }else if time > 1440{
-            return ("\(24)", "+hours", Double(time))
+            return ("\(2)", "hours", Double(120))
         }else{
-            return ("\(time/60)", "hours", Double(time))
+            return ("\(2)", "hours", Double(120))
         }
     }
 }

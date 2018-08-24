@@ -18,6 +18,7 @@ class SettingsSceneViewController: UIViewController {
     @IBOutlet weak var suggestionDescriptionLabel	: UILabel!
     @IBOutlet weak var aboutDescriptionLabel		: UILabel!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.isScrollEnabled = UIDevice.currentDevice == .unknown
@@ -59,6 +60,7 @@ extension SettingsSceneViewController{
             AlertService.presentAlert(with: "Please send an email to : sunblockapp@gmail.com", title: "Native mail client not configured")
         }
     }
+    
 
     private func configureMailComposeViewController() -> MFMailComposeViewController{
         let mailComposerVC = MFMailComposeViewController()

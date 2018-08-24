@@ -273,6 +273,14 @@ extension SPFSelectionView: UIScrollViewDelegate{
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 
+        let contentOffset = scrollView.contentOffset
+        let lastItemFrameX = self.labels.last!.frame.origin.x - (UIScreen.main.bounds.width / 2)
+		let treshold = (contentOffset.x - lastItemFrameX)
+        let shouldSelectLastItem = treshold >= self.labels.last!.frame.width
+        if shouldSelectLastItem{
+            value = 50
+        }
+
 		let offset = getOffsetPoint()
         scrollView.setContentOffset(offset, animated: true)
     }
