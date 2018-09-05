@@ -26,6 +26,12 @@ enum ColorNames: String{
     case blush			= "blush"
     case lightPeach		= "lightPeach"
     case lightMustard	= "lightMustard"
+
+    static var allUVColors : [ColorNames]{
+        return [.greenishTeal, .wheat,
+                .fadedOrange, .fadedOrange2,
+                .perryWinkle]
+    }
 }
 
 extension UIColor{

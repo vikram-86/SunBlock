@@ -35,6 +35,13 @@ enum TemperatureUnit{
         }
     }
 
+    var unitString : String {
+        switch self{
+        case .celcius: return  "Celcius"
+        case .fahrenheit: return "Fahrenheit"
+        }
+    }
+
     var description : String {
         let preText = "Temperature is shown as "
         switch self {

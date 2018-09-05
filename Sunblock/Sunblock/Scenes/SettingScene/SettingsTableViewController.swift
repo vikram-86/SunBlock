@@ -65,7 +65,7 @@ class SettingsTableViewController: UITableViewController {
 
             shouldShowUpdate 	= true
             shouldSetReminder	= true
-			currentUnit			= .celcius
+			currentUnit			= SettingsUtility.unit
 
             SettingsUtility.justAfterUpdate = true
 
@@ -108,7 +108,7 @@ extension SettingsTableViewController{
             let mail 					= MFMailComposeViewController()
             mail.mailComposeDelegate	= self
             mail.setToRecipients([emailAdress])
-            mail.setSubject("Suggestion for version \(Bundle.main.buildVersionNumber!)")
+            mail.setSubject("Suggestion for version \(Bundle.main.releaseVersionNumber!)")
 
             present(mail, animated: true)
         }else{

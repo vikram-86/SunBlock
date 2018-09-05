@@ -67,31 +67,31 @@ extension SSEView{
 
     @IBAction private func startReminder(){
         print("starting reminder")
-        guard let minutes = sseValue?.minutes else { return }
-        let timeInterval: TimeInterval = minutes * 60
+        guard let minutes = sseValue?.duration else { return }
+        let timeInterval: TimeInterval = Double(minutes) * 60
         UserNotificationService.current.scheduleNotification(with: timeInterval)
         self.buttonImageview.image = #imageLiteral(resourceName: "icDashboardActive")
         self.buttonTitle.text = "Reset reminder"
     }
 
-    func configure(with value: SSEValue){
-        valueLabel.text = value.duration
-        unitLabel.text	= value.unit
-
-        self.sseValue = value
-
-        valueLabel.alpha	= 1
-        unitLabel.alpha		= 1
-
-        if value.minutes >= (60 * 24) {
-            buttonView.isHidden = false
-            UserNotificationService.current.removeAllPendingRequests()
-            buttonTitle.text	= "Start reminder"
-            buttonImageview.image = #imageLiteral(resourceName: "stopWatch")
-        }else{
-            buttonView.isHidden = true
-        }
-        setupButton()
-    }
+//    func configure(with value: SSEValue){
+//        valueLabel.text = value.duration
+//        unitLabel.text    = value.unit
+//
+//        self.sseValue = value
+//
+//        valueLabel.alpha    = 1
+//        unitLabel.alpha        = 1
+//
+//        if value.minutes >= (60 * 24) {
+//            buttonView.isHidden = false
+//            UserNotificationService.current.removeAllPendingRequests()
+//            buttonTitle.text    = "Start reminder"
+//            buttonImageview.image = #imageLiteral(resourceName: "stopWatch")
+//        }else{
+//            buttonView.isHidden = true
+//        }
+//        setupButton()
+//    }
 }
 

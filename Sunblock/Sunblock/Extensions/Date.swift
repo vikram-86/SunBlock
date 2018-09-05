@@ -37,4 +37,20 @@ extension Date{
         return dateFormatter.string(from: date)
     }
 
+    static func add(minutes: Int) -> Date{
+        let calendar = Calendar.current
+        return calendar.date(byAdding: .minute, value: minutes, to: Date())!
+    }
+
+    func hasExceeded(duration: Int) -> Bool {
+        
+        let timeInterval = abs(Date().timeIntervalSince(self))
+        return timeInterval >= (Double(duration) *  60000)
+    }
+
+    var hourClock: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: self)
+    }
 }

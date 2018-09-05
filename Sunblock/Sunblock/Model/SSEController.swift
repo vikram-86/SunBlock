@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias SSEValue = (duration: String, unit:String, minutes: Double)
+//typealias SSEValue = (duration: String, unit:String, minutes: Double)
 
 struct SSEController{
 
@@ -38,7 +38,11 @@ struct SSEController{
     }
 
     var temperature: String {
-        let currentTemperature = round(weather.temperature)
+        var currentTemperature = round(weather.temperature)
+        let currentUnit = SettingsUtility.unit
+        if currentUnit == .fahrenheit{
+            currentTemperature = Float(currentUnit.convertToFahrenheit(celcius: Double(currentTemperature)))
+        }
         return "\(Int(currentTemperature))°"
     }
 
@@ -93,25 +97,36 @@ struct SSEController{
     }
 
     var sse: SSEValue{
+
+        if let value = SSEValue.load(){
+            return value
+        }
+//        // already an sse in persistance?
+//
         let location = UserLocation.load()!
 
         let altitudeModifier = (location.altitude / 1000) * 0.16
-        
+
         let currentUV = weather.uvIndex == 0 ? 0.0 : weather.uvIndex * (1 + altitudeModifier) * environment.modifier
         if currentUV == 0 {
-            return ("\(24)", "+hours", 1440)
+            //return ("\(24)", "+hours", 1440)
+            return SSEValue(duration: 1440, currentSPF: spf)
         }
 
 
         let time = Int((Float(skinType.maximumTimeInSun) / currentUV) * Float(spf))
         if time < 60 {
-            return ("\(time)", "minutes", Double(time))
+            //return ("\(time)", "minutes", Double(time))
+            return SSEValue(duration: time, currentSPF: spf)
         }else if time >= 60, time < 120{
-            return ("\(1)", "hour", Double(time))
+            //return ("\(1)", "hour", Double(time))
+            return SSEValue(duration: time, currentSPF: spf)
         }else if time > 1440{
-            return ("\(2)", "hours", Double(120))
+            //return ("\(2)", "hours", Double(120))
+            return SSEValue(duration: 120, currentSPF: spf)
         }else{
-            return ("\(2)", "hours", Double(120))
+            //return ("\(2)", "hours", Double(120))
+            return SSEValue(duration: 120, currentSPF: spf)
         }
     }
 }

@@ -89,6 +89,8 @@
 		8AD6B1FD2083E2FD0073721E /* SkinChooser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6B1FC2083E2FD0073721E /* SkinChooser.storyboard */; };
 		8AD6B2002083E80F0073721E /* SkinChooserSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B1FF2083E80F0073721E /* SkinChooserSceneViewController.swift */; };
 		8AD6B2032083E8A10073721E /* SkinTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B2022083E8A10073721E /* SkinTypeCell.swift */; };
+		8AE0368721331EAB00174DF2 /* SSEValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0368621331EAB00174DF2 /* SSEValue.swift */; };
+		8AE0368A2133209A00174DF2 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE036892133209A00174DF2 /* PersistanceService.swift */; };
 		8AE2771F20B0A79300D8E65F /* SPFSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE2771E20B0A79300D8E65F /* SPFSelectionView.xib */; };
 		8AE2772120B0ADDF00D8E65F /* SPFSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772020B0ADDF00D8E65F /* SPFSelectionView.swift */; };
 		8AE2772520B1CA7900D8E65F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE2772420B1CA7900D8E65F /* UIFont.swift */; };
@@ -185,6 +187,8 @@
 		8AD6B1FC2083E2FD0073721E /* SkinChooser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkinChooser.storyboard; sourceTree = "<group>"; };
 		8AD6B1FF2083E80F0073721E /* SkinChooserSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinChooserSceneViewController.swift; sourceTree = "<group>"; };
 		8AD6B2022083E8A10073721E /* SkinTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinTypeCell.swift; sourceTree = "<group>"; };
+		8AE0368621331EAB00174DF2 /* SSEValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEValue.swift; sourceTree = "<group>"; };
+		8AE036892133209A00174DF2 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		8AE2771E20B0A79300D8E65F /* SPFSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPFSelectionView.xib; sourceTree = "<group>"; };
 		8AE2772020B0ADDF00D8E65F /* SPFSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPFSelectionView.swift; sourceTree = "<group>"; };
 		8AE2772420B1CA7900D8E65F /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 		8A0003C220A8AD8B006A854E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8AE036882133208300174DF2 /* PersistanceService */,
 				8A7E8D0A212C22A800E0909C /* SettingsUtility */,
 				8AE78F0120B5F874002B7F8D /* UserNotificationService */,
 				8A0003CE20A9B4F4006A854E /* NetworkService */,
@@ -322,6 +327,7 @@
 				8A00045520AECA53006A854E /* Environment.swift */,
 				8A4A3A8620B347D80043D0FA /* OnboardingStatus.swift */,
 				8AE78EFD20B4BB27002B7F8D /* SSEController.swift */,
+				8AE0368621331EAB00174DF2 /* SSEValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -688,6 +694,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		8AE036882133208300174DF2 /* PersistanceService */ = {
+			isa = PBXGroup;
+			children = (
+				8AE036892133209A00174DF2 /* PersistanceService.swift */,
+			);
+			path = PersistanceService;
+			sourceTree = "<group>";
+		};
 		8AE2771D20B0A5F800D8E65F /* SPFSelectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,6 +835,7 @@
 				8A36537320950E1000337B3C /* UIView.swift in Sources */,
 				8A23F6E92091140A00A30DDE /* StoryboardIdentifiable.swift in Sources */,
 				8A0003CC20A983C2006A854E /* AlertService.swift in Sources */,
+				8AE0368A2133209A00174DF2 /* PersistanceService.swift in Sources */,
 				8A0003DC20A9C912006A854E /* APIClient.swift in Sources */,
 				8A40F84A20B7639400C16725 /* UIDevice.swift in Sources */,
 				8AE78F0020B595A4002B7F8D /* Reachability.swift in Sources */,
@@ -881,6 +896,7 @@
 				8A23F6E72091103500A30DDE /* UITableView.swift in Sources */,
 				8A7E8D0C212C22CC00E0909C /* SettingsUtlity.swift in Sources */,
 				8A0D7BAB208FABBB00003245 /* SkinImageContainer.swift in Sources */,
+				8AE0368721331EAB00174DF2 /* SSEValue.swift in Sources */,
 				8A57482320742E8600B295B9 /* MainSceneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

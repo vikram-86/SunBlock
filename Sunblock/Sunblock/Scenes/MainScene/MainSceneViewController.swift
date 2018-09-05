@@ -16,7 +16,7 @@ class MainSceneViewController: UIViewController {
     @IBOutlet weak var uvImageView			: UIImageView!
     @IBOutlet weak var temperatureLabel		: UILabel!
     @IBOutlet weak var weatherIconImageView	: UIImageView!
-    @IBOutlet weak var sseView				: SSEView!
+    //@IBOutlet weak var sseView				: SSEView!
     @IBOutlet weak var segmentView    		: SegmentChooserView!
     @IBOutlet weak var spfSelectionView		: SPFSelectionView!
     @IBOutlet weak var uvTitleLabel			: UILabel!
@@ -187,16 +187,21 @@ extension MainSceneViewController{
         currentWeather = weather
         let sse = SSEController(weather: weather, environment: currentEnvironment, skinType: currentSkinType, spf: currentSPF)
 		let subtitleContent = calculatePeak()
-        let subtitleText = "Max. UV level is \(subtitleContent.uv) at \(subtitleContent.time)"
+        let sseValue = sse.sse
+
+        let subtitleText = currentSPF != 1 ? sseValue.spfDescription : "Max. UV level is \(subtitleContent.uv) at \(subtitleContent.time)"
+        let title = "You got \(sseValue.unit) until skin damage"
+        let currentUnit = SettingsUtility.unit
+
         DispatchQueue.main.async {
-            self.titleLabel.text                 = sse.title
+            self.titleLabel.text                 = title
             self.subTitleLabel.text              = subtitleText
             self.uvLabel.text                    = sse.uvIndex
             self.uvImageView.image               = sse.uvIcon
             self.temperatureLabel.text           = sse.temperature
             self.weatherIconImageView.image      = sse.weatherIcon
-
-            self.view.backgroundColor            = sse.headerColor
+            self.temperatureUnitLabel.text		 = currentUnit.unitString
+            self.view.backgroundColor            = UIColor.appColor(sseValue.backgroundColorName)//sse.headerColor
 
 
 
@@ -209,7 +214,7 @@ extension MainSceneViewController{
             self.temperatureLabel.isHidden            = false
             self.weatherIconImageView.isHidden        = false
 
-            self.sseView.configure(with: sse.sse)
+//self.sseView.configure(with: sse.sse)
         }
         UIView.animate(withDuration: 1, animations: {
             self.view.backgroundColor = sse.headerColor
@@ -232,6 +237,7 @@ extension MainSceneViewController{
         let timeString = Date.timeString(for: Double(time))
         return (currentPeakUV, timeString)
     }
+    
 }
 
 extension MainSceneViewController{
