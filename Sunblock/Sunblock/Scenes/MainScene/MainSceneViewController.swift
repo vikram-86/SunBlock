@@ -131,7 +131,6 @@ class MainSceneViewController: UIViewController {
 
         UIApplication.shared.statusBarStyle = .lightContent
         NotificationCenter.default.addObserver(self, selector: #selector(viewDidBecomeActive), name: .UIApplicationWillEnterForeground, object: nil)
-
        // setupLabelsForScreenSize()
     }
 
@@ -149,6 +148,7 @@ class MainSceneViewController: UIViewController {
             }
         }
         spfSelectionView.initializeContent()
+        
     }
 
     @objc func viewDidBecomeActive(){
