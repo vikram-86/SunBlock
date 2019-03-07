@@ -22,26 +22,16 @@ class SettingsTableViewController: UITableViewController {
 
     //MARK: -IBOutlets
     @IBOutlet weak var screenReminderSwitch	: UISwitch!
-    @IBOutlet weak var updateSwitch			: UISwitch!
     @IBOutlet weak var temperatureLabel		: UILabel!
-
-
-
-
+    
+    
     private var shouldSetReminder 	: Bool = true {
         didSet{
             print(shouldSetReminder)
             SettingsUtility.isReminderSet = shouldSetReminder
         }
     }
-
-    private var shouldShowUpdate	: Bool = true{
-        didSet{
-            print(shouldShowUpdate)
-            SettingsUtility.shouldShowUpdate = shouldShowUpdate
-        }
-    }
-
+    
     private var currentUnit	: TemperatureUnit = .celcius{
         didSet{
             print(currentUnit)
@@ -61,9 +51,6 @@ class SettingsTableViewController: UITableViewController {
         if SettingsUtility.justAfterUpdate{
             
             screenReminderSwitch.isOn	= true
-            updateSwitch.isOn 			= true
-
-            shouldShowUpdate 	= true
             shouldSetReminder	= true
 			currentUnit			= SettingsUtility.unit
 
@@ -71,7 +58,6 @@ class SettingsTableViewController: UITableViewController {
 
         }else {
             screenReminderSwitch.isOn	= SettingsUtility.isReminderSet
-            updateSwitch.isOn 			= SettingsUtility.shouldShowUpdate
             temperatureLabel.text		= SettingsUtility.unit.description
         }
     }
@@ -146,10 +132,6 @@ extension SettingsTableViewController{
 
     @IBAction private func reminderSwitchTapped(_ sender: UISwitch) {
         shouldSetReminder = sender.isOn
-    }
-
-    @IBAction private func updateSwitchTapped(_ sender: UISwitch) {
-        shouldShowUpdate = sender.isOn
     }
 }
 
