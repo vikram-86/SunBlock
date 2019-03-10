@@ -15,6 +15,7 @@ struct SettingsUtility{
         static let reminderKey		= "reminder"
         static let updateKey		= "update"
         static let versionKey		= Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "undefined"
+        static let notificationPermissionKey = "notificationPermission"
     }
 
     static var unit : TemperatureUnit{
@@ -51,6 +52,15 @@ struct SettingsUtility{
         }
         get{
             return !UserDefaults.standard.bool(forKey: Keys.versionKey)
+        }
+    }
+    
+    static var hasAskedForNotificationPermission: Bool {
+        set {
+            UserDefaults.standard.set(newValue, forKey: Keys.notificationPermissionKey)
+        }
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.notificationPermissionKey)
         }
     }
 }

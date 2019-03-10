@@ -70,6 +70,63 @@ class UserNotificationService: NSObject{
             }
         }
     }
+    
+    func scheduleNotification(with sse: SSEValue) {
+        if !SettingsUtility.isReminderSet {
+            print("User has disabled auto reminder!")
+            DispatchQueue.main.async {
+                ToastService.current.addToast(with: .autoReminderDisabled)
+                return
+            }
+        }
+        
+        if sse.timeRemaining == 0 || sse.timeRemaining >= 120 {
+            return
+        }
+        
+        requestPermission { (granted) in
+            if !granted {
+                DispatchQueue.main.async {
+                    ToastService.current.addToast(with: .notificationPermissionDenied)
+                    return
+                }
+            }
+            
+            let timeInterval = Double(sse.duration) * 60
+            let safeDate = Date.add(minutes: sse.timeRemaining).hourClock
+            let center = UNUserNotificationCenter.current()
+            center.removeAllPendingNotificationRequests()
+            
+            // Create content
+            let content = UNMutableNotificationContent()
+            content.title = "Sunblock"
+            content.body  = "It is time to reapply sun screen!"
+            content.sound = UNNotificationSound.default()
+            
+            // create trigger
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+            let identifier = "SunblockNotifications"
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if error != nil {
+                    print("Error")
+                }
+                DispatchQueue.main.async {
+                    ToastService.current.addToast(with: .setNewTimer(safeDate))
+                }
+            })
+        }
+        
+        // check if notification is allowed by OS
+            // notifiy user that notification is disabled by OS
+        
+        // check if notification is allowe by user in app settings
+            // notify user that notification is disabled by app
+        
+        // check if user has pending notification
+        // delete existing notification and add new one
+        
+    }
 }
 
 

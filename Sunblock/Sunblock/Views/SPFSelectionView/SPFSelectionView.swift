@@ -10,6 +10,7 @@ import UIKit
 
 protocol SPFDelegate: class{
     func selectorSelected(spf: Int)
+    func selectorCollapsed()
 }
 @IBDesignable class SPFSelectionView: UIView, NibFileOwnerLoadable{
 
@@ -250,6 +251,7 @@ extension SPFSelectionView{
             })
         }) { (_) in
             self.tapButton.isHidden = false
+            self.delegate?.selectorCollapsed()
         }
     }
 }

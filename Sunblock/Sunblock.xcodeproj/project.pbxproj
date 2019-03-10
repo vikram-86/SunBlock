@@ -102,6 +102,12 @@
 		8AE78F0020B595A4002B7F8D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE78EFF20B595A4002B7F8D /* Reachability.swift */; };
 		8AE78F0320B5F890002B7F8D /* UserNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE78F0220B5F890002B7F8D /* UserNotificationService.swift */; };
 		8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFAE299207FED9500DA7D0E /* Settings.storyboard */; };
+		AC2AADAF223542C7007B80DF /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AADAE223542C7007B80DF /* ToastView.swift */; };
+		AC2AADB1223542E3007B80DF /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2AADB0223542E3007B80DF /* ToastView.xib */; };
+		AC2AADB422354CE0007B80DF /* ToastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AADB322354CE0007B80DF /* ToastService.swift */; };
+		AC2AADB7223580A4007B80DF /* NotificationAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2AADB6223580A4007B80DF /* NotificationAlertView.xib */; };
+		ACFAA32722358E340077AB7B /* NotificationAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA32622358E340077AB7B /* NotificationAlertView.swift */; };
+		ACFAA32A2235920B0077AB7B /* NotificationAlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA3292235920B0077AB7B /* NotificationAlertService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +208,12 @@
 		8AE78EFF20B595A4002B7F8D /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8AE78F0220B5F890002B7F8D /* UserNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationService.swift; sourceTree = "<group>"; };
 		8AFAE299207FED9500DA7D0E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		AC2AADAE223542C7007B80DF /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		AC2AADB0223542E3007B80DF /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
+		AC2AADB322354CE0007B80DF /* ToastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastService.swift; sourceTree = "<group>"; };
+		AC2AADB6223580A4007B80DF /* NotificationAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationAlertView.xib; sourceTree = "<group>"; };
+		ACFAA32622358E340077AB7B /* NotificationAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAlertView.swift; sourceTree = "<group>"; };
+		ACFAA3292235920B0077AB7B /* NotificationAlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAlertService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +230,8 @@
 		8A0003C220A8AD8B006A854E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				ACFAA328223591F30077AB7B /* NotificationAlertService */,
+				AC2AADB222354CD3007B80DF /* ToastService */,
 				8AE036882133208300174DF2 /* PersistanceService */,
 				8A7E8D0A212C22A800E0909C /* SettingsUtility */,
 				8AE78F0120B5F874002B7F8D /* UserNotificationService */,
@@ -662,6 +676,8 @@
 		8AD6B1F72083D43C0073721E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC2AADB52235807B007B80DF /* NotificationAlertView */,
+				AC2AADAD22353E45007B80DF /* ToastView */,
 				8A50072121400D8C00612717 /* UpdateView */,
 				8A40F85B20BCA9CC00C16725 /* SkinSelection */,
 				8A40F85120BBEBF200C16725 /* OnboardingHeaderView */,
@@ -750,6 +766,40 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		AC2AADAD22353E45007B80DF /* ToastView */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AADAE223542C7007B80DF /* ToastView.swift */,
+				AC2AADB0223542E3007B80DF /* ToastView.xib */,
+			);
+			path = ToastView;
+			sourceTree = "<group>";
+		};
+		AC2AADB222354CD3007B80DF /* ToastService */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AADB322354CE0007B80DF /* ToastService.swift */,
+			);
+			path = ToastService;
+			sourceTree = "<group>";
+		};
+		AC2AADB52235807B007B80DF /* NotificationAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AADB6223580A4007B80DF /* NotificationAlertView.xib */,
+				ACFAA32622358E340077AB7B /* NotificationAlertView.swift */,
+			);
+			path = NotificationAlertView;
+			sourceTree = "<group>";
+		};
+		ACFAA328223591F30077AB7B /* NotificationAlertService */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAA3292235920B0077AB7B /* NotificationAlertService.swift */,
+			);
+			path = NotificationAlertService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -824,6 +874,7 @@
 				8AD6B1FD2083E2FD0073721E /* SkinChooser.storyboard in Resources */,
 				8ABC18C820B20852007EA149 /* Onboarding.storyboard in Resources */,
 				8A5748322074316B00B295B9 /* Archivo-Bold.ttf in Resources */,
+				AC2AADB1223542E3007B80DF /* ToastView.xib in Resources */,
 				8A5748342074316B00B295B9 /* Archivo-Medium.ttf in Resources */,
 				8A5748302074316B00B295B9 /* Archivo-SemiBold.ttf in Resources */,
 				8A40F85D20BCA9E700C16725 /* SkinSelectionAvatarView.xib in Resources */,
@@ -832,6 +883,7 @@
 				8A40F85320BBEC0400C16725 /* OnboardingHeaderView.xib in Resources */,
 				8A5748332074316B00B295B9 /* Archivo-Regular.ttf in Resources */,
 				8A40F86620BD808400C16725 /* SkinSelectionView.xib in Resources */,
+				AC2AADB7223580A4007B80DF /* NotificationAlertView.xib in Resources */,
 				8AFAE29A207FED9500DA7D0E /* Settings.storyboard in Resources */,
 				8A502EE42073C8330039D598 /* Main.storyboard in Resources */,
 				8A50072321400D9E00612717 /* UpdateView.xib in Resources */,
@@ -872,6 +924,7 @@
 				8AE2772A20B1FE8C00D8E65F /* SSEView.swift in Sources */,
 				8A00045420AEB45D006A854E /* Date.swift in Sources */,
 				8A4A3A8B20B365E60043D0FA /* OnboardinLocationSceneViewController.swift in Sources */,
+				ACFAA32A2235920B0077AB7B /* NotificationAlertService.swift in Sources */,
 				8A40F86320BD3C6100C16725 /* SkinSelectionSceneViewController.swift in Sources */,
 				8A00041C20AAD4E4006A854E /* CoreDataStack.swift in Sources */,
 				8A7E8D05212C0C5400E0909C /* SettingsTableViewController.swift in Sources */,
@@ -903,12 +956,15 @@
 				8A9CF542209A509E001EFCCC /* DisclaimerSceneViewController.swift in Sources */,
 				8A00044720ADF599006A854E /* WeatherHourlyResponse.swift in Sources */,
 				8A4A3A8720B347D80043D0FA /* OnboardingStatus.swift in Sources */,
+				AC2AADB422354CE0007B80DF /* ToastService.swift in Sources */,
 				8AE2772120B0ADDF00D8E65F /* SPFSelectionView.swift in Sources */,
 				8AC3C3FA20A577EA00FFFB20 /* SegmentChooserView.swift in Sources */,
 				8A40F85A20BC37C600C16725 /* SESkinSelectionView.swift in Sources */,
 				8A0003D620A9BF54006A854E /* Result.swift in Sources */,
 				8A00042C20AAEF23006A854E /* CodingUserInfoKey.swift in Sources */,
+				ACFAA32722358E340077AB7B /* NotificationAlertView.swift in Sources */,
 				8A23F6E72091103500A30DDE /* UITableView.swift in Sources */,
+				AC2AADAF223542C7007B80DF /* ToastView.swift in Sources */,
 				8A500725214140F100612717 /* UpdateView.swift in Sources */,
 				8A7E8D0C212C22CC00E0909C /* SettingsUtlity.swift in Sources */,
 				8A0D7BAB208FABBB00003245 /* SkinImageContainer.swift in Sources */,

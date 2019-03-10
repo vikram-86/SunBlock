@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationAlertView" customModule="Sunblock" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="YKc-9B-oPI" id="0TE-v6-qnS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKc-9B-oPI">
+                    <rect key="frame" x="37.5" y="213.5" width="300" height="240"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automatic Reminder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asZ-01-mch">
+                            <rect key="frame" x="8" y="8" width="284" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" name="dirtyPurple"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP6-sI-ksv">
+                            <rect key="frame" x="9" y="45" width="283" height="74.5"/>
+                            <attributedString key="attributedText">
+                                <fragment>
+                                    <string key="content">By enabling Automatic Reminder, the app will remind you when it is time to re-apply sunscreen.  One less thing for you to worry about! How does that sound?</string>
+                                    <attributes>
+                                        <color key="NSColor" name="dirtyPurple"/>
+                                        <font key="NSFont" metaFont="system" size="14"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2.5" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cN-CW-y6B">
+                            <rect key="frame" x="0.0" y="160" width="300" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="gGO-ay-ZtH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="Sounds Awesome!">
+                                <color key="titleColor" name="dirtyPurple"/>
+                            </state>
+                            <connections>
+                                <action selector="acceptButtonPressed:" destination="-1" eventType="touchUpInside" id="SsF-kW-tLo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZN-BD-VqW">
+                            <rect key="frame" x="0.0" y="200" width="300" height="40"/>
+                            <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="fTF-d8-T0S"/>
+                            </constraints>
+                            <state key="normal" title="No Thanks">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="declineButtonPressed:" destination="-1" eventType="touchUpInside" id="gWU-yD-7uS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="wZN-BD-VqW" firstAttribute="leading" secondItem="YKc-9B-oPI" secondAttribute="leading" id="1PE-Zg-vsO"/>
+                        <constraint firstAttribute="width" constant="300" id="4ha-hF-uZ5"/>
+                        <constraint firstAttribute="height" constant="240" id="Asy-bY-hMS"/>
+                        <constraint firstAttribute="trailing" secondItem="2cN-CW-y6B" secondAttribute="trailing" id="CnQ-gq-V3A"/>
+                        <constraint firstItem="asZ-01-mch" firstAttribute="leading" secondItem="YKc-9B-oPI" secondAttribute="leading" constant="8" id="F0z-0m-Ukd"/>
+                        <constraint firstItem="2cN-CW-y6B" firstAttribute="leading" secondItem="YKc-9B-oPI" secondAttribute="leading" id="Hgs-PI-k2A"/>
+                        <constraint firstItem="HP6-sI-ksv" firstAttribute="top" secondItem="asZ-01-mch" secondAttribute="bottom" constant="16" id="IHh-nK-pvA"/>
+                        <constraint firstAttribute="bottom" secondItem="wZN-BD-VqW" secondAttribute="bottom" id="W3e-Tf-f5P"/>
+                        <constraint firstItem="HP6-sI-ksv" firstAttribute="leading" secondItem="YKc-9B-oPI" secondAttribute="leading" constant="9" id="dDn-34-jY9"/>
+                        <constraint firstAttribute="trailing" secondItem="asZ-01-mch" secondAttribute="trailing" constant="8" id="lwl-3x-Wss"/>
+                        <constraint firstItem="asZ-01-mch" firstAttribute="top" secondItem="YKc-9B-oPI" secondAttribute="top" constant="8" id="n1f-tC-74g"/>
+                        <constraint firstItem="wZN-BD-VqW" firstAttribute="top" secondItem="2cN-CW-y6B" secondAttribute="bottom" id="pfN-UX-IcU"/>
+                        <constraint firstAttribute="trailing" secondItem="HP6-sI-ksv" secondAttribute="trailing" constant="8" id="uqE-J5-Sbc"/>
+                        <constraint firstAttribute="trailing" secondItem="wZN-BD-VqW" secondAttribute="trailing" id="xzC-iE-Zx3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="YKc-9B-oPI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tfW-ti-T4q"/>
+                <constraint firstItem="YKc-9B-oPI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wpe-KO-NGW"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-81" y="150"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="dirtyPurple">
+            <color red="0.33725490196078434" green="0.25882352941176473" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="dirtyPurple">
+            <color red="0.33725490196078434" green="0.25882352941176473" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

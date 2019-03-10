@@ -62,6 +62,8 @@ class MainSceneViewController: UIViewController {
             updateSSE()
         }
     }
+    
+    private var sseValue : SSEValue?
 
     private var currentWeather: Weather?
 
@@ -188,6 +190,7 @@ extension MainSceneViewController{
         let sse = SSEController(weather: weather, environment: currentEnvironment, skinType: currentSkinType, spf: currentSPF)
 		let subtitleContent = calculatePeak()
         let sseValue = sse.sse
+        self.sseValue = sse.sse
 
         let subtitleText = currentSPF != 1 ? sseValue.spfDescription : "Max. UV level is \(subtitleContent.uv) at \(subtitleContent.time)"
         let title = "You got \(sseValue.unit) until skin damage"
@@ -321,6 +324,12 @@ extension MainSceneViewController: SPFDelegate{
     func selectorSelected(spf: Int) {
         currentSPF = spf
     }
+    
+    func selectorCollapsed() {
+        print("Start Reminder!")
+        guard let sseValue = self.sseValue else { return }
+        UserNotificationService.current.scheduleNotification(with: sseValue)
+    }
 }
 
 //MARK: SegmentChooserDelegate
@@ -330,5 +339,8 @@ extension MainSceneViewController: SegmentChooserDelegate{
         // Update SSE
         environment.save()
         updateSSE()
+        print("Start Reminder!")
+        guard let sseValue = self.sseValue else { return }
+        UserNotificationService.current.scheduleNotification(with: sseValue)
     }
 }

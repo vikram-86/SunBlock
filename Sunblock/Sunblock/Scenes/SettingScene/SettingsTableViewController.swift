@@ -25,7 +25,7 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var temperatureLabel		: UILabel!
     
     
-    private var shouldSetReminder 	: Bool = true {
+    private var shouldSetReminder 	: Bool = false {
         didSet{
             print(shouldSetReminder)
             SettingsUtility.isReminderSet = shouldSetReminder
@@ -50,11 +50,11 @@ class SettingsTableViewController: UITableViewController {
 
         if SettingsUtility.justAfterUpdate{
             
-            screenReminderSwitch.isOn	= true
-            shouldSetReminder	= true
-			currentUnit			= SettingsUtility.unit
+            screenReminderSwitch.isOn	= false
+            shouldSetReminder	        = false
+			currentUnit			        = SettingsUtility.unit
 
-            SettingsUtility.justAfterUpdate = true
+            SettingsUtility.justAfterUpdate = false
 
         }else {
             screenReminderSwitch.isOn	= SettingsUtility.isReminderSet
@@ -66,11 +66,11 @@ class SettingsTableViewController: UITableViewController {
 
         switch indexPath.row{
         case 1: performSegue(withIdentifier: skinChooser, sender: nil)
-        case 4: showUnitSelection()
-        case 6: performSegue(withIdentifier: onboarding, sender: nil)
-        case 7: performSegue(withIdentifier: disclaimer, sender: nil)
-        case 8: sendMail()
-        case 9: performSegue(withIdentifier: about, sender: nil)
+        case 3: showUnitSelection()
+        case 5: performSegue(withIdentifier: onboarding, sender: nil)
+        case 6: performSegue(withIdentifier: disclaimer, sender: nil)
+        case 7: sendMail()
+        case 8: performSegue(withIdentifier: about, sender: nil)
             
         default: break
         }
@@ -131,6 +131,9 @@ extension SettingsTableViewController{
     }
 
     @IBAction private func reminderSwitchTapped(_ sender: UISwitch) {
+        if sender.isOn, !SettingsUtility.hasAskedForNotificationPermission{
+            NotificationAlertService.current.presentNotificationAlert()
+        }
         shouldSetReminder = sender.isOn
     }
 }
